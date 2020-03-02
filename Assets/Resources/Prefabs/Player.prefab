@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 8197690256172150048}
   - component: {fileID: 8197690256172150063}
   - component: {fileID: 8197690256172150062}
-  m_Layer: 0
+  - component: {fileID: 6095427833099799037}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -111,6 +112,11 @@ MonoBehaviour:
   state: 0
   moveSpeed: 10
   turnSpeed: 250
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  col: {fileID: 0}
+  jumpVelorcity: 5
 --- !u!54 &8197690256172150062
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,3 +133,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6095427833099799037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8197690256172150061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a141f0a945697439a03b362d623aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallMulitiplier: 2.5
+  lowJumpMulitiplier: 2

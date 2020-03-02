@@ -11,25 +11,36 @@ public class Player : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float turnSpeed = 250f;
-
+    [SerializeField] private LayerMask groundLayer;
+    CapsuleCollider col;
     float cameraRotationY;
+    bool isJumping;
+    public float jumpVelorcity = 5f;
     // Start is called before the first frame update
     void Start()
     {
         state = PlayerStates.IDLING;
         rigidBody = GetComponent<Rigidbody>();
         rigidBody.freezeRotation = true;
+        isJumping = false;
+        col = GetComponent<CapsuleCollider>();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         inputHandler();
+        if (Input.GetKeyUp(KeyCode.JoystickButton0))
+        {
+            isJumping = false;
+            Debug.Log("JUMP Now!");
+        }
     }
 
     private void inputHandler()
     {
         movePlayer();
+        jump();
     }
 
     private void movePlayer()
@@ -46,14 +57,13 @@ public class Player : MonoBehaviour
             //Debug.Log("character:"+angle);
             //rigidBody.AddForce(transform.forward * moveSpeed);
             state = PlayerStates.MOVING;
-            rigidBody.MovePosition(transform.position + transform.forward * moveSpeed * Time.fixedDeltaTime);
+            //rigidBody.MovePosition(transform.position + transform.forward * moveSpeed * Time.fixedDeltaTime);
+            rigidBody.AddForce(transform.forward * moveSpeed * Time.fixedDeltaTime);
         }
-        else
-        {
-            state = PlayerStates.IDLING;
-
-            //Keyboard
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
+        
+        
+        //Keyboard
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
             {
                 rigidBody.MovePosition(transform.position + transform.forward * moveSpeed * Time.fixedDeltaTime);
                 state = PlayerStates.MOVING;
@@ -84,7 +94,24 @@ public class Player : MonoBehaviour
                     state = PlayerStates.IDLING;
                 }
             }
+    }
+
+    private void jump()
+    {
+        
+            
+        if(!isJumping&&isGround()&&Input.GetKey(KeyCode.JoystickButton0))
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.up * jumpVelorcity;
+            isJumping=true;
+            
         }
+        
+    }
+
+    private bool isGround()
+    {
+        return Physics.CheckCapsule(col.bounds.center, new Vector3(col.bounds.center.x, col.bounds.min.y, col.bounds.center.z), col.radius * 0.1f, groundLayer);
     }
 
     float get_angle(float x, float y)
