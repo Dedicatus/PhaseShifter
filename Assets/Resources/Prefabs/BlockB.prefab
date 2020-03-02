@@ -107,3 +107,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisBlockPhase: 1
+  blockAEnabledMaterial: {fileID: 2100000, guid: 09298c6a09fc46149992bb978b4051d0,
+    type: 2}
+  blockADisabledMaterial: {fileID: 2100000, guid: 9bf939ae255813246886d0ff3be1f141,
+    type: 2}
+  blockBEnabledMaterial: {fileID: 2100000, guid: b733be3a87e04e34b99d662087a177d6,
+    type: 2}
+  blockBDisabledMaterial: {fileID: 2100000, guid: d5d3511dc56df3649bc119e95de3cb9e,
+    type: 2}
