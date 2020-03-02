@@ -42,6 +42,6 @@ public class ThirdPersonCameraFollow : MonoBehaviour
     {                                                        //Rotation around character............/...Keeps distance from character          
         gameObject.transform.position = character.position + Quaternion.Euler(currentY + 10f, currentX, 0) * new Vector3(0, 0, distance);
         gameObject.transform.LookAt(character.position + new Vector3(0, offsetY, 0));//Points camera at character
-        character.gameObject.GetComponent<Player>().changeCameraY(gameObject.transform.localEulerAngles.y);
+        //character.gameObject.GetComponent<Player>().changeCameraY(gameObject.transform.localEulerAngles.y);
     }
 }

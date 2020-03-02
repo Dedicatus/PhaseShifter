@@ -1,134 +1,213 @@
-﻿using System.Collections;
+﻿using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public enum PlayerStates { IDLING, MOVING, DASHING };
-    public PlayerStates state;
-
-    Rigidbody rigidBody;
-    [Header("Movement")]
-    [SerializeField] private float moveSpeed = 10f;
-    [SerializeField] private float turnSpeed = 250f;
-    [SerializeField] private LayerMask groundLayer;
-    CapsuleCollider col;
-    float cameraRotationY;
-    bool isJumping;
-    public float jumpVelorcity = 5f;
-    // Start is called before the first frame update
-    void Start()
+    public void Initialize(GameObject character)
     {
-        state = PlayerStates.IDLING;
-        rigidBody = GetComponent<Rigidbody>();
-        rigidBody.freezeRotation = true;
-        isJumping = false;
-        col = GetComponent<CapsuleCollider>();
+        m_animator = character.GetComponent<Animator>();
+        m_rigidBody = character.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private enum ControlMode
     {
-        inputHandler();
-        if (Input.GetKeyUp(KeyCode.JoystickButton0))
+        /// <summary>
+        /// Up moves the character forward, left and right turn the character gradually and down moves the character backwards
+        /// </summary>
+        Tank,
+        /// <summary>
+        /// Character freely moves in the chosen direction from the perspective of the camera
+        /// </summary>
+        Direct
+    }
+
+    [SerializeField] private float m_moveSpeed = 2;
+    [SerializeField] private float m_turnSpeed = 200;
+    [SerializeField] private float m_jumpForce = 4;
+
+    [SerializeField] private Animator m_animator;
+    [SerializeField] private Rigidbody m_rigidBody;
+
+    [SerializeField] private ControlMode m_controlMode = ControlMode.Direct;
+
+    private float m_currentV = 0;
+    private float m_currentH = 0;
+
+    private readonly float m_interpolation = 10;
+    private readonly float m_walkScale = 0.33f;
+    private readonly float m_backwardsWalkScale = 0.16f;
+    private readonly float m_backwardRunScale = 0.66f;
+
+    private bool m_wasGrounded;
+    private Vector3 m_currentDirection = Vector3.zero;
+
+    private float m_jumpTimeStamp = 0;
+    private float m_minJumpInterval = 0.25f;
+
+    private bool m_isGrounded;
+    
+    private List<Collider> m_collisions = new List<Collider>();
+
+    void Awake()
+    {
+        if(!m_animator) { gameObject.GetComponent<Animator>(); }
+        if(!m_rigidBody) { gameObject.GetComponent<Animator>(); }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        ContactPoint[] contactPoints = collision.contacts;
+        for(int i = 0; i < contactPoints.Length; i++)
         {
-            isJumping = false;
-            Debug.Log("JUMP Now!");
-        }
-    }
-
-    private void inputHandler()
-    {
-        movePlayer();
-        jump();
-    }
-
-    private void movePlayer()
-    {
-        //XBOX Controller
-        if (Mathf.Abs(Input.GetAxis("Horizontal_L")) > 0.19f || Mathf.Abs(Input.GetAxis("Vertical_L")) > 0.19f)
-        {
-            float x = Input.GetAxis("Horizontal_L"), y = Input.GetAxis("Vertical_L");
-            transform.eulerAngles = new Vector3(0, cameraRotationY, 0);
-            float angle = get_angle(x, y), currentAngle = (transform.localEulerAngles.y % 360 + 360) % 360;
-            transform.eulerAngles = new Vector3(0, angle + currentAngle, 0);
-            //transform.Rotate(Vector3.up,angle- currentAngle);
-            //Debug.Log("camera:"+cameraRotationY);
-            //Debug.Log("character:"+angle);
-            //rigidBody.AddForce(transform.forward * moveSpeed);
-            state = PlayerStates.MOVING;
-            //rigidBody.MovePosition(transform.position + transform.forward * moveSpeed * Time.fixedDeltaTime);
-            rigidBody.AddForce(transform.forward * moveSpeed * Time.fixedDeltaTime);
-        }
-        
-        
-        //Keyboard
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
+            if (Vector3.Dot(contactPoints[i].normal, Vector3.up) > 0.5f)
             {
-                rigidBody.MovePosition(transform.position + transform.forward * moveSpeed * Time.fixedDeltaTime);
-                state = PlayerStates.MOVING;
-
-                if (Input.GetKey(KeyCode.A))
-                {
-                    transform.Rotate(Vector3.up, -turnSpeed * Time.deltaTime);
-                    state = PlayerStates.MOVING;
+                if (!m_collisions.Contains(collision.collider)) {
+                    m_collisions.Add(collision.collider);
                 }
-
-                if (Input.GetKey(KeyCode.D))
-                {
-                    transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
-                    state = PlayerStates.MOVING;
-                }
+                m_isGrounded = true;
             }
-            else
-            {
-                if (Input.GetKey(KeyCode.A))
-                {
-                    transform.Rotate(Vector3.up, -turnSpeed * Time.deltaTime);
-                    state = PlayerStates.IDLING;
-                }
-
-                if (Input.GetKey(KeyCode.D))
-                {
-                    transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
-                    state = PlayerStates.IDLING;
-                }
-            }
-    }
-
-    private void jump()
-    {
-        
-            
-        if(!isJumping&&isGround()&&Input.GetKey(KeyCode.JoystickButton0))
-        {
-            GetComponent<Rigidbody>().velocity = Vector3.up * jumpVelorcity;
-            isJumping=true;
-            
         }
-        
     }
 
-    private bool isGround()
+    private void OnCollisionStay(Collision collision)
     {
-        return Physics.CheckCapsule(col.bounds.center, new Vector3(col.bounds.center.x, col.bounds.min.y, col.bounds.center.z), col.radius * 0.1f, groundLayer);
+        ContactPoint[] contactPoints = collision.contacts;
+        bool validSurfaceNormal = false;
+        for (int i = 0; i < contactPoints.Length; i++)
+        {
+            if (Vector3.Dot(contactPoints[i].normal, Vector3.up) > 0.5f)
+            {
+                validSurfaceNormal = true; break;
+            }
+        }
+
+        if(validSurfaceNormal)
+        {
+            m_isGrounded = true;
+            if (!m_collisions.Contains(collision.collider))
+            {
+                m_collisions.Add(collision.collider);
+            }
+        } else
+        {
+            if (m_collisions.Contains(collision.collider))
+            {
+                m_collisions.Remove(collision.collider);
+            }
+            if (m_collisions.Count == 0) { m_isGrounded = false; }
+        }
     }
 
-    float get_angle(float x, float y)
+    private void OnCollisionExit(Collision collision)
     {
-        float theta = Mathf.Atan2(x, y) - Mathf.Atan2(0, 1.0f);
-        if (theta > (float)Mathf.PI)
-            theta -= (float)Mathf.PI;
-        if (theta < -(float)Mathf.PI)
-            theta += (float)Mathf.PI;
-
-        theta = (float)(theta * 180.0f / (float)Mathf.PI);
-        return theta;
-
+        if(m_collisions.Contains(collision.collider))
+        {
+            m_collisions.Remove(collision.collider);
+        }
+        if (m_collisions.Count == 0) { m_isGrounded = false; }
     }
 
-    public void changeCameraY(float y)
+	void FixedUpdate ()
     {
-        cameraRotationY = y;
+        m_animator.SetBool("Grounded", m_isGrounded);
+
+        switch(m_controlMode)
+        {
+            case ControlMode.Direct:
+                DirectUpdate();
+                break;
+
+            case ControlMode.Tank:
+                TankUpdate();
+                break;
+
+            default:
+                Debug.LogError("Unsupported state");
+                break;
+        }
+
+        m_wasGrounded = m_isGrounded;
+    }
+
+    private void TankUpdate()
+    {
+        float v = Input.GetAxis("Vertical");
+        float h = Input.GetAxis("Horizontal");
+
+        bool walk = Input.GetKey(KeyCode.LeftShift);
+
+        if (v < 0) {
+            if (walk) { v *= m_backwardsWalkScale; }
+            else { v *= m_backwardRunScale; }
+        } else if(walk)
+        {
+            v *= m_walkScale;
+        }
+
+        m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
+        m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
+
+        transform.position += transform.forward * m_currentV * m_moveSpeed * Time.deltaTime;
+        transform.Rotate(0, m_currentH * m_turnSpeed * Time.deltaTime, 0);
+
+        m_animator.SetFloat("MoveSpeed", m_currentV);
+
+        JumpingAndLanding();
+    }
+
+    private void DirectUpdate()
+    {
+        float v = Input.GetAxis("Vertical");
+        float h = Input.GetAxis("Horizontal");
+
+        Transform camera = Camera.main.transform;
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            v *= m_walkScale;
+            h *= m_walkScale;
+        }
+
+        m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
+        m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
+
+        Vector3 direction = camera.forward * m_currentV + camera.right * m_currentH;
+
+        float directionLength = direction.magnitude;
+        direction.y = 0;
+        direction = direction.normalized * directionLength;
+
+        if(direction != Vector3.zero)
+        {
+            m_currentDirection = Vector3.Slerp(m_currentDirection, direction, Time.deltaTime * m_interpolation);
+
+            transform.rotation = Quaternion.LookRotation(m_currentDirection);
+            transform.position += m_currentDirection * m_moveSpeed * Time.deltaTime;
+
+            m_animator.SetFloat("MoveSpeed", direction.magnitude);
+        }
+
+        JumpingAndLanding();
+    }
+
+    private void JumpingAndLanding()
+    {
+        bool jumpCooldownOver = (Time.time - m_jumpTimeStamp) >= m_minJumpInterval;
+
+        if (jumpCooldownOver && m_isGrounded && Input.GetKey(KeyCode.Joystick1Button0))
+        {
+            m_jumpTimeStamp = Time.time;
+            m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
+        }
+
+        if (!m_wasGrounded && m_isGrounded)
+        {
+            m_animator.SetTrigger("Land");
+        }
+
+        if (!m_isGrounded && m_wasGrounded)
+        {
+            m_animator.SetTrigger("Jump");
+        }
     }
 }
