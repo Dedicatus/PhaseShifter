@@ -5,6 +5,7 @@ using UnityEngine;
 public class DeadZone : MonoBehaviour
 {
     private PhaseController phaseController;
+    private LevelController levelController;
 
     private enum ZonePhase { A, B, Always };
     [SerializeField] private ZonePhase thisZonePhase = ZonePhase.A;
@@ -15,6 +16,7 @@ public class DeadZone : MonoBehaviour
     void Start()
     {
         phaseController = GameObject.FindWithTag("PhaseController").GetComponent<PhaseController>();
+        levelController = GameObject.Find("LevelController").transform.GetComponent<LevelController>();
         myCollider = gameObject.GetComponent<BoxCollider>();
     }
 
@@ -32,6 +34,7 @@ public class DeadZone : MonoBehaviour
         if (other.tag == "Player")
         {
             Destroy(other.gameObject);
+            levelController.respawnPlayer();
         }
     }
 

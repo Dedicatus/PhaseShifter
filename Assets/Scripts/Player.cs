@@ -45,6 +45,8 @@ public class Player : MonoBehaviour
     private float m_minJumpInterval = 0.25f;
 
     private bool m_isGrounded;
+
+    private bool m_isPickingUp;
     
     private List<Collider> m_collisions = new List<Collider>();
 
@@ -153,6 +155,8 @@ public class Player : MonoBehaviour
         m_animator.SetFloat("MoveSpeed", m_currentV);
 
         JumpingAndLanding();
+
+        PickingUp();
     }
 
     private void DirectUpdate()
@@ -188,6 +192,8 @@ public class Player : MonoBehaviour
         }
 
         JumpingAndLanding();
+
+        PickingUp();
     }
 
     private void JumpingAndLanding()
@@ -208,6 +214,14 @@ public class Player : MonoBehaviour
         if (!m_isGrounded && m_wasGrounded)
         {
             m_animator.SetTrigger("Jump");
+        }
+    }
+
+    public void PickingUp()
+    {
+        if (Input.GetAxis("LRT") > 0.19f && !m_animator.GetCurrentAnimatorStateInfo(0).IsName("Pickup"))
+        {
+            m_animator.SetTrigger("Pickup");
         }
     }
 }

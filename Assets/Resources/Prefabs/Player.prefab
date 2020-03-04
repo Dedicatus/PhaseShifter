@@ -1037,6 +1037,11 @@ MonoBehaviour:
   m_animator: {fileID: 5093281156469096667}
   m_rigidBody: {fileID: 5133262545351383099}
   m_controlMode: 1
+  m_wasGrounded: 0
+  m_isGrounded: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &5186920417065115409
 GameObject:
   m_ObjectHideFlags: 0
