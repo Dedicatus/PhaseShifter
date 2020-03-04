@@ -5,14 +5,15 @@ using UnityEngine;
 public class MovingBlock : MonoBehaviour
 {
     private PhaseController phaseController;
+    
+    Material cubeMaterial;
+
     private enum BlockPhase { A, B };
+
     [SerializeField] private BlockPhase thisBlockPhase = BlockPhase.A;
 
     private enum MovingMode { Always, PhaseOnly };
     [SerializeField] private MovingMode thisMovingMode = MovingMode.Always;
-
-    Material cubeMaterial;
-
     BoxCollider[] myColliders;
 
     [SerializeField] private Material blockAEnabledMaterial;
@@ -20,7 +21,7 @@ public class MovingBlock : MonoBehaviour
     [SerializeField] private Material blockBEnabledMaterial;
     [SerializeField] private Material blockBDisabledMaterial;
 
-    Animator movingAnimator;
+    Animator movingAnimator; 
 
     // Start is called before the first frame update
     void Start()

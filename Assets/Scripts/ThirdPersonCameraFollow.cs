@@ -26,7 +26,10 @@ public class ThirdPersonCameraFollow : MonoBehaviour
     {
         if (character == null)
         {
-            character = GameObject.FindGameObjectWithTag("Player").transform;
+            if (GameObject.FindGameObjectWithTag("Player") != null)
+            {
+                character = GameObject.FindGameObjectWithTag("Player").transform;
+            }            
         }
 
         if (Mathf.Abs(Input.GetAxis("Horizontal_R")) > 0.19f || Mathf.Abs(Input.GetAxis("Vertical_R")) > 0.19f)
@@ -39,9 +42,11 @@ public class ThirdPersonCameraFollow : MonoBehaviour
     }
 
     void LateUpdate()
-    {                                                        //Rotation around character............/...Keeps distance from character          
-        gameObject.transform.position = character.position + Quaternion.Euler(currentY + 10f, currentX, 0) * new Vector3(0, 0, distance);
-        gameObject.transform.LookAt(character.position + new Vector3(0, offsetY, 0));//Points camera at character
-        //character.gameObject.GetComponent<Player>().changeCameraY(gameObject.transform.localEulerAngles.y);
+    {                                                        //Rotation around character............/...Keeps distance from character
+        if (GameObject.FindGameObjectWithTag("Player") != null)
+        {
+            gameObject.transform.position = character.position + Quaternion.Euler(currentY + 10f, currentX, 0) * new Vector3(0, 0, distance);
+            gameObject.transform.LookAt(character.position + new Vector3(0, offsetY, 0));//Points camera at character                                                                               //character.gameObject.GetComponent<Player>().changeCameraY(gameObject.transform.localEulerAngles.y);
+        }
     }
 }
