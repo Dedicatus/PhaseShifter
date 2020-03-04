@@ -11,6 +11,7 @@ public class ThirdPersonCameraFollow : MonoBehaviour
     public Transform character; //What the camera is looking at..the main character
 
     [SerializeField] private float distance = -5.0f; // Distance to stay from character, Make sure it is negative
+    [SerializeField] private float currentPushDistance = 1.0f;
     [SerializeField] private float offsetY = 2.5f;
     [SerializeField] private float xRotationSpeed = 2.5f;
     [SerializeField] private float yRotationSpeed = 2.5f;
@@ -46,7 +47,18 @@ public class ThirdPersonCameraFollow : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
             gameObject.transform.position = character.position + Quaternion.Euler(currentY + 10f, currentX, 0) * new Vector3(0, 0, distance);
-            gameObject.transform.LookAt(character.position + new Vector3(0, offsetY, 0));//Points camera at character                                                                               //character.gameObject.GetComponent<Player>().changeCameraY(gameObject.transform.localEulerAngles.y);
+            gameObject.transform.LookAt(character.position + new Vector3(0, offsetY, 0));//Points camera at character      
+            //RaycastHit hitInfo;
+            //if (Physics.SphereCast(gameObject.transform.position, 0.2f, -character.forward, out hitInfo, -distance, LayerMask.GetMask("Wall")))
+            //{
+
+            //    gameObject.transform.position = new Vector3(hitInfo.point.x + hitInfo.normal.x * currentPushDistance, transform.position.y, hitInfo.point.z + hitInfo.normal.z * currentPushDistance);
+
+            //}
+            //else
+            //{
+            //    gameObject.transform.position = character.position - character.forward * -distance;
+            //}
         }
     }
 }
