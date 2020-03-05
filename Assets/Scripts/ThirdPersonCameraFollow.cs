@@ -48,17 +48,13 @@ public class ThirdPersonCameraFollow : MonoBehaviour
         {
             gameObject.transform.position = character.position + Quaternion.Euler(currentY + 10f, currentX, 0) * new Vector3(0, 0, distance);
             gameObject.transform.LookAt(character.position + new Vector3(0, offsetY, 0));//Points camera at character      
-            //RaycastHit hitInfo;
-            //if (Physics.SphereCast(gameObject.transform.position, 0.2f, -character.forward, out hitInfo, -distance, LayerMask.GetMask("Wall")))
-            //{
-
-            //    gameObject.transform.position = new Vector3(hitInfo.point.x + hitInfo.normal.x * currentPushDistance, transform.position.y, hitInfo.point.z + hitInfo.normal.z * currentPushDistance);
-
-            //}
-            //else
-            //{
-            //    gameObject.transform.position = character.position - character.forward * -distance;
-            //}
+            RaycastHit hitInfo;
+            if (Physics.SphereCast(gameObject.transform.position, 0.5f, gameObject.transform.forward, out hitInfo, -distance, LayerMask.GetMask("Wall")))
+            {
+                gameObject.transform.position = new Vector3(hitInfo.point.x + hitInfo.normal.x * currentPushDistance, hitInfo.point.y + hitInfo.normal.y * currentPushDistance, hitInfo.point.z + hitInfo.normal.z * currentPushDistance);
+                Debug.Log("YES!");
+            }
+            
         }
     }
 }
