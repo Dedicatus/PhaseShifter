@@ -5,8 +5,6 @@ using UnityEngine;
 public class MovingBlock : MonoBehaviour
 {
     private PhaseController phaseController;
-    
-    Material cubeMaterial;
 
     private enum BlockPhase { A, B };
 
@@ -19,11 +17,6 @@ public class MovingBlock : MonoBehaviour
 
     private GameObject EnabledObject;
     private GameObject DisabledObject;
-
-    [SerializeField] private Material blockAEnabledMaterial;
-    [SerializeField] private Material blockADisabledMaterial;
-    [SerializeField] private Material blockBEnabledMaterial;
-    [SerializeField] private Material blockBDisabledMaterial;
 
     Animator movingAnimator; 
 

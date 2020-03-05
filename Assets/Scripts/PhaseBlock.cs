@@ -8,18 +8,15 @@ public class PhaseBlock : MonoBehaviour
     private enum BlockPhase { A, B };
     [SerializeField] private BlockPhase thisBlockPhase = BlockPhase.A;
 
-    private Material cubeMaterial;
-
-    [SerializeField] private Material blockAEnabledMaterial;
-    [SerializeField] private Material blockADisabledMaterial;
-    [SerializeField] private Material blockBEnabledMaterial;
-    [SerializeField] private Material blockBDisabledMaterial;
+    private GameObject EnabledObject;
+    private GameObject DisabledObject;
 
     // Start is called before the first frame update
     void Start()
     {
         phaseController = GameObject.FindWithTag("PhaseController").GetComponent<PhaseController>();
-        cubeMaterial = transform.GetComponent<Renderer>().material;
+        EnabledObject = transform.Find("EnabledObject").gameObject;
+        DisabledObject = transform.Find("DisabledObject").gameObject;
     }
 
     // Update is called once per frame
@@ -35,18 +32,12 @@ public class PhaseBlock : MonoBehaviour
             switch (thisBlockPhase)
             {
                 case BlockPhase.A:
-                    //gameObject.GetComponent<MeshRenderer>().enabled = true;
-                    //cubeMaterial.SetColor("_Color", new Color(253f / 255f, 85f / 255f, 85f / 255f, 255f / 255f));
-                    cubeMaterial.SetColor("_Color", blockAEnabledMaterial.GetColor("_Color"));
-                    gameObject.GetComponent<BoxCollider>().enabled = true;
-                    //gameObject.layer = 0;
+                    EnabledObject.SetActive(true);
+                    DisabledObject.SetActive(false);
                     break;
                 case BlockPhase.B:
-                    //gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    //cubeMaterial.SetColor("_Color", new Color(103f / 255f, 231f / 255f, 250f / 255f, 30f / 255f));
-                    cubeMaterial.SetColor("_Color", blockBDisabledMaterial.GetColor("_Color"));
-                    gameObject.GetComponent<BoxCollider>().enabled = false;
-                    //gameObject.layer = 8;
+                    EnabledObject.SetActive(false);
+                    DisabledObject.SetActive(true);
                     break;
                 default:
                     break;
@@ -57,18 +48,12 @@ public class PhaseBlock : MonoBehaviour
             switch (thisBlockPhase)
             {
                 case BlockPhase.A:
-                    //gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    //cubeMaterial.SetColor("_Color", new Color(253f / 255f, 85f / 255f, 85f / 255f, 30f / 255f));
-                    cubeMaterial.SetColor("_Color", blockADisabledMaterial.GetColor("_Color"));
-                    gameObject.GetComponent<BoxCollider>().enabled = false;
-                    //gameObject.layer = 8;
+                    EnabledObject.SetActive(false);
+                    DisabledObject.SetActive(true);
                     break;
                 case BlockPhase.B:
-                    //gameObject.GetComponent<MeshRenderer>().enabled = true;
-                    //cubeMaterial.SetColor("_Color", new Color(103f / 255f, 231f / 255f, 250f / 255f, 255f / 255f));
-                    cubeMaterial.SetColor("_Color", blockBEnabledMaterial.GetColor("_Color"));
-                    gameObject.GetComponent<BoxCollider>().enabled = true;
-                    //gameObject.layer = 0;
+                    EnabledObject.SetActive(true);
+                    DisabledObject.SetActive(false);
                     break;
                 default:
                     break;
