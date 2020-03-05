@@ -14,7 +14,11 @@ public class MovingBlock : MonoBehaviour
 
     private enum MovingMode { Always, PhaseOnly };
     [SerializeField] private MovingMode thisMovingMode = MovingMode.Always;
-    BoxCollider[] myColliders;
+
+    private BoxCollider myTrigger;
+
+    private GameObject EnabledObject;
+    private GameObject DisabledObject;
 
     [SerializeField] private Material blockAEnabledMaterial;
     [SerializeField] private Material blockADisabledMaterial;
@@ -27,9 +31,10 @@ public class MovingBlock : MonoBehaviour
     void Start()
     {
         phaseController = GameObject.FindWithTag("PhaseController").GetComponent<PhaseController>();
-        cubeMaterial = transform.GetComponent<Renderer>().material;
         movingAnimator = gameObject.GetComponent<Animator>();
-        myColliders = gameObject.GetComponents<BoxCollider>();
+        myTrigger = gameObject.GetComponent<BoxCollider>();
+        EnabledObject = transform.Find("EnabledObject").gameObject;
+        DisabledObject = transform.Find("DisabledObject").gameObject;
     }
 
     // Update is called once per frame
@@ -64,21 +69,15 @@ public class MovingBlock : MonoBehaviour
             switch (thisBlockPhase)
             {
                 case BlockPhase.A:
-                    //gameObject.GetComponent<MeshRenderer>().enabled = true;
-                    //cubeMaterial.SetColor("_Color", new Color(253f / 255f, 85f / 255f, 85f / 255f, 255f / 255f));
-                    cubeMaterial.SetColor("_Color", blockAEnabledMaterial.GetColor("_Color"));
-                    //gameObject.GetComponent<BoxCollider>().enabled = true;
-                    foreach (BoxCollider bc in myColliders) bc.enabled = true;
-                    //gameObject.layer = 0;
+                    myTrigger.enabled = true;
+                    EnabledObject.SetActive(true);
+                    DisabledObject.SetActive(false);
                     movingAnimator.speed = 1;
                     break;
                 case BlockPhase.B:
-                    //gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    //cubeMaterial.SetColor("_Color", new Color(103f / 255f, 231f / 255f, 250f / 255f, 30f / 255f));
-                    cubeMaterial.SetColor("_Color", blockBDisabledMaterial.GetColor("_Color"));
-                    //gameObject.GetComponent<BoxCollider>().enabled = false;
-                    foreach (BoxCollider bc in myColliders) bc.enabled = false;
-                    //gameObject.layer = 8;
+                    myTrigger.enabled = false;
+                    EnabledObject.SetActive(false);
+                    DisabledObject.SetActive(true);
                     movingAnimator.speed = 0;
                     break;
                 default:
@@ -90,21 +89,15 @@ public class MovingBlock : MonoBehaviour
             switch (thisBlockPhase)
             {
                 case BlockPhase.A:
-                    //gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    //cubeMaterial.SetColor("_Color", new Color(253f / 255f, 85f / 255f, 85f / 255f, 30f / 255f));
-                    cubeMaterial.SetColor("_Color", blockADisabledMaterial.GetColor("_Color"));
-                    //gameObject.GetComponent<BoxCollider>().enabled = false;
-                    foreach (BoxCollider bc in myColliders) bc.enabled = false;
-                    //gameObject.layer = 8;
+                    myTrigger.enabled = false;
+                    EnabledObject.SetActive(false);
+                    DisabledObject.SetActive(true);
                     movingAnimator.speed = 0;
                     break;
                 case BlockPhase.B:
-                    //gameObject.GetComponent<MeshRenderer>().enabled = true;
-                    //cubeMaterial.SetColor("_Color", new Color(103f / 255f, 231f / 255f, 250f / 255f, 255f / 255f));
-                    cubeMaterial.SetColor("_Color", blockBEnabledMaterial.GetColor("_Color"));
-                    //gameObject.GetComponent<BoxCollider>().enabled = true;
-                    foreach (BoxCollider bc in myColliders) bc.enabled = true;
-                    //gameObject.layer = 0;
+                    myTrigger.enabled = true;
+                    EnabledObject.SetActive(true);
+                    DisabledObject.SetActive(false);
                     movingAnimator.speed = 1;
                     break;
                 default:
