@@ -47,23 +47,30 @@ public class Player : MonoBehaviour
     private bool m_isGrounded;
 
     private bool m_isPickingUp;
-    
+
+    public bool keyInRange;
+
+    public bool hasKey;
+
     private List<Collider> m_collisions = new List<Collider>();
 
     void Awake()
     {
-        if(!m_animator) { gameObject.GetComponent<Animator>(); }
-        if(!m_rigidBody) { gameObject.GetComponent<Animator>(); }
+        if (!m_animator) { gameObject.GetComponent<Animator>(); }
+        if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
+        keyInRange = false;
+        hasKey = false;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         ContactPoint[] contactPoints = collision.contacts;
-        for(int i = 0; i < contactPoints.Length; i++)
+        for (int i = 0; i < contactPoints.Length; i++)
         {
             if (Vector3.Dot(contactPoints[i].normal, Vector3.up) > 0.5f)
             {
-                if (!m_collisions.Contains(collision.collider)) {
+                if (!m_collisions.Contains(collision.collider))
+                {
                     m_collisions.Add(collision.collider);
                 }
                 m_isGrounded = true;
@@ -83,14 +90,15 @@ public class Player : MonoBehaviour
             }
         }
 
-        if(validSurfaceNormal)
+        if (validSurfaceNormal)
         {
             m_isGrounded = true;
             if (!m_collisions.Contains(collision.collider))
             {
                 m_collisions.Add(collision.collider);
             }
-        } else
+        }
+        else
         {
             if (m_collisions.Contains(collision.collider))
             {
@@ -102,18 +110,18 @@ public class Player : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if(m_collisions.Contains(collision.collider))
+        if (m_collisions.Contains(collision.collider))
         {
             m_collisions.Remove(collision.collider);
         }
         if (m_collisions.Count == 0) { m_isGrounded = false; }
     }
 
-	void FixedUpdate ()
+    void FixedUpdate()
     {
         m_animator.SetBool("Grounded", m_isGrounded);
 
-        switch(m_controlMode)
+        switch (m_controlMode)
         {
             case ControlMode.Direct:
                 DirectUpdate();
@@ -138,10 +146,12 @@ public class Player : MonoBehaviour
 
         bool walk = Input.GetKey(KeyCode.LeftShift);
 
-        if (v < 0) {
+        if (v < 0)
+        {
             if (walk) { v *= m_backwardsWalkScale; }
             else { v *= m_backwardRunScale; }
-        } else if(walk)
+        }
+        else if (walk)
         {
             v *= m_walkScale;
         }
@@ -156,7 +166,6 @@ public class Player : MonoBehaviour
 
         JumpingAndLanding();
 
-        PickingUp();
     }
 
     private void DirectUpdate()
@@ -181,7 +190,7 @@ public class Player : MonoBehaviour
         direction.y = 0;
         direction = direction.normalized * directionLength;
 
-        if(direction != Vector3.zero)
+        if (direction != Vector3.zero)
         {
             m_currentDirection = Vector3.Slerp(m_currentDirection, direction, Time.deltaTime * m_interpolation);
 
@@ -193,7 +202,6 @@ public class Player : MonoBehaviour
 
         JumpingAndLanding();
 
-        PickingUp();
     }
 
     private void JumpingAndLanding()
@@ -217,11 +225,13 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void PickingUp()
+    public void pickingUpKey()
     {
-        if (Input.GetAxis("LRT") > 0.19f && !m_animator.GetCurrentAnimatorStateInfo(0).IsName("Pickup"))
-        {
-            m_animator.SetTrigger("Pickup");
-        }
+        m_animator.SetTrigger("Pickup");
+    }
+
+    public bool pickUpAnimation()
+    {
+        return m_animator.GetCurrentAnimatorStateInfo(0).IsName("Pickup");
     }
 }

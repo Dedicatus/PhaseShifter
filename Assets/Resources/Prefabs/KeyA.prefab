@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497028776284201893}
-  m_LocalRotation: {x: -0.5174356, y: -0.4823345, z: -0.31564742, w: 0.63244027}
-  m_LocalPosition: {x: -0.43327218, y: -0.24421668, z: 0.15140396}
+  m_LocalRotation: {x: -0.11907525, y: -0.079524815, z: -0.8123826, w: -0.5652712}
+  m_LocalPosition: {x: 0.458, y: 0.926, z: -0.106}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 497028776284404821}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -106.465996, y: 89.843994, z: -159.363}
+  m_LocalEulerAnglesHint: {x: -180.31, y: -163.538, z: -69.617004}
 --- !u!33 &497028776285300325
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 497028776284404821}
-  - component: {fileID: 5707023840145786785}
+  - component: {fileID: 6009322713120763708}
   - component: {fileID: 5707023840145786784}
   m_Layer: 0
   m_Name: KeyA
@@ -105,15 +105,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497028776284211323}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.68, z: 3.25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 497028776284477891}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5707023840145786785
-BoxCollider:
+--- !u!135 &6009322713120763708
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -123,8 +123,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.2, z: 1.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1
+  m_Center: {x: 0, y: 0.79, z: 0}
 --- !u!114 &5707023840145786784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,3 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d11d4bf86ba9ee4195a48cb44da3536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myCamera: {fileID: 0}
+  thisPhase: 0
+  keyAEnabledMaterial: {fileID: 2100000, guid: 0275cd71d48a28e4ca8d99d740827a3f, type: 2}
+  keyBEnabledMaterial: {fileID: 2100000, guid: 38d1de5817623b340b9be32aed3c33ac, type: 2}
+  keyDisabledMaterial: {fileID: 2100000, guid: a9234a1f52e38c646b9d0c551cddbdf1, type: 2}
+  onPlayer: 0
