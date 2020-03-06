@@ -39,6 +39,10 @@ public class Player : MonoBehaviour
     private readonly float m_backwardRunScale = 0.66f;
 
     private bool m_wasGrounded;
+
+    private float m_inAirTimer;
+    [SerializeField] private float fallingAnimationMargin = 0.25f;
+
     private Vector3 m_currentDirection = Vector3.zero;
 
     private float m_jumpTimeStamp = 0;
@@ -60,6 +64,7 @@ public class Player : MonoBehaviour
         if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
         keyInRange = false;
         hasKey = false;
+        m_inAirTimer = 0f;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -121,22 +126,32 @@ public class Player : MonoBehaviour
     {
         m_animator.SetBool("Grounded", m_isGrounded);
 
-        switch (m_controlMode)
+        if (!m_isGrounded)
         {
-            case ControlMode.Direct:
-                DirectUpdate();
-                break;
-
-            case ControlMode.Tank:
-                TankUpdate();
-                break;
-
-            default:
-                Debug.LogError("Unsupported state");
-                break;
+            m_inAirTimer += Time.deltaTime;
+        }
+        else
+        {
+            m_inAirTimer = 0f;
         }
 
-        m_wasGrounded = m_isGrounded;
+            switch (m_controlMode)
+            {
+                case ControlMode.Direct:
+                    DirectUpdate();
+                    break;
+
+                case ControlMode.Tank:
+                    TankUpdate();
+                    break;
+
+                default:
+                    Debug.LogError("Unsupported state");
+                    break;
+            }
+
+            m_wasGrounded = m_isGrounded;
+
     }
 
     private void TankUpdate()
@@ -212,6 +227,7 @@ public class Player : MonoBehaviour
         {
             m_jumpTimeStamp = Time.time;
             m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
+            m_animator.SetTrigger("Jump");
         }
 
         if (!m_wasGrounded && m_isGrounded)
@@ -219,10 +235,12 @@ public class Player : MonoBehaviour
             m_animator.SetTrigger("Land");
         }
 
-        if (!m_isGrounded && m_wasGrounded)
+        
+        if (!m_isGrounded && !m_wasGrounded && m_inAirTimer >= fallingAnimationMargin)
         {
             m_animator.SetTrigger("Jump");
         }
+        
     }
 
     public void pickingUpKey()
