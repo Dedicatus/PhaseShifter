@@ -6,9 +6,15 @@ public class DeadZone : MonoBehaviour
 {
     private PhaseController phaseController;
     private LevelController levelController;
+    private ThirdPersonCameraFollow cameraController;
 
-    private enum ZonePhase { A, B, Always };
+    private enum ZonePhase { A, B, Always, Air };
     [SerializeField] private ZonePhase thisZonePhase = ZonePhase.A;
+
+    private GameObject player;
+    [SerializeField] private float respawnTime = 2.0f;
+    private float respawnTimer;
+    private bool isRespawning;
 
     BoxCollider myCollider;
 
@@ -17,6 +23,7 @@ public class DeadZone : MonoBehaviour
     {
         phaseController = GameObject.FindWithTag("PhaseController").GetComponent<PhaseController>();
         levelController = GameObject.Find("LevelController").transform.GetComponent<LevelController>();
+        cameraController = GameObject.FindWithTag("MainCamera").GetComponent<ThirdPersonCameraFollow>();
         myCollider = gameObject.GetComponent<BoxCollider>();
     }
 
@@ -27,14 +34,44 @@ public class DeadZone : MonoBehaviour
         {
             phaseHandler();
         }
+
+        respawnHandler();
+    }
+
+    private void respawnHandler()
+    {
+        if (isRespawning)
+        {
+            respawnTimer -= Time.deltaTime;
+        }
+        else
+        {
+            respawnTimer = respawnTime;
+        }
+
+        if (respawnTimer <= 0f)
+        {
+            Destroy(player);
+            levelController.respawnPlayer();
+            cameraController.isFrozen = false;
+            isRespawning = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            Destroy(other.gameObject);
-            levelController.respawnPlayer();
+            player = other.gameObject;
+            isRespawning = true;
+            if (thisZonePhase == ZonePhase.Air)
+            {
+                cameraController.isFrozen = true;
+            }
+            else
+            {
+                Destroy(player);
+            }
         }
     }
 

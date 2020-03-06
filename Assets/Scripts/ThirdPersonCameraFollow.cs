@@ -18,9 +18,12 @@ public class ThirdPersonCameraFollow : MonoBehaviour
     private float currentX = 0.0f; // Holds value of X mouse movement
     private float currentY = 0.0f; // Holds value of Y mouse movement
 
+    public bool isFrozen;
+
     void start()
     {
         character = GameObject.FindGameObjectWithTag("Player").transform;
+        isFrozen = false;
     }
 
     void Update()
@@ -33,18 +36,21 @@ public class ThirdPersonCameraFollow : MonoBehaviour
             }            
         }
 
-        if (Mathf.Abs(Input.GetAxis("Horizontal_R")) > 0.19f || Mathf.Abs(Input.GetAxis("Vertical_R")) > 0.19f)
+        if (!isFrozen)
         {
-            currentX += Input.GetAxis("Horizontal_R") * Time.deltaTime * xRotationSpeed;
-            currentY += Input.GetAxis("Vertical_R") * Time.deltaTime * yRotationSpeed;
-        }
+            if (Mathf.Abs(Input.GetAxis("Horizontal_R")) > 0.19f || Mathf.Abs(Input.GetAxis("Vertical_R")) > 0.19f)
+            {
+                currentX += Input.GetAxis("Horizontal_R") * Time.deltaTime * xRotationSpeed;
+                currentY += Input.GetAxis("Vertical_R") * Time.deltaTime * yRotationSpeed;
+            }
 
-        currentY = Mathf.Clamp(currentY, Y_ANGLE_MIN, Y_ANGLE_MAX);
+            currentY = Mathf.Clamp(currentY, Y_ANGLE_MIN, Y_ANGLE_MAX);
+        }
     }
 
     void LateUpdate()
     {                                                        //Rotation around character............/...Keeps distance from character
-        if (GameObject.FindGameObjectWithTag("Player") != null)
+        if (character != null && !isFrozen)
         {
             gameObject.transform.position = character.position + Quaternion.Euler(currentY + 10f, currentX, 0) * new Vector3(0, 0, distance);
             gameObject.transform.LookAt(character.position + new Vector3(0, offsetY, 0));//Points camera at character      

@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
     private readonly float m_backwardsWalkScale = 0.16f;
     private readonly float m_backwardRunScale = 0.66f;
 
-    private bool m_wasGrounded;
+    [SerializeField] private bool m_wasGrounded;
 
     private float m_inAirTimer;
     [SerializeField] private float fallingAnimationMargin = 0.25f;
@@ -48,7 +48,11 @@ public class Player : MonoBehaviour
     private float m_jumpTimeStamp = 0;
     private float m_minJumpInterval = 0.25f;
 
-    private bool m_isGrounded;
+    private CapsuleCollider col;
+    [SerializeField] private bool m_isGrounded;
+    [SerializeField] private LayerMask groundLayer;
+
+    private bool isCollisionEntered;
 
     private bool m_isPickingUp;
 
@@ -60,13 +64,16 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
+        col = gameObject.GetComponent<CapsuleCollider>();
         if (!m_animator) { gameObject.GetComponent<Animator>(); }
         if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
+        isCollisionEntered = false;
         keyInRange = false;
         hasKey = false;
         m_inAirTimer = 0f;
     }
 
+    
     private void OnCollisionEnter(Collision collision)
     {
         ContactPoint[] contactPoints = collision.contacts;
@@ -79,37 +86,41 @@ public class Player : MonoBehaviour
                     m_collisions.Add(collision.collider);
                 }
                 m_isGrounded = true;
+                isCollisionEntered = true;
             }
         }
     }
 
     private void OnCollisionStay(Collision collision)
     {
-        ContactPoint[] contactPoints = collision.contacts;
-        bool validSurfaceNormal = false;
-        for (int i = 0; i < contactPoints.Length; i++)
+        if (isCollisionEntered)
         {
-            if (Vector3.Dot(contactPoints[i].normal, Vector3.up) > 0.5f)
+            ContactPoint[] contactPoints = collision.contacts;
+            bool validSurfaceNormal = false;
+            for (int i = 0; i < contactPoints.Length; i++)
             {
-                validSurfaceNormal = true; break;
+                if (Vector3.Dot(contactPoints[i].normal, Vector3.up) > 0.5f)
+                {
+                    validSurfaceNormal = true; break;
+                }
             }
-        }
 
-        if (validSurfaceNormal)
-        {
-            m_isGrounded = true;
-            if (!m_collisions.Contains(collision.collider))
+            if (validSurfaceNormal)
             {
-                m_collisions.Add(collision.collider);
+                m_isGrounded = true;
+                if (!m_collisions.Contains(collision.collider))
+                {
+                    m_collisions.Add(collision.collider);
+                }
             }
-        }
-        else
-        {
-            if (m_collisions.Contains(collision.collider))
+            else
             {
-                m_collisions.Remove(collision.collider);
+                if (m_collisions.Contains(collision.collider))
+                {
+                    m_collisions.Remove(collision.collider);
+                }
+                if (m_collisions.Count == 0) { m_isGrounded = false; }
             }
-            if (m_collisions.Count == 0) { m_isGrounded = false; }
         }
     }
 
@@ -119,7 +130,16 @@ public class Player : MonoBehaviour
         {
             m_collisions.Remove(collision.collider);
         }
-        if (m_collisions.Count == 0) { m_isGrounded = false; }
+        if (m_collisions.Count == 0)
+        {
+            m_isGrounded = false;    
+        }
+    }
+    
+
+    private bool isGrounded()
+    {
+        return Physics.CheckCapsule(col.bounds.center, new Vector3(col.bounds.center.x, col.bounds.min.y, col.bounds.center.z), col.radius * 0.9f, groundLayer);
     }
 
     void FixedUpdate()
@@ -228,6 +248,8 @@ public class Player : MonoBehaviour
             m_jumpTimeStamp = Time.time;
             m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
             m_animator.SetTrigger("Jump");
+            m_isGrounded = false;
+            isCollisionEntered = false;
         }
 
         if (!m_wasGrounded && m_isGrounded)
@@ -236,7 +258,7 @@ public class Player : MonoBehaviour
         }
 
         
-        if (!m_isGrounded && !m_wasGrounded && m_inAirTimer >= fallingAnimationMargin)
+        if (!m_isGrounded && !m_wasGrounded && m_inAirTimer >= fallingAnimationMargin && isCollisionEntered)
         {
             m_animator.SetTrigger("Jump");
         }

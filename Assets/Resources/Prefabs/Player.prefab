@@ -996,7 +996,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.1
+  m_Radius: 0.14
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
@@ -1038,10 +1038,13 @@ MonoBehaviour:
   m_rigidBody: {fileID: 5133262545351383099}
   m_controlMode: 1
   m_wasGrounded: 0
+  fallingAnimationMargin: 0.25
   m_isGrounded: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 1
+  keyInRange: 0
+  hasKey: 0
 --- !u!1 &5186920417065115409
 GameObject:
   m_ObjectHideFlags: 0

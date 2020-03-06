@@ -30,10 +30,10 @@ public class LevelController : MonoBehaviour
 
     public void respawnPlayer()
     {
-        if (spawnPoints[spawnPointIndex - 1] == null)
+        if (spawnPoints[spawnPointIndex] == null)
         {
             throw new Exception("SpawnPoint Overflow");
         }
-        Instantiate(player, spawnPoints[spawnPointIndex - 1].position, spawnPoints[spawnPointIndex - 1].rotation);
+        Instantiate(player, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
     }
 }
