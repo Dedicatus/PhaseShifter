@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 491224953490934709}
   - component: {fileID: 491224953490934708}
-  - component: {fileID: 491224953490934711}
   - component: {fileID: 491224953490934710}
   m_Layer: 0
   m_Name: MovingIslandB
@@ -79,25 +78,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.35, y: 4.74, z: 5.35}
   m_Center: {x: 0, y: 2.55, z: 0.84}
---- !u!95 &491224953490934711
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491224953490934713}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 943dd14a979ed2d4fadc886e6af8a585, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &491224953490934710
 MonoBehaviour:
   m_ObjectHideFlags: 0
