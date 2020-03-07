@@ -34,16 +34,19 @@ public class Key : MonoBehaviour
 
     private void Update()
     {
-        if (thisPhase != Phase.Both)
+        if (player != null)
         {
-            phaseHandler();
-        }
+            if (thisPhase != Phase.Both)
+            {
+                phaseHandler();
+            }
 
-        pickUpKey();
+            pickUpKey();
 
-        if (onPlayer)
-        {
-            rotateKeyWithCamera();
+            if (onPlayer)
+            {
+                rotateKeyWithCamera();
+            }
         }
     }
 

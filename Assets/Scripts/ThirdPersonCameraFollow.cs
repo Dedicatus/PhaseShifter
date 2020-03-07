@@ -41,7 +41,7 @@ public class ThirdPersonCameraFollow : MonoBehaviour
             }            
         }
 
-        if (!isFrozen)
+        if (character != null && !isFrozen)
         {
             if (!player.GetComponent<Player>().isKeyboard)
             {

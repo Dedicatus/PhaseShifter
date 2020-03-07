@@ -20,7 +20,8 @@ public class PhaseController : MonoBehaviour
     {
         if (player == null)
             player = GameObject.FindGameObjectWithTag("Player");
-        inputHandler();
+        if (player != null)
+            inputHandler();
     }
 
     private void inputHandler()

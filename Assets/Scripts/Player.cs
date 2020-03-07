@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
 
     private float m_inAirTimer;
     [SerializeField] private float fallingAnimationMargin = 0.25f;
+    [SerializeField] private float maxFallingSpeed = -30.0f;
 
     private Vector3 m_currentDirection = Vector3.zero;
 
@@ -146,7 +147,12 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         m_animator.SetBool("Grounded", m_isGrounded);
-
+        
+        if ( m_rigidBody.velocity.y < maxFallingSpeed )
+        {
+            m_rigidBody.velocity = new Vector3(m_rigidBody.velocity.x, maxFallingSpeed, m_rigidBody.velocity.z);
+        }
+        
         if (!m_isGrounded)
         {
             m_inAirTimer += Time.deltaTime;

@@ -1039,6 +1039,7 @@ MonoBehaviour:
   m_controlMode: 1
   m_wasGrounded: 0
   fallingAnimationMargin: 0.25
+  maxFallingSpeed: -60
   m_isGrounded: 0
   groundLayer:
     serializedVersion: 2
