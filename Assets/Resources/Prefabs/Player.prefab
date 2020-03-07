@@ -1045,6 +1045,7 @@ MonoBehaviour:
     m_Bits: 1
   keyInRange: 0
   hasKey: 0
+  isKeyboard: 0
 --- !u!1 &5186920417065115409
 GameObject:
   m_ObjectHideFlags: 0

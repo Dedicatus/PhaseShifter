@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
         if (!m_animator) { gameObject.GetComponent<Animator>(); }
         if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
         isCollisionEntered = false;
-        isKeyboard = true;
+        //isKeyboard = true;
         keyInRange = false;
         hasKey = false;
         m_inAirTimer = 0f;

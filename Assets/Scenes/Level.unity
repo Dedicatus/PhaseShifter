@@ -1231,21 +1231,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: IslandWithHole
       objectReference: {fileID: 0}
-    - target: {fileID: 7906169759859212809, guid: 4a697694c376b424a97f85ddbea3f42f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -25.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7906169759859212809, guid: 4a697694c376b424a97f85ddbea3f42f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7906169759859212809, guid: 4a697694c376b424a97f85ddbea3f42f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a697694c376b424a97f85ddbea3f42f, type: 3}
 --- !u!1001 &5299123435777302670
