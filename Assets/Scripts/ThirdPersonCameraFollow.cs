@@ -7,9 +7,11 @@ public class ThirdPersonCameraFollow : MonoBehaviour
     //Determines the limitations of vertical camera movement
     [SerializeField] private float Y_ANGLE_MIN = 15.0f;
     [SerializeField] private float Y_ANGLE_MAX = 25.0f;
-
+    [HideInInspector]
+    [System.Runtime.InteropServices.DllImport("user32.dll")]
+    public static extern int SetCursorPos(int x, int y);
     public Transform character; //What the camera is looking at..the main character
-
+    GameObject player;
     [SerializeField] private float distance = -5.0f; // Distance to stay from character, Make sure it is negative
     [SerializeField] private float currentPushDistance = 1.0f;
     [SerializeField] private float offsetY = 2.5f;
@@ -23,7 +25,9 @@ public class ThirdPersonCameraFollow : MonoBehaviour
     void start()
     {
         character = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player");
         isFrozen = false;
+        Cursor.visible = false;
     }
 
     void Update()
@@ -32,16 +36,25 @@ public class ThirdPersonCameraFollow : MonoBehaviour
         {
             if (GameObject.FindGameObjectWithTag("Player") != null)
             {
+                player = GameObject.FindGameObjectWithTag("Player");
                 character = GameObject.FindGameObjectWithTag("Player").transform;
             }            
         }
 
         if (!isFrozen)
         {
-            if (Mathf.Abs(Input.GetAxis("Horizontal_R")) > 0.19f || Mathf.Abs(Input.GetAxis("Vertical_R")) > 0.19f)
+            if (!player.GetComponent<Player>().isKeyboard)
             {
-                currentX += Input.GetAxis("Horizontal_R") * Time.deltaTime * xRotationSpeed;
-                currentY += Input.GetAxis("Vertical_R") * Time.deltaTime * yRotationSpeed;
+                if (Mathf.Abs(Input.GetAxis("Horizontal_R")) > 0.19f || Mathf.Abs(Input.GetAxis("Vertical_R")) > 0.19f)
+                {
+                    currentX += Input.GetAxis("Horizontal_R") * Time.deltaTime * xRotationSpeed;
+                    currentY += Input.GetAxis("Vertical_R") * Time.deltaTime * yRotationSpeed;
+                }
+            }
+            else
+            {
+                currentX += Input.GetAxis("Mouse X") * Time.deltaTime * xRotationSpeed;
+                currentY += Input.GetAxis("Mouse Y") * Time.deltaTime * yRotationSpeed;
             }
 
             currentY = Mathf.Clamp(currentY, Y_ANGLE_MIN, Y_ANGLE_MAX);
@@ -63,4 +76,5 @@ public class ThirdPersonCameraFollow : MonoBehaviour
             
         }
     }
+    
 }

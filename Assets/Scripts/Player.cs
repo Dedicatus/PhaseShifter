@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
     private CapsuleCollider col;
     [SerializeField] private bool m_isGrounded;
     [SerializeField] private LayerMask groundLayer;
-
+    
     private bool isCollisionEntered;
 
     private bool m_isPickingUp;
@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
     public bool keyInRange;
 
     public bool hasKey;
-
+    public bool isKeyboard;
     private List<Collider> m_collisions = new List<Collider>();
 
     void Awake()
@@ -68,6 +68,7 @@ public class Player : MonoBehaviour
         if (!m_animator) { gameObject.GetComponent<Animator>(); }
         if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
         isCollisionEntered = false;
+        isKeyboard = true;
         keyInRange = false;
         hasKey = false;
         m_inAirTimer = 0f;
@@ -176,8 +177,24 @@ public class Player : MonoBehaviour
 
     private void TankUpdate()
     {
-        float v = Input.GetAxis("Vertical");
-        float h = Input.GetAxis("Horizontal");
+        float v = 0, h = 0;
+        if (isKeyboard)
+        {
+            if (Input.GetKey(KeyCode.W))
+                v = 1.0f;
+            if (Input.GetKey(KeyCode.S))
+                v = -1.0f;
+            if (Input.GetKey(KeyCode.A))
+                h = -1.0f;
+            if (Input.GetKey(KeyCode.D))
+                h = 1.0f;
+
+        }
+        else
+        {
+            v = Input.GetAxis("Vertical");
+            h = Input.GetAxis("Horizontal");
+        }
 
         bool walk = Input.GetKey(KeyCode.LeftShift);
 
@@ -205,9 +222,24 @@ public class Player : MonoBehaviour
 
     private void DirectUpdate()
     {
-        float v = Input.GetAxis("Vertical");
-        float h = Input.GetAxis("Horizontal");
+        float v=0,h=0;
+        if (isKeyboard)
+        {
+            if (Input.GetKey(KeyCode.W))
+                v = 1.0f;
+            if (Input.GetKey(KeyCode.S))
+                v = -1.0f;
+            if (Input.GetKey(KeyCode.A))
+                h = -1.0f;
+            if (Input.GetKey(KeyCode.D))
+                h = 1.0f;
 
+        }
+        else
+        {
+            v = Input.GetAxis("Vertical");
+            h = Input.GetAxis("Horizontal");
+        }
         Transform camera = Camera.main.transform;
 
         if (Input.GetKey(KeyCode.LeftShift))
@@ -243,7 +275,7 @@ public class Player : MonoBehaviour
     {
         bool jumpCooldownOver = (Time.time - m_jumpTimeStamp) >= m_minJumpInterval;
 
-        if (jumpCooldownOver && m_isGrounded && Input.GetKey(KeyCode.Joystick1Button0))
+        if ((jumpCooldownOver && m_isGrounded && Input.GetKey(KeyCode.Joystick1Button0)&&!isKeyboard) || (jumpCooldownOver && m_isGrounded && Input.GetKey(KeyCode.Space) && isKeyboard))
         {
             m_jumpTimeStamp = Time.time;
             m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);

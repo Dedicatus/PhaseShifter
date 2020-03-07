@@ -7,38 +7,47 @@ public class PhaseController : MonoBehaviour
     public enum GamePhase { A, B};
     public GamePhase curGamePhase;
     private bool phaseSwitched;
+    GameObject player;
 
     private void Start()
     {
         curGamePhase = GamePhase.A;
         phaseSwitched = false;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
     {
+        if (player == null)
+            player = GameObject.FindGameObjectWithTag("Player");
         inputHandler();
     }
 
     private void inputHandler()
     {
-        if (Input.GetAxis("LRT") < -0.19f && !phaseSwitched)
+        if (!player.GetComponent<Player>().isKeyboard)
         {
-            switchPhase();
-        }
+            if (Input.GetAxis("LRT") < -0.19f && !phaseSwitched)
+            {
+                switchPhase();
+            }
 
-        if (Input.GetAxis("LRT") >= -0.19f && Input.GetAxis("LRT") <= 0f)
-        {
-            phaseSwitched = false;
+            if (Input.GetAxis("LRT") >= -0.19f && Input.GetAxis("LRT") <= 0f)
+            {
+                phaseSwitched = false;
+            }
         }
-
-        if (Input.GetKeyDown(KeyCode.Q) && !phaseSwitched)
+        else
         {
-            switchPhase();
-        }
+            if (Input.GetKeyDown(KeyCode.Q) && !phaseSwitched)
+            {
+                switchPhase();
+            }
 
-        if (Input.GetKeyUp(KeyCode.Q))
-        {
-            phaseSwitched = false;
+            if (Input.GetKeyUp(KeyCode.Q))
+            {
+                phaseSwitched = false;
+            }
         }
 
     }

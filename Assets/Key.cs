@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-    private Player playerScript;
+    private GameObject player;
     private PhaseController phaseController;
     [SerializeField] private GameObject myCamera;
 
@@ -27,6 +27,7 @@ public class Key : MonoBehaviour
     {
         phaseController = GameObject.FindWithTag("PhaseController").GetComponent<PhaseController>();
         myCamera = GameObject.FindWithTag("MainCamera");
+        player = GameObject.FindWithTag("Player");
         myMaterial = transform.GetChild(0).GetComponent<Renderer>().material;
         inRange = false;
     }
@@ -48,7 +49,7 @@ public class Key : MonoBehaviour
 
     private void pickUpKey()
     {
-        if (Input.GetAxis("LRT") > 0.19f && inRange && !onPlayer && !myPlayer.GetComponent<Player>().pickUpAnimation())
+        if (((player.GetComponent<Player>().isKeyboard && Input.GetKey(KeyCode.F) ) ||(!player.GetComponent<Player>().isKeyboard&&Input.GetAxis("LRT") > 0.19f)) && inRange && !onPlayer && !myPlayer.GetComponent<Player>().pickUpAnimation())
         {
             if ( myPlayer != null )
             {
