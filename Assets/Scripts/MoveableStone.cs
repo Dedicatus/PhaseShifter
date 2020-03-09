@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class MoveableStone : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Transform spawnPoint;
+    [SerializeField] GameObject stoneArea;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        
+        if (other.gameObject == stoneArea)
+        {
+            transform.position = spawnPoint.position;
+            transform.rotation = spawnPoint.rotation;
+        }
     }
 }
