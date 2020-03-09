@@ -22,7 +22,9 @@ public class PhaseController : MonoBehaviour
         phaseSwitched = false;
         player = GameObject.FindGameObjectWithTag("Player");
         grassMaterial.SetColor("_Color", grassMaterialA.GetColor("_Color"));
+        grassMaterial.SetColor("_EmissionColor", grassMaterialA.GetColor("_EmissionColor"));
         leafMaterial.SetColor("_Color", leafMaterialA.GetColor("_Color"));
+        leafMaterial.SetColor("_EmissionColor", leafMaterialA.GetColor("_EmissionColor"));
     }
 
     private void Update()
@@ -70,12 +72,16 @@ public class PhaseController : MonoBehaviour
                 curGamePhase = GamePhase.B;
                 phaseSwitched = true;
                 grassMaterial.SetColor("_Color", grassMaterialB.GetColor("_Color"));
+                grassMaterial.SetColor("_EmissionColor", grassMaterialB.GetColor("_EmissionColor"));
                 leafMaterial.SetColor("_Color", leafMaterialB.GetColor("_Color"));
+                leafMaterial.SetColor("_EmissionColor", leafMaterialB.GetColor("_EmissionColor"));
                 break;
             case GamePhase.B:
                 curGamePhase = GamePhase.A;
                 grassMaterial.SetColor("_Color", grassMaterialA.GetColor("_Color"));
+                grassMaterial.SetColor("_EmissionColor", grassMaterialA.GetColor("_EmissionColor"));
                 leafMaterial.SetColor("_Color", leafMaterialA.GetColor("_Color"));
+                leafMaterial.SetColor("_EmissionColor", leafMaterialA.GetColor("_EmissionColor"));
                 phaseSwitched = true;
                 break;
             default:
