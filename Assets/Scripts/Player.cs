@@ -183,7 +183,10 @@ public class Player : MonoBehaviour
 
     private void TankUpdate()
     {
+        detectInputMethod();
+
         float v = 0, h = 0;
+
         if (isKeyboard)
         {
             if (Input.GetKey(KeyCode.W))
@@ -228,7 +231,10 @@ public class Player : MonoBehaviour
 
     private void DirectUpdate()
     {
-        float v=0,h=0;
+        detectInputMethod();
+
+        float v = 0, h = 0;
+
         if (isKeyboard)
         {
             if (Input.GetKey(KeyCode.W))
@@ -277,11 +283,23 @@ public class Player : MonoBehaviour
 
     }
 
+    private void detectInputMethod()
+    {
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            isKeyboard = true;
+        }
+        else if (Mathf.Abs(Input.GetAxis("Horizontal_L")) > 0.19f || Mathf.Abs(Input.GetAxis("Vertical_L")) > 0.19f)
+        {
+            isKeyboard = false;
+        }
+    }
+
     private void JumpingAndLanding()
     {
         bool jumpCooldownOver = (Time.time - m_jumpTimeStamp) >= m_minJumpInterval;
 
-        if ((jumpCooldownOver && m_isGrounded && Input.GetKey(KeyCode.Joystick1Button0)&&!isKeyboard) || (jumpCooldownOver && m_isGrounded && Input.GetKey(KeyCode.Space) && isKeyboard))
+        if ((jumpCooldownOver && m_isGrounded && Input.GetKey(KeyCode.Joystick1Button0) && !isKeyboard) || (jumpCooldownOver && m_isGrounded && Input.GetKey(KeyCode.Space) && isKeyboard))
         {
             m_jumpTimeStamp = Time.time;
             m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
