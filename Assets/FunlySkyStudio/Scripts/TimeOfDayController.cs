@@ -298,9 +298,9 @@ namespace Funly.SkyStudio
 
       // Sky.
       m_SkyMaterialController.BackgroundCubemap = skyProfile.GetTexturePropertyValue(ProfilePropertyKeys.SkyCubemapKey, timeOfDay) as Cubemap;
-      m_SkyMaterialController.SkyColor = skyProfile.GetColorPropertyValue(ProfilePropertyKeys.SkyUpperColorKey, timeOfDay);
-      m_SkyMaterialController.SkyMiddleColor = skyProfile.GetColorPropertyValue(ProfilePropertyKeys.SkyMiddleColorKey, timeOfDay);
-      m_SkyMaterialController.HorizonColor = skyProfile.GetColorPropertyValue(ProfilePropertyKeys.SkyLowerColorKey, timeOfDay);
+      //m_SkyMaterialController.SkyColor = skyProfile.GetColorPropertyValue(ProfilePropertyKeys.SkyUpperColorKey, timeOfDay);
+      //m_SkyMaterialController.SkyMiddleColor = skyProfile.GetColorPropertyValue(ProfilePropertyKeys.SkyMiddleColorKey, timeOfDay);
+      //m_SkyMaterialController.HorizonColor = skyProfile.GetColorPropertyValue(ProfilePropertyKeys.SkyLowerColorKey, timeOfDay);
       m_SkyMaterialController.GradientFadeBegin = skyProfile.GetNumberPropertyValue(ProfilePropertyKeys.HorizonTrasitionStartKey, timeOfDay);
       m_SkyMaterialController.GradientFadeLength = skyProfile.GetNumberPropertyValue(ProfilePropertyKeys.HorizonTransitionLengthKey, timeOfDay);
       m_SkyMaterialController.SkyMiddlePosition = skyProfile.GetNumberPropertyValue(ProfilePropertyKeys.SkyMiddleColorPositionKey, timeOfDay);
@@ -347,8 +347,8 @@ namespace Funly.SkyStudio
         {
           m_SkyMaterialController.CloudCubemapNormalLightDirection = GetPrimaryLightDirection();
           m_SkyMaterialController.CloudCubemapNormalTexture = skyProfile.GetTexturePropertyValue(ProfilePropertyKeys.CloudCubemapNormalTextureKey, timeOfDay);
-          m_SkyMaterialController.CloudCubemapNormalLitColor = skyProfile.GetColorPropertyValue(ProfilePropertyKeys.CloudCubemapNormalLitColorKey, timeOfDay);
-          m_SkyMaterialController.CloudCubemapNormalShadowColor = skyProfile.GetColorPropertyValue(ProfilePropertyKeys.CloudCubemapNormalShadowKey, timeOfDay);
+          //m_SkyMaterialController.CloudCubemapNormalLitColor = skyProfile.GetColorPropertyValue(ProfilePropertyKeys.CloudCubemapNormalLitColorKey, timeOfDay);
+          //m_SkyMaterialController.CloudCubemapNormalShadowColor = skyProfile.GetColorPropertyValue(ProfilePropertyKeys.CloudCubemapNormalShadowKey, timeOfDay);
           m_SkyMaterialController.CloudCubemapNormalAmbientIntensity = skyProfile.GetNumberPropertyValue(ProfilePropertyKeys.CloudCubemapNormalAmbientIntensity, timeOfDay);
           m_SkyMaterialController.CloudCubemapNormalHeight = skyProfile.GetNumberPropertyValue(ProfilePropertyKeys.CloudCubemapNormalHeightKey, timeOfDay);
           m_SkyMaterialController.CloudCubemapNormalRotationSpeed = skyProfile.GetNumberPropertyValue(ProfilePropertyKeys.CloudCubemapNormalRotationSpeedKey, timeOfDay);
@@ -357,8 +357,8 @@ namespace Funly.SkyStudio
           {
             m_SkyMaterialController.CloudCubemapNormalDoubleLayerHeight = skyProfile.GetNumberPropertyValue(ProfilePropertyKeys.CloudCubemapNormalDoubleLayerHeightKey, timeOfDay);
             m_SkyMaterialController.CloudCubemapNormalDoubleLayerRotationSpeed = skyProfile.GetNumberPropertyValue(ProfilePropertyKeys.CloudCubemapNormalDoubleLayerRotationSpeedKey, timeOfDay);
-            m_SkyMaterialController.CloudCubemapNormalDoubleLayerLitColor = skyProfile.GetColorPropertyValue(ProfilePropertyKeys.CloudCubemapNormalDoubleLayerLitColorKey, timeOfDay);
-            m_SkyMaterialController.CloudCubemapNormalDoubleLayerShadowColor = skyProfile.GetColorPropertyValue(ProfilePropertyKeys.CloudCubemapNormalDoubleLayerShadowKey, timeOfDay);
+            //m_SkyMaterialController.CloudCubemapNormalDoubleLayerLitColor = skyProfile.GetColorPropertyValue(ProfilePropertyKeys.CloudCubemapNormalDoubleLayerLitColorKey, timeOfDay);
+            //m_SkyMaterialController.CloudCubemapNormalDoubleLayerShadowColor = skyProfile.GetColorPropertyValue(ProfilePropertyKeys.CloudCubemapNormalDoubleLayerShadowKey, timeOfDay);
 
             if (skyProfile.IsFeatureEnabled(ProfileFeatureKeys.CubemapNormalCloudDoubleLayerCubemapFeature))
             {
@@ -592,9 +592,9 @@ namespace Funly.SkyStudio
             }
             else
             {
-                m_SkyMaterialController.SkyColor = new Color(255.0f / 255.0f, 221.0f / 255.0f, 49.0f / 255.0f, 1.0f);
-                m_SkyMaterialController.SkyMiddleColor = new Color(245.0f / 255.0f, 106.0f / 255.0f, 52.0f / 255.0f, 1.0f);
-                m_SkyMaterialController.HorizonColor = new Color(250.0f / 255.0f, 166.0f / 255.0f, 133.0f / 255.0f, 1.0f);
+                m_SkyMaterialController.SkyColor = new Color(73.0f / 255.0f, 81.0f / 255.0f, 82.0f / 255.0f, 1.0f);
+                m_SkyMaterialController.SkyMiddleColor = new Color(147.0f / 255.0f, 164.0f / 255.0f, 168.0f / 255.0f, 1.0f);
+                m_SkyMaterialController.HorizonColor = new Color(192.0f / 255.0f, 192.0f / 255.0f, 192.0f / 255.0f, 1.0f);
 
                 if (skyProfile.IsFeatureEnabled(ProfileFeatureKeys.CubemapNormalCloudFeature))
                 {

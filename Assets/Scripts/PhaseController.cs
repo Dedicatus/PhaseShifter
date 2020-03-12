@@ -24,6 +24,7 @@ public class PhaseController : MonoBehaviour
         phaseSwitched = false;
         player = GameObject.FindGameObjectWithTag("Player");
         timeOfDayController = GameObject.FindWithTag("System").transform.Find("SkySystemController").GetComponent<Funly.SkyStudio.TimeOfDayController>();
+        timeOfDayController.switchSkyColor(true);
     }
 
     private void Update()
