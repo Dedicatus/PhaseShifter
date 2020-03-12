@@ -24,9 +24,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 565792314429028703}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.73, y: 3.9109402, z: -14.434002}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3604810742848801208}
   - {fileID: 8461998672023967237}
@@ -179,13 +179,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6323151079261558576, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 13.05
+      propertyPath: m_LocalScale.z
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6323151079261558576, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
+      propertyPath: m_LocalScale.y
+      value: 13.05
       objectReference: {fileID: 0}
     - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
@@ -201,26 +201,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DeadZone (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6323151079261558581, guid: 21dfc21f4941f964490e6c8480199fcd,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.6047045
-      objectReference: {fileID: 0}
-    - target: {fileID: 6323151079261558581, guid: 21dfc21f4941f964490e6c8480199fcd,
-        type: 3}
-      propertyPath: m_Center.x
-      value: -0.0000000069868897
-      objectReference: {fileID: 0}
-    - target: {fileID: 6323151079261558581, guid: 21dfc21f4941f964490e6c8480199fcd,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 0.19764678
-      objectReference: {fileID: 0}
-    - target: {fileID: 6323151079261558581, guid: 21dfc21f4941f964490e6c8480199fcd,
-        type: 3}
-      propertyPath: m_Center.z
-      value: 0.000004843504
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21dfc21f4941f964490e6c8480199fcd, type: 3}
@@ -315,6 +295,10 @@ PrefabInstance:
     - target: {fileID: 1997620202637898, guid: aba885aef7e30e7408477d75b92aaa41, type: 3}
       propertyPath: m_Name
       value: Waterfall_Wide
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997620202637898, guid: aba885aef7e30e7408477d75b92aaa41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4561274582914478, guid: aba885aef7e30e7408477d75b92aaa41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -445,13 +429,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6323151079261558576, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 54.15
+      propertyPath: m_LocalScale.z
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6323151079261558576, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
+      propertyPath: m_LocalScale.y
+      value: 54.15
       objectReference: {fileID: 0}
     - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
