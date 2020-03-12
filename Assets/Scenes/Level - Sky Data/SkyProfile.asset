@@ -47,7 +47,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          color: {r: 0.33490568, g: 0.58847296, b: 1, a: 1}
+          color: {r: 0.28595585, g: 0.31640485, b: 0.3207547, a: 1}
         m_Name: Sky Upper Color
         m_Id: edcafd85-9dab-432b-81be-76b2ee64fc3d
       - keyframes:
@@ -55,7 +55,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          color: {r: 0.56737274, g: 0.85007906, b: 0.9622642, a: 1}
+          color: {r: 0.5762727, g: 0.64120287, b: 0.6603774, a: 1}
         m_Name: Sky Middle Color
         m_Id: 737c3f4b-9a33-48c6-bc7a-43c7bb3c6380
       - keyframes:
@@ -63,7 +63,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          color: {r: 0.9009434, g: 0.9858491, b: 1, a: 1}
+          color: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
         m_Name: Sky Lower Color
         m_Id: e06a7d5e-aeeb-464a-ab5c-411dcbbd3052
       - keyframes:
@@ -1779,10 +1779,12 @@ MonoBehaviour:
     - MobileQualityFeature
     - StarBasicFeature
     - VertexGradientSkyFeature
-    m_Values: 01010000000000000000000001000000000000000000000001010001010001000100000000
+    m_Values: 01010000000101000000000001000000000000000000000001010001010001000100000000
   lightningArtSet: {fileID: 11400000, guid: fcd26c6d0379bd1498f9fbfeaf211979, type: 2}
   rainSplashArtSet: {fileID: 11400000, guid: bc520d172250ae746bd6c81b2ca80510, type: 2}
-  starLayer1DataTexture: {fileID: 0}
-  starLayer2DataTexture: {fileID: 0}
+  starLayer1DataTexture: {fileID: 2800000, guid: c723f6ddf85e191419a1e57b1fdeb7d0,
+    type: 2}
+  starLayer2DataTexture: {fileID: 2800000, guid: 7d27402062669c54782529ea6d479230,
+    type: 2}
   starLayer3DataTexture: {fileID: 0}
   m_ProfileVersion: 1
