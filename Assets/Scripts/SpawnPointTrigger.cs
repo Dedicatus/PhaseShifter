@@ -10,7 +10,7 @@ public class SpawnPointTrigger : MonoBehaviour
 
     private void Start()
     {
-        levelController = GameObject.Find("LevelController").transform.GetComponent<LevelController>();
+        levelController = GameObject.Find("LevelController").GetComponent<LevelController>();
         triggered = false;
     }
     private void OnTriggerEnter(Collider other)
