@@ -589,22 +589,22 @@ namespace Funly.SkyStudio
                         m_SkyMaterialController.CloudCubemapNormalDoubleLayerShadowColor = new Color(128.0f / 255.0f, 128.0f / 255.0f, 128.0f / 255.0f, 1.0f);
                     }
                 }
-                else
+            }
+            else
+            {
+                m_SkyMaterialController.SkyColor = new Color(255.0f / 255.0f, 221.0f / 255.0f, 49.0f / 255.0f, 1.0f);
+                m_SkyMaterialController.SkyMiddleColor = new Color(245.0f / 255.0f, 106.0f / 255.0f, 52.0f / 255.0f, 1.0f);
+                m_SkyMaterialController.HorizonColor = new Color(250.0f / 255.0f, 166.0f / 255.0f, 133.0f / 255.0f, 1.0f);
+
+                if (skyProfile.IsFeatureEnabled(ProfileFeatureKeys.CubemapNormalCloudFeature))
                 {
-                    m_SkyMaterialController.SkyColor = new Color(255.0f / 255.0f, 221.0f / 255.0f, 49.0f / 255.0f, 1.0f);
-                    m_SkyMaterialController.SkyMiddleColor = new Color(245.0f / 255.0f, 106.0f / 255.0f, 52.0f / 255.0f, 1.0f);
-                    m_SkyMaterialController.HorizonColor = new Color(250.0f / 255.0f, 166.0f / 255.0f, 133.0f / 255.0f, 1.0f);
+                    m_SkyMaterialController.CloudCubemapNormalLitColor = new Color(255.0f / 255.0f, 255.0f / 255.0f, 255.0f / 255.0f, 1.0f);
+                    m_SkyMaterialController.CloudCubemapNormalShadowColor = new Color(174.0f / 255.0f, 174.0f / 255.0f, 174.0f / 255.0f, 1.0f);
 
-                    if (skyProfile.IsFeatureEnabled(ProfileFeatureKeys.CubemapNormalCloudFeature))
+                    if (skyProfile.IsFeatureEnabled(ProfileFeatureKeys.CubemapNormalCloudDoubleLayerFeature))
                     {
-                        m_SkyMaterialController.CloudCubemapNormalLitColor = new Color(255.0f / 255.0f, 255.0f / 255.0f, 255.0f / 255.0f, 1.0f);
-                        m_SkyMaterialController.CloudCubemapNormalShadowColor = new Color(174.0f / 255.0f, 174.0f / 255.0f, 174.0f / 255.0f, 1.0f);
-
-                        if (skyProfile.IsFeatureEnabled(ProfileFeatureKeys.CubemapNormalCloudDoubleLayerFeature))
-                        {
-                            m_SkyMaterialController.CloudCubemapNormalDoubleLayerLitColor = new Color(255.0f / 255.0f, 255.0f / 255.0f, 255.0f / 255.0f, 1.0f);
-                            m_SkyMaterialController.CloudCubemapNormalDoubleLayerShadowColor = new Color(128.0f / 255.0f, 128.0f / 255.0f, 128.0f / 255.0f, 1.0f);
-                        }
+                        m_SkyMaterialController.CloudCubemapNormalDoubleLayerLitColor = new Color(255.0f / 255.0f, 255.0f / 255.0f, 255.0f / 255.0f, 1.0f);
+                        m_SkyMaterialController.CloudCubemapNormalDoubleLayerShadowColor = new Color(128.0f / 255.0f, 128.0f / 255.0f, 128.0f / 255.0f, 1.0f);
                     }
                 }
             }
