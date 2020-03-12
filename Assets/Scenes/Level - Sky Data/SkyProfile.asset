@@ -1779,7 +1779,7 @@ MonoBehaviour:
     - MobileQualityFeature
     - StarBasicFeature
     - VertexGradientSkyFeature
-    m_Values: 01010000000000000101010001000000000000000000000001010001010001000100000000
+    m_Values: 01010000000000000000000001000000000000000000000001010001010001000100000000
   lightningArtSet: {fileID: 11400000, guid: fcd26c6d0379bd1498f9fbfeaf211979, type: 2}
   rainSplashArtSet: {fileID: 11400000, guid: bc520d172250ae746bd6c81b2ca80510, type: 2}
   starLayer1DataTexture: {fileID: 2800000, guid: c723f6ddf85e191419a1e57b1fdeb7d0,
