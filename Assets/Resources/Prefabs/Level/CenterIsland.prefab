@@ -927,6 +927,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8246306336638304017}
     m_Modifications:
+    - target: {fileID: 4561500271661138664, guid: 4a697694c376b424a97f85ddbea3f42f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5207308351575172906, guid: 4a697694c376b424a97f85ddbea3f42f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -986,6 +991,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: IslandWithHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 7382536006384866910, guid: 4a697694c376b424a97f85ddbea3f42f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a697694c376b424a97f85ddbea3f42f, type: 3}
