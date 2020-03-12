@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PhaseController : MonoBehaviour
 {
+    private Funly.SkyStudio.TimeOfDayController timeOfDayController;
+
     public enum GamePhase { A, B};
     public GamePhase curGamePhase;
     private bool phaseSwitched;
@@ -21,6 +23,7 @@ public class PhaseController : MonoBehaviour
         curGamePhase = GamePhase.A;
         phaseSwitched = false;
         player = GameObject.FindGameObjectWithTag("Player");
+        timeOfDayController = GameObject.FindWithTag("System").transform.Find("SkySystemController").GetComponent<Funly.SkyStudio.TimeOfDayController>();
     }
 
     private void Update()
@@ -66,14 +69,16 @@ public class PhaseController : MonoBehaviour
         {
             case GamePhase.A:
                 curGamePhase = GamePhase.B;
-                phaseSwitched = true;
+                timeOfDayController.switchSkyColor(false);
                 grassMaterial.SetColor("_Color", grassMaterialB.GetColor("_Color"));
                 grassMaterial.SetColor("_EmissionColor", grassMaterialB.GetColor("_EmissionColor"));
                 leafMaterial.SetColor("_Color", leafMaterialB.GetColor("_Color"));
                 leafMaterial.SetColor("_EmissionColor", leafMaterialB.GetColor("_EmissionColor"));
+                phaseSwitched = true;
                 break;
             case GamePhase.B:
                 curGamePhase = GamePhase.A;
+                timeOfDayController.switchSkyColor(true);
                 grassMaterial.SetColor("_Color", grassMaterialA.GetColor("_Color"));
                 grassMaterial.SetColor("_EmissionColor", grassMaterialA.GetColor("_EmissionColor"));
                 leafMaterial.SetColor("_Color", leafMaterialA.GetColor("_Color"));
