@@ -1243,7 +1243,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          value: 0.5
+          value: 0.251
         m_Name: Thunder Sound Volume
         m_Id: 272e6088-c216-4daa-9400-fb71b0ce1033
         minValue: 0
@@ -1353,7 +1353,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          value: 1
+          value: 0.2
         m_Name: Lightning Probability
         m_Id: e29efcc5-2980-4df8-9113-b9b01b9ffa7f
         minValue: 0
@@ -1363,7 +1363,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          value: 6
+          value: 9.9
         m_Name: Lightning Cool Down
         m_Id: faee665b-38c3-44ea-812f-cf3e61e39431
         minValue: 0
@@ -1779,7 +1779,7 @@ MonoBehaviour:
     - MobileQualityFeature
     - StarBasicFeature
     - VertexGradientSkyFeature
-    m_Values: 01010000000000000000000001000000000000000000000001010001010001000100000000
+    m_Values: 01000000000000000101010001000000000000000000000001010001010001000100000000
   lightningArtSet: {fileID: 11400000, guid: fcd26c6d0379bd1498f9fbfeaf211979, type: 2}
   rainSplashArtSet: {fileID: 11400000, guid: bc520d172250ae746bd6c81b2ca80510, type: 2}
   starLayer1DataTexture: {fileID: 2800000, guid: c723f6ddf85e191419a1e57b1fdeb7d0,
