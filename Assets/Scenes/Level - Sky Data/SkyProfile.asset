@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 802ef6648d8f86f498c5fc5043f434bc, type: 3}
-  m_Name: Toon Daytime - Low Poly Lit Clouds
+  m_Name: SkyProfile
   m_EditorClassIdentifier: 
-  m_SkyboxMaterial: {fileID: 2100000, guid: b1d765c5bf524304398b7bb851c2c701, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 176b084c23b37a946992bd59162a5eee, type: 2}
   m_ShaderName: Funly/Sky Studio/Skybox/3D Standard
   timelineManagedKeys: []
   keyframeGroups:
@@ -47,7 +47,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          color: {r: 0.46323532, g: 0.6668357, b: 1, a: 1}
+          color: {r: 0.33490568, g: 0.58847296, b: 1, a: 1}
         m_Name: Sky Upper Color
         m_Id: edcafd85-9dab-432b-81be-76b2ee64fc3d
       - keyframes:
@@ -55,7 +55,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          color: {r: 0.42333475, g: 0.82774276, b: 0.99264705, a: 1}
+          color: {r: 0.56737274, g: 0.85007906, b: 0.9622642, a: 1}
         m_Name: Sky Middle Color
         m_Id: 737c3f4b-9a33-48c6-bc7a-43c7bb3c6380
       - keyframes:
@@ -63,7 +63,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          color: {r: 0.6544118, g: 0.95709944, b: 1, a: 1}
+          color: {r: 0.9009434, g: 0.9858491, b: 1, a: 1}
         m_Name: Sky Lower Color
         m_Id: e06a7d5e-aeeb-464a-ab5c-411dcbbd3052
       - keyframes:
@@ -103,7 +103,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          color: {r: 0.9830957, g: 0.9852941, b: 0.8259083, a: 1}
+          color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
         m_Name: Sun Light Color
         m_Id: e0798d0e-e5a4-4687-a25b-c9e86ab7ad15
       - keyframes:
@@ -353,7 +353,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          value: 0.5
+          value: 0.092
         m_Name: Sky Middle Color Balance
         m_Id: f2fa9790-04eb-4644-aeda-e81a08b70814
         minValue: 0
@@ -363,7 +363,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          value: -0.014
+          value: -0.16
         m_Name: Horizon Position
         m_Id: 0d215a4b-f845-4855-b7b7-26d3b1f78953
         minValue: -1
@@ -533,7 +533,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          value: 1
+          value: 0
         m_Name: Sun Light Intensity
         m_Id: 279922cd-5969-41cc-9a98-5e2cf53db4fa
         minValue: 0
@@ -1443,7 +1443,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          value: 0.03
+          value: 0.01
         m_Name: Cloud Lit - Rotation Speed
         m_Id: 8f9aeb4b-58fa-4d0a-be00-35d56ff63dc8
         minValue: -0.5
@@ -1473,7 +1473,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          value: 0.07
+          value: 0.02
         m_Name: Cloud Lit - Double Layer Rotation Speed
         m_Id: 85c967a3-e944-4bf8-808b-336c59e436f2
         minValue: -0.5
@@ -1714,8 +1714,8 @@ MonoBehaviour:
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
           spherePoint:
-            horizontalRotation: 0.39
-            verticalRotation: 0.9
+            horizontalRotation: -1.03
+            verticalRotation: 0.88
         m_Name: Sun Position
         m_Id: 675533c6-e625-4e7a-952d-6e191eed8364
       - keyframes:
@@ -1779,7 +1779,7 @@ MonoBehaviour:
     - MobileQualityFeature
     - StarBasicFeature
     - VertexGradientSkyFeature
-    m_Values: 01010000000000000000000001000000000000000000000001010001010000000100000000
+    m_Values: 01010000000000000000000001000000000000000000000001010001010001000100000000
   lightningArtSet: {fileID: 11400000, guid: fcd26c6d0379bd1498f9fbfeaf211979, type: 2}
   rainSplashArtSet: {fileID: 11400000, guid: bc520d172250ae746bd6c81b2ca80510, type: 2}
   starLayer1DataTexture: {fileID: 0}
