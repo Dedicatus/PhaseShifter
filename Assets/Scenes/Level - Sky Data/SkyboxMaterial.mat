@@ -10,7 +10,7 @@ Material:
   m_Name: SkyboxMaterial
   m_Shader: {fileID: 4800000, guid: a449307a7b4cccf45b5b0e8cc47be915, type: 3}
   m_ShaderKeywords: ' CLOUDS CUBEMAP_CLOUD_FORMAT_RGBA CUBEMAP_NORMAL_CLOUDS CUBEMAP_NORMAL_CLOUD_DOUBLE_LAYER
-    GRADIENT_BACKGROUND STAR_LAYER_1 STAR_LAYER_2 SUN'
+    GRADIENT_BACKGROUND SUN'
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -152,11 +152,12 @@ Material:
     - _CloudColor1: {r: 1, g: 1, b: 1, a: 1}
     - _CloudColor2: {r: 0.74264705, g: 0.74264705, b: 0.74264705, a: 1}
     - _CloudCubemapDoubleLayerTintColor: {r: 1, g: 1, b: 1, a: 1}
-    - _CloudCubemapNormalDoubleLitColor: {r: 1, g: 1, b: 1, a: 1}
-    - _CloudCubemapNormalDoubleShadowColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608,
+    - _CloudCubemapNormalDoubleLitColor: {r: 0.62352943, g: 0.62352943, b: 0.62352943,
         a: 1}
-    - _CloudCubemapNormalLitColor: {r: 1, g: 1, b: 1, a: 1}
-    - _CloudCubemapNormalShadowColor: {r: 0.68235296, g: 0.68235296, b: 0.68235296,
+    - _CloudCubemapNormalDoubleShadowColor: {r: 0.26666668, g: 0.26666668, b: 0.26666668,
+        a: 1}
+    - _CloudCubemapNormalLitColor: {r: 0.59607846, g: 0.59607846, b: 0.59607846, a: 1}
+    - _CloudCubemapNormalShadowColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746,
         a: 1}
     - _CloudCubemapNormalToLight: {r: 0.3280174, g: 0.7707389, b: -0.546229, a: 0}
     - _CloudCubemapTintColor: {r: 1, g: 1, b: 1, a: 1}

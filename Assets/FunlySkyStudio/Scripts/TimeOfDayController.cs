@@ -598,13 +598,13 @@ namespace Funly.SkyStudio
 
                 if (skyProfile.IsFeatureEnabled(ProfileFeatureKeys.CubemapNormalCloudFeature))
                 {
-                    m_SkyMaterialController.CloudCubemapNormalLitColor = new Color(255.0f / 255.0f, 255.0f / 255.0f, 255.0f / 255.0f, 1.0f);
-                    m_SkyMaterialController.CloudCubemapNormalShadowColor = new Color(174.0f / 255.0f, 174.0f / 255.0f, 174.0f / 255.0f, 1.0f);
+                    m_SkyMaterialController.CloudCubemapNormalLitColor = new Color(152.0f / 255.0f, 152.0f / 255.0f, 152.0f / 255.0f, 1.0f);
+                    m_SkyMaterialController.CloudCubemapNormalShadowColor = new Color(94.0f / 255.0f, 94.0f / 255.0f, 94.0f / 255.0f, 1.0f);
 
                     if (skyProfile.IsFeatureEnabled(ProfileFeatureKeys.CubemapNormalCloudDoubleLayerFeature))
                     {
-                        m_SkyMaterialController.CloudCubemapNormalDoubleLayerLitColor = new Color(255.0f / 255.0f, 255.0f / 255.0f, 255.0f / 255.0f, 1.0f);
-                        m_SkyMaterialController.CloudCubemapNormalDoubleLayerShadowColor = new Color(128.0f / 255.0f, 128.0f / 255.0f, 128.0f / 255.0f, 1.0f);
+                        m_SkyMaterialController.CloudCubemapNormalDoubleLayerLitColor = new Color(159.0f / 255.0f, 159.0f / 255.0f, 159.0f / 255.0f, 1.0f);
+                        m_SkyMaterialController.CloudCubemapNormalDoubleLayerShadowColor = new Color(68.0f / 255.0f, 68.0f / 255.0f, 68.0f / 255.0f, 1.0f);
                     }
                 }
             }

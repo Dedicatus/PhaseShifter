@@ -167,7 +167,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          color: {r: 0.3496972, g: 0.5852076, b: 0.9705882, a: 1}
+          color: {r: 0.65881985, g: 0.7840071, b: 0.990566, a: 1}
         m_Name: Lightning Tint Color
         m_Id: 2663a5f3-c842-4449-8802-66bcde6de706
       - keyframes:
@@ -183,7 +183,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          color: {r: 1, g: 1, b: 1, a: 1}
+          color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
         m_Name: Cloud Lit - Light Color
         m_Id: ae721c93-5e9e-425b-988e-7301ddf3c789
       - keyframes:
@@ -191,7 +191,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          color: {r: 0.6838235, g: 0.6838235, b: 0.6838235, a: 1}
+          color: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
         m_Name: Cloud Lit - Shadow Color
         m_Id: 9a0876aa-e3c0-489d-8b64-c1b7114506f6
       - keyframes:
@@ -207,7 +207,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          color: {r: 1, g: 1, b: 1, a: 1}
+          color: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
         m_Name: Cloud Lit - Double Layer Lit Color
         m_Id: b1b25368-86ad-4097-82dd-20d0da545cdf
       - keyframes:
@@ -215,7 +215,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          color: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
         m_Name: Cloud Lit - Double Layer Shadow Color
         m_Id: 992de7a7-5459-4bf6-8ea8-fb3d9a1126c8
       - keyframes:
@@ -1353,7 +1353,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          value: 0.051
+          value: 1
         m_Name: Lightning Probability
         m_Id: e29efcc5-2980-4df8-9113-b9b01b9ffa7f
         minValue: 0
@@ -1779,7 +1779,7 @@ MonoBehaviour:
     - MobileQualityFeature
     - StarBasicFeature
     - VertexGradientSkyFeature
-    m_Values: 01010000000101000000000001000000000000000000000001010001010001000100000000
+    m_Values: 01010000000000000101010001000000000000000000000001010001010001000100000000
   lightningArtSet: {fileID: 11400000, guid: fcd26c6d0379bd1498f9fbfeaf211979, type: 2}
   rainSplashArtSet: {fileID: 11400000, guid: bc520d172250ae746bd6c81b2ca80510, type: 2}
   starLayer1DataTexture: {fileID: 2800000, guid: c723f6ddf85e191419a1e57b1fdeb7d0,
