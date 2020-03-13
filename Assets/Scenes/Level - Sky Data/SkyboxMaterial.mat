@@ -152,17 +152,18 @@ Material:
     - _CloudColor1: {r: 1, g: 1, b: 1, a: 1}
     - _CloudColor2: {r: 0.74264705, g: 0.74264705, b: 0.74264705, a: 1}
     - _CloudCubemapDoubleLayerTintColor: {r: 1, g: 1, b: 1, a: 1}
-    - _CloudCubemapNormalDoubleLitColor: {r: 1, g: 1, b: 1, a: 1}
-    - _CloudCubemapNormalDoubleShadowColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608,
+    - _CloudCubemapNormalDoubleLitColor: {r: 0.62352943, g: 0.62352943, b: 0.62352943,
         a: 1}
-    - _CloudCubemapNormalLitColor: {r: 1, g: 1, b: 1, a: 1}
-    - _CloudCubemapNormalShadowColor: {r: 0.68235296, g: 0.68235296, b: 0.68235296,
+    - _CloudCubemapNormalDoubleShadowColor: {r: 0.26666668, g: 0.26666668, b: 0.26666668,
+        a: 1}
+    - _CloudCubemapNormalLitColor: {r: 0.59607846, g: 0.59607846, b: 0.59607846, a: 1}
+    - _CloudCubemapNormalShadowColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746,
         a: 1}
     - _CloudCubemapNormalToLight: {r: 0, g: 1, b: 0, a: 0}
     - _CloudCubemapTintColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GradientSkyLowerColor: {r: 0.9019608, g: 0.9843137, b: 1, a: 1}
-    - _GradientSkyMiddleColor: {r: 0.5686275, g: 0.8509804, b: 0.9607843, a: 1}
-    - _GradientSkyUpperColor: {r: 0.33333334, g: 0.5882353, b: 1, a: 1}
+    - _GradientSkyLowerColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
+    - _GradientSkyMiddleColor: {r: 0.5764706, g: 0.6431373, b: 0.65882355, a: 1}
+    - _GradientSkyUpperColor: {r: 0.28627452, g: 0.31764707, b: 0.32156864, a: 1}
     - _HorizonFogColor: {r: 1, g: 1, b: 1, a: 1}
     - _MoonColor: {r: 0.66, g: 0.65, b: 0.55, a: 1}
     - _MoonPosition: {r: 0, g: 0, b: 0, a: 0}
