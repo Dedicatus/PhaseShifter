@@ -52,8 +52,8 @@ public class Player : MonoBehaviour
     private CapsuleCollider col;
     [SerializeField] private bool m_isGrounded;
     [SerializeField] private LayerMask groundLayer;
-    
-    private bool isCollisionEntered;
+
+    [SerializeField] private bool isCollisionEntered;
 
     private bool m_isPickingUp;
 
@@ -95,8 +95,8 @@ public class Player : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (isCollisionEntered)
-        {
+        //if (isCollisionEntered)
+        //{
             ContactPoint[] contactPoints = collision.contacts;
             bool validSurfaceNormal = false;
             for (int i = 0; i < contactPoints.Length; i++)
@@ -123,7 +123,7 @@ public class Player : MonoBehaviour
                 }
                 if (m_collisions.Count == 0) { m_isGrounded = false; }
             }
-        }
+        //}
     }
 
     private void OnCollisionExit(Collision collision)
