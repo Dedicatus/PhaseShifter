@@ -5,7 +5,7 @@ using UnityEngine;
 public class PhaseBlock : MonoBehaviour
 {
     private PhaseController phaseController;
-    private enum BlockPhase { A, B };
+    private enum BlockPhase { A, B, Both };
     [SerializeField] private BlockPhase thisBlockPhase = BlockPhase.A;
 
     private GameObject EnabledObject;
@@ -27,6 +27,7 @@ public class PhaseBlock : MonoBehaviour
 
     private void phaseHandler()
     {
+        if (thisBlockPhase == BlockPhase.Both) return;
         if (phaseController.curGamePhase == PhaseController.GamePhase.A)
         {
             switch (thisBlockPhase)
