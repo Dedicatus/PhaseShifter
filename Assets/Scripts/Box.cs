@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Box : MonoBehaviour
+public class MoveableStone : MonoBehaviour
 {
     [SerializeField] Transform spawnPoint;
     [SerializeField] GameObject stoneArea;
