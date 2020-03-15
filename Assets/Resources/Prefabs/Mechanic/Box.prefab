@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc8c3c3041259146adddb98133b29c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisBlockPhase: 2
+  thisBlockPhase: 1
 --- !u!1 &4038435157267747208
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +430,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4038435157267747208}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8d1826df698fb9d49b1ad84082cd658f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -512,8 +512,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.609253, y: 2.5521393, z: 2.578354}
+  m_Center: {x: 0.00579834, y: -0.032543182, z: -0.0034713745}
 --- !u!54 &7165381651322204576
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -598,6 +598,18 @@ PrefabInstance:
     - target: {fileID: 400000, guid: ebdf5029633472d4e99bd7632dbd81a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ebdf5029633472d4e99bd7632dbd81a7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ebdf5029633472d4e99bd7632dbd81a7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ebdf5029633472d4e99bd7632dbd81a7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebdf5029633472d4e99bd7632dbd81a7, type: 3}
