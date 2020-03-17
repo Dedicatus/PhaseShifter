@@ -55,6 +55,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] private bool isCollisionEntered;
 
+    [SerializeField] private bool movedThisFrame;
+
     private bool m_isPickingUp;
 
     public bool keyInRange;
@@ -69,6 +71,7 @@ public class Player : MonoBehaviour
         if (!m_animator) { gameObject.GetComponent<Animator>(); }
         if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
         isCollisionEntered = false;
+        movedThisFrame = false;
         //isKeyboard = true;
         keyInRange = false;
         hasKey = false;
@@ -95,8 +98,8 @@ public class Player : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        //if (isCollisionEntered)
-        //{
+        if (isCollisionEntered || movedThisFrame)
+        {
             ContactPoint[] contactPoints = collision.contacts;
             bool validSurfaceNormal = false;
             for (int i = 0; i < contactPoints.Length; i++)
@@ -109,7 +112,7 @@ public class Player : MonoBehaviour
 
             if (validSurfaceNormal)
             {
-                m_isGrounded = true;
+            m_isGrounded = true;
                 if (!m_collisions.Contains(collision.collider))
                 {
                     m_collisions.Add(collision.collider);
@@ -123,11 +126,12 @@ public class Player : MonoBehaviour
                 }
                 if (m_collisions.Count == 0) { m_isGrounded = false; }
             }
-        //}
+        }
     }
 
     private void OnCollisionExit(Collision collision)
     {
+        movedThisFrame = false;
         if (m_collisions.Contains(collision.collider))
         {
             m_collisions.Remove(collision.collider);
@@ -288,10 +292,16 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             isKeyboard = true;
+            movedThisFrame = true;
         }
         else if (Mathf.Abs(Input.GetAxis("Horizontal_L")) > 0.19f || Mathf.Abs(Input.GetAxis("Vertical_L")) > 0.19f)
         {
             isKeyboard = false;
+            movedThisFrame = true;
+        }
+        else
+        {
+            movedThisFrame = false;
         }
     }
 
