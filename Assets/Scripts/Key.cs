@@ -31,8 +31,8 @@ public class Key : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         myMaterial = transform.GetChild(0).GetComponent<Renderer>().material;
         inRange = false;
-        EnabledObject = transform.Find("EnabledObject").gameObject;
-        DisabledObject = transform.Find("DisabledObject").gameObject;
+        if (transform.Find("EnabledObject").gameObject != null) EnabledObject = transform.Find("EnabledObject").gameObject;
+        if (transform.Find("DisabledObject").gameObject != null) DisabledObject = transform.Find("DisabledObject").gameObject;
     }
 
     private void Update()
@@ -118,16 +118,16 @@ public class Key : MonoBehaviour
                     gameObject.GetComponent<SphereCollider>().enabled = true;
                     myMaterial.SetColor("_Color", keyAEnabledMaterial.GetColor("_Color"));
                     myMaterial.SetColor("_EmissionColor", keyAEnabledMaterial.GetColor("_EmissionColor"));
-                    EnabledObject.SetActive(true);
-                    DisabledObject.SetActive(false);
+                    if (EnabledObject != null) EnabledObject.SetActive(true);
+                    if (DisabledObject != null) DisabledObject.SetActive(false);
                     break;
                 case Phase.B:
                     gameObject.GetComponent<SphereCollider>().enabled = false;
                     myMaterial.SetColor("_Color", keyDisabledMaterial.GetColor("_Color"));
                     myMaterial.SetColor("_EmissionColor", keyDisabledMaterial.GetColor("_EmissionColor"));
                     if (onPlayer) dropKey();
-                    EnabledObject.SetActive(false);
-                    DisabledObject.SetActive(true);
+                    if (EnabledObject != null) EnabledObject.SetActive(false);
+                    if (DisabledObject != null) DisabledObject.SetActive(true);
                     break;
                 default:
                     break;
@@ -142,15 +142,15 @@ public class Key : MonoBehaviour
                     myMaterial.SetColor("_Color", keyDisabledMaterial.GetColor("_Color"));
                     myMaterial.SetColor("_EmissionColor", keyDisabledMaterial.GetColor("_EmissionColor"));
                     if (onPlayer) dropKey();
-                    EnabledObject.SetActive(false);
-                    DisabledObject.SetActive(true);
+                    if (EnabledObject != null) EnabledObject.SetActive(false);
+                    if (DisabledObject != null) DisabledObject.SetActive(true);
                     break;
                 case Phase.B:
                     gameObject.GetComponent<SphereCollider>().enabled = true;
                     myMaterial.SetColor("_Color", keyBEnabledMaterial.GetColor("_Color"));
                     myMaterial.SetColor("_EmissionColor", keyBEnabledMaterial.GetColor("_EmissionColor"));
-                    EnabledObject.SetActive(true);
-                    DisabledObject.SetActive(false);
+                    if (EnabledObject != null) EnabledObject.SetActive(true);
+                    if (DisabledObject != null) DisabledObject.SetActive(false);
                     break;
                 default:
                     break;

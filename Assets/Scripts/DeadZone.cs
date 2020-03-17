@@ -16,6 +16,10 @@ public class DeadZone : MonoBehaviour
     private float respawnTimer;
     private bool isRespawning;
 
+    [Header("ResetObject")]
+    [SerializeField] private GameObject[] box;
+    [SerializeField] private GameObject[] door;
+
     Collider myCollider;
 
     // Start is called before the first frame update
@@ -51,11 +55,26 @@ public class DeadZone : MonoBehaviour
 
         if (respawnTimer <= 0f)
         {
-            Destroy(player);
-            levelController.respawnPlayer();
-            cameraController.isFrozen = false;
-            isRespawning = false;
+            respwanPlayer();
+
+            foreach (GameObject myBox in box)
+            {
+                myBox.transform.GetComponent<Box>().resetPosition();
+            }
+
+            foreach (GameObject myDoor in door)
+            {
+                myDoor.transform.GetComponent<Door>().spawnKey();
+            }
         }
+    }
+
+    public void respwanPlayer()
+    {
+        Destroy(player);
+        levelController.respawnPlayer();
+        cameraController.isFrozen = false;
+        isRespawning = false;
     }
 
     private void OnTriggerEnter(Collider other)

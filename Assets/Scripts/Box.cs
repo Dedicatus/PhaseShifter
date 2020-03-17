@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveableStone : MonoBehaviour
+public class Box : MonoBehaviour
 {
     [SerializeField] Transform spawnPoint;
     [SerializeField] GameObject stoneArea;
@@ -11,8 +11,13 @@ public class MoveableStone : MonoBehaviour
     {
         if (other.gameObject == stoneArea)
         {
-            transform.position = spawnPoint.position;
-            transform.rotation = spawnPoint.rotation;
+            resetPosition();
         }
+    }
+
+    public void resetPosition()
+    {
+        transform.position = spawnPoint.position;
+        transform.rotation = spawnPoint.rotation;
     }
 }

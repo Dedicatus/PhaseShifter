@@ -14,16 +14,13 @@ public class Door : MonoBehaviour
         spawnKey();
     }
 
-    private void Update()
+    public void spawnKey()
     {
-        if (myKey == null)
+        if (myKey != null)
         {
-            spawnKey();
+            Destroy(myKey);
         }
-    }
 
-    private void spawnKey()
-    {
         myKey = Instantiate(keyPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
     }
 
