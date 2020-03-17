@@ -1714,7 +1714,7 @@ MonoBehaviour:
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
           spherePoint:
-            horizontalRotation: -1.03
+            horizontalRotation: -0.92
             verticalRotation: 0.57
         m_Name: Sun Position
         m_Id: 675533c6-e625-4e7a-952d-6e191eed8364

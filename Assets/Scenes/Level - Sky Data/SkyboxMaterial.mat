@@ -158,7 +158,7 @@ Material:
     - _CloudCubemapNormalLitColor: {r: 1, g: 1, b: 1, a: 1}
     - _CloudCubemapNormalShadowColor: {r: 0.68235296, g: 0.68235296, b: 0.68235296,
         a: 1}
-    - _CloudCubemapNormalToLight: {r: 0.4334265, g: 0.539632, b: -0.72176087, a: 0}
+    - _CloudCubemapNormalToLight: {r: 0.5100406, g: 0.539632, b: -0.6698178, a: 0}
     - _CloudCubemapTintColor: {r: 1, g: 1, b: 1, a: 1}
     - _GradientSkyLowerColor: {r: 0.9019608, g: 0.9843137, b: 1, a: 1}
     - _GradientSkyMiddleColor: {r: 0.5686275, g: 0.8509804, b: 0.9607843, a: 1}
@@ -175,5 +175,5 @@ Material:
     - _StarLayer3Color: {r: 0.46323532, g: 0.6668357, b: 1, a: 1}
     - _StarLayer3SpriteDimensions: {r: 0, g: 0, b: 0, a: 0}
     - _SunColor: {r: 1, g: 0.7651822, b: 0, a: 1}
-    - _SunPosition: {r: 0.4334265, g: 0.539632, b: -0.72176087, a: 0}
+    - _SunPosition: {r: 0.5100406, g: 0.539632, b: -0.6698178, a: 0}
     - _SunSpriteDimensions: {r: 0, g: 0, b: 0, a: 0}
