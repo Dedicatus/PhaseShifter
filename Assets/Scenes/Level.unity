@@ -1566,7 +1566,7 @@ PrefabInstance:
         type: 3}
       propertyPath: keyPrefab
       value: 
-      objectReference: {fileID: 4751501875914426941, guid: 21157f9b1fcf7f94abc568dff1c2fc1d,
+      objectReference: {fileID: 497028776284211323, guid: 6dab2d53312627a4e9a8f8d6ed35dd5b,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 655834130acbcf4438e009ec5ec6c046, type: 3}
