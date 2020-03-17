@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-    private GameObject player;
+    [SerializeField] private GameObject player;
     private PhaseController phaseController;
     [SerializeField] private GameObject myCamera;
 
@@ -50,6 +50,10 @@ public class Key : MonoBehaviour
             {
                 rotateKeyWithCamera();
             }
+        }
+        else 
+        {
+            player = GameObject.FindWithTag("Player");
         }
     }
 
