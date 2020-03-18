@@ -54,7 +54,7 @@ public class MovingBlock : MonoBehaviour
         if (other.tag == "Player")
         {
             other.transform.parent = null;
-            //if (thisMovingMode == MovingMode.PlayerOn) { movingAnimator.speed = 0; }
+            if (thisMovingMode == MovingMode.PlayerOn) { movingAnimator.speed = 0; }
         }
     }
 
