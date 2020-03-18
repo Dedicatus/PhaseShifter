@@ -10,7 +10,7 @@ public class MovingBlock : MonoBehaviour
 
     [SerializeField] private BlockPhase thisBlockPhase = BlockPhase.A;
 
-    private enum MovingMode { Always, PhaseOnly };
+    private enum MovingMode { Always, PhaseOnly, PlayerOn };
     [SerializeField] private MovingMode thisMovingMode = MovingMode.Always;
 
     private BoxCollider myTrigger;
@@ -28,6 +28,7 @@ public class MovingBlock : MonoBehaviour
         myTrigger = gameObject.GetComponent<BoxCollider>();
         EnabledObject = transform.Find("EnabledObject").gameObject;
         DisabledObject = transform.Find("DisabledObject").gameObject;
+        if (thisMovingMode == MovingMode.PlayerOn) { movingAnimator.speed = 0; }
     }
 
     // Update is called once per frame
@@ -44,6 +45,7 @@ public class MovingBlock : MonoBehaviour
         if (other.tag == "Player")
         {
             other.transform.parent = transform;
+            if (thisMovingMode == MovingMode.PlayerOn) { movingAnimator.speed = 1; }
         }
     }
 
@@ -52,6 +54,7 @@ public class MovingBlock : MonoBehaviour
         if (other.tag == "Player")
         {
             other.transform.parent = null;
+            //if (thisMovingMode == MovingMode.PlayerOn) { movingAnimator.speed = 0; }
         }
     }
 
