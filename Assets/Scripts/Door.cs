@@ -30,6 +30,9 @@ public class Door : MonoBehaviour
 
         for (int i = 0; i < keyPrefabs.Length; i++)
         {
+            if (keyPrefabs[i] == null)
+                continue;
+            else 
             myKeys[i] = Instantiate(keyPrefabs[i], spawnPoints[i].transform.position, spawnPoints[i].transform.rotation);
         }
     }

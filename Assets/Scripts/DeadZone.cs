@@ -64,6 +64,8 @@ public class DeadZone : MonoBehaviour
 
             foreach (GameObject myDoor in door)
             {
+                if (myDoor == null)
+                    continue;
                 myDoor.transform.GetComponent<Door>().spawnKey();
             }
         }
