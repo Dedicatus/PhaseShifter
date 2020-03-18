@@ -10,8 +10,7 @@ public class ThirdPersonCameraFollow : MonoBehaviour
     [HideInInspector]
     [System.Runtime.InteropServices.DllImport("user32.dll")]
     public static extern int SetCursorPos(int x, int y);
-    public Transform character; //What the camera is looking at..the main character
-    GameObject player;
+    [SerializeField] private Transform character; //What the camera is looking at..the main character
     [SerializeField] private float distance = -5.0f; // Distance to stay from character, Make sure it is negative
     [SerializeField] private float currentPushDistance = 1.0f;
     [SerializeField] private float offsetY = 2.5f;
@@ -25,7 +24,6 @@ public class ThirdPersonCameraFollow : MonoBehaviour
     void start()
     {
         character = GameObject.FindGameObjectWithTag("Player").transform;
-        player = GameObject.FindGameObjectWithTag("Player");
         isFrozen = false;
         Cursor.visible = false;
     }
@@ -36,14 +34,13 @@ public class ThirdPersonCameraFollow : MonoBehaviour
         {
             if (GameObject.FindGameObjectWithTag("Player") != null)
             {
-                player = GameObject.FindGameObjectWithTag("Player");
                 character = GameObject.FindGameObjectWithTag("Player").transform;
             }            
         }
 
         if (character != null && !isFrozen)
         {
-            if (!player.GetComponent<Player>().isKeyboard)
+            if (!character.gameObject.GetComponent<Player>().isKeyboard)
             {
                 if (Mathf.Abs(Input.GetAxis("Horizontal_R")) > 0.19f || Mathf.Abs(Input.GetAxis("Vertical_R")) > 0.19f)
                 {
