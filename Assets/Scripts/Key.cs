@@ -20,7 +20,7 @@ public class Key : MonoBehaviour
     private GameObject DisabledObject;
 
     private bool inRange;
-    [SerializeField] private bool onPlayer;
+    public bool onPlayer;
 
     GameObject myPlayer;
 
@@ -31,6 +31,7 @@ public class Key : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         myMaterial = transform.GetChild(0).GetComponent<Renderer>().material;
         inRange = false;
+        onPlayer = false;
         if (transform.Find("EnabledObject").gameObject != null) EnabledObject = transform.Find("EnabledObject").gameObject;
         if (transform.Find("DisabledObject").gameObject != null) DisabledObject = transform.Find("DisabledObject").gameObject;
     }

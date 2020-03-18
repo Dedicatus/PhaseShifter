@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] private GameObject keyPrefab;
-    [SerializeField] private Transform spawnPoint;
-    private GameObject myKey;
+    [SerializeField] private GameObject[] keyPrefabs;
+    [SerializeField] private Transform[] spawnPoints;
+    private GameObject[] myKeys;
     private Player playerScript;
 
     private void Start()
@@ -16,12 +16,21 @@ public class Door : MonoBehaviour
 
     public void spawnKey()
     {
-        if (myKey != null)
+        if (myKeys != null)
         {
-            Destroy(myKey);
+            foreach (GameObject m_key in myKeys) { Destroy(m_key); }
         }
 
-        myKey = Instantiate(keyPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
+        if (keyPrefabs == null) 
+        {
+            Debug.LogError("Missing key prefab");
+            return;
+        }
+
+        for (int i = 0; i < keyPrefabs.Length; ++i)
+        {
+            myKeys[i] = Instantiate(keyPrefabs[i], spawnPoints[i].transform.position, spawnPoints[i].transform.rotation);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,7 +41,17 @@ public class Door : MonoBehaviour
             if (playerScript.hasKey)
             {
                 Destroy(gameObject);
-                Destroy(myKey);
+
+                if (keyPrefabs == null)
+                {
+                    Debug.LogError("Missing key prefab");
+                    return;
+                }
+
+                foreach (GameObject m_key in myKeys)
+                {
+                    if (m_key.GetComponent<Key>().onPlayer) { Destroy(m_key); }
+                } 
                 playerScript.keyInRange = false;
                 playerScript.hasKey = false;
             }
