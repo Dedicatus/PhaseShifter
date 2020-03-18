@@ -55,6 +55,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] private bool isCollisionEntered;
 
+    public GameObject m_key;
+
     private bool m_isPickingUp;
 
     public bool keyInRange;

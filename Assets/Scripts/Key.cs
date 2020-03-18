@@ -70,6 +70,7 @@ public class Key : MonoBehaviour
                 onPlayer = true;
                 myPlayer.GetComponent<Player>().pickingUpKey();
                 myPlayer.GetComponent<Player>().hasKey = true;
+                myPlayer.GetComponent<Player>().m_key = gameObject;
             }
         }
     }

@@ -11,6 +11,7 @@ public class Door : MonoBehaviour
 
     private void Start()
     {
+        myKeys = new GameObject[keyPrefabs.Length];
         spawnKey();
     }
 
@@ -27,7 +28,7 @@ public class Door : MonoBehaviour
             return;
         }
 
-        for (int i = 0; i < keyPrefabs.Length; ++i)
+        for (int i = 0; i < keyPrefabs.Length; i++)
         {
             myKeys[i] = Instantiate(keyPrefabs[i], spawnPoints[i].transform.position, spawnPoints[i].transform.rotation);
         }
@@ -48,10 +49,8 @@ public class Door : MonoBehaviour
                     return;
                 }
 
-                foreach (GameObject m_key in myKeys)
-                {
-                    if (m_key.GetComponent<Key>().onPlayer) { Destroy(m_key); }
-                } 
+                Destroy(other.transform.GetComponent<Player>().m_key);
+
                 playerScript.keyInRange = false;
                 playerScript.hasKey = false;
             }
