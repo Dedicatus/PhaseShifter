@@ -19,6 +19,7 @@ public class DeadZone : MonoBehaviour
     [Header("ResetObject")]
     [SerializeField] private GameObject[] box;
     [SerializeField] private GameObject[] door;
+    [SerializeField] private GameObject[] movingBlock;
 
     Collider myCollider;
 
@@ -67,6 +68,13 @@ public class DeadZone : MonoBehaviour
                 if (myDoor == null)
                     continue;
                 myDoor.transform.GetComponent<Door>().spawnKey();
+            }
+
+            foreach (GameObject myMovingBlock in movingBlock)
+            {
+                if (myMovingBlock == null)
+                    continue;
+                myMovingBlock.transform.GetComponent<MovingBlock>().resetBlock();
             }
         }
     }

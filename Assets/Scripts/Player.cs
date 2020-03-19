@@ -334,7 +334,6 @@ public class Player : MonoBehaviour
         if (!m_wasGrounded && m_isGrounded)
         {
             m_animator.SetTrigger("Land");
-            Debug.Log("Ohyes!");
             m_rigidBody.velocity = new Vector3(m_rigidBody.velocity.x, 0f, m_rigidBody.velocity.z);
         }
 
