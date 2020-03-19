@@ -64,6 +64,7 @@ public class Player : MonoBehaviour
 
     public bool hasKey;
     public bool isKeyboard;
+    public bool isRespawning;
     private List<Collider> m_collisions = new List<Collider>();
 
     
@@ -77,6 +78,7 @@ public class Player : MonoBehaviour
         keyInRange = false;
         hasKey = false;
         m_inAirTimer = 0f;
+        isRespawning = false;
     }
 
     
@@ -224,15 +226,18 @@ public class Player : MonoBehaviour
             v *= m_walkScale;
         }
 
-        m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
-        m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
+        if (!isRespawning)
+        {
+            m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
+            m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
 
-        transform.position += transform.forward * m_currentV * m_moveSpeed * Time.deltaTime;
-        transform.Rotate(0, m_currentH * m_turnSpeed * Time.deltaTime, 0);
+            transform.position += transform.forward * m_currentV * m_moveSpeed * Time.deltaTime;
+            transform.Rotate(0, m_currentH * m_turnSpeed * Time.deltaTime, 0);
 
-        m_animator.SetFloat("MoveSpeed", m_currentV);
+            m_animator.SetFloat("MoveSpeed", m_currentV);
 
-        JumpingAndLanding();
+            JumpingAndLanding();
+        }
 
     }
 
@@ -267,23 +272,26 @@ public class Player : MonoBehaviour
             h *= m_walkScale;
         }
 
-        m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
-        m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
-
-        Vector3 direction = camera.forward * m_currentV + camera.right * m_currentH;
-
-        float directionLength = direction.magnitude;
-        direction.y = 0;
-        direction = direction.normalized * directionLength;
-
-        if (direction != Vector3.zero)
+        if (!isRespawning)
         {
-            m_currentDirection = Vector3.Slerp(m_currentDirection, direction, Time.deltaTime * m_interpolation);
+            m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
+            m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
 
-            transform.rotation = Quaternion.LookRotation(m_currentDirection);
-            transform.position += m_currentDirection * m_moveSpeed * Time.deltaTime;
+            Vector3 direction = camera.forward * m_currentV + camera.right * m_currentH;
 
-            m_animator.SetFloat("MoveSpeed", direction.magnitude);
+            float directionLength = direction.magnitude;
+            direction.y = 0;
+            direction = direction.normalized * directionLength;
+
+            if (direction != Vector3.zero)
+            {
+                m_currentDirection = Vector3.Slerp(m_currentDirection, direction, Time.deltaTime * m_interpolation);
+
+                transform.rotation = Quaternion.LookRotation(m_currentDirection);
+                transform.position += m_currentDirection * m_moveSpeed * Time.deltaTime;
+
+                m_animator.SetFloat("MoveSpeed", direction.magnitude);
+            }
         }
 
         JumpingAndLanding();
@@ -315,12 +323,10 @@ public class Player : MonoBehaviour
                     m_jumpTimeStamp = Time.time;
                     if (m_inAirTimer == 0f)
                     {
-                        Debug.Log("1");
                         m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
                     }
                     else 
                     {
-                        Debug.Log("2");
                         m_rigidBody.AddForce(Vector3.up * m_jumpForce * lateJumpCompensationScale, ForceMode.Impulse);
                     }
                     m_animator.SetTrigger("Jump");

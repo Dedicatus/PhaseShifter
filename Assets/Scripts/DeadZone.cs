@@ -81,6 +81,7 @@ public class DeadZone : MonoBehaviour
 
     public void respwanPlayer()
     {
+        //player.GetComponent<Player>().isRespawning = false;
         Destroy(player);
         levelController.respawnPlayer();
         cameraController.isFrozen = false;
@@ -92,15 +93,19 @@ public class DeadZone : MonoBehaviour
         if (other.tag == "Player")
         {
             player = other.gameObject;
-            isRespawning = true;
-            if (thisZonePhase == ZonePhase.Air)
+            if (!player.GetComponent<Player>().isRespawning)
             {
-                cameraController.isFrozen = true;
-            }
-            else
-            {
-                Destroy(player);
-            }
+                isRespawning = true;
+                player.GetComponent<Player>().isRespawning = true;
+                if (thisZonePhase == ZonePhase.Air)
+                {
+                    cameraController.isFrozen = true;
+                }
+                else
+                {
+                    Destroy(player);
+                }
+            }     
         }
     }
 

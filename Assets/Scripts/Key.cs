@@ -65,7 +65,8 @@ public class Key : MonoBehaviour
             if ( myPlayer != null )
             {
                 transform.parent = myPlayer.transform;
-                transform.position = myPlayer.transform.position + new Vector3(0f, 1.76f, 0.1f);
+                transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+                transform.position = myPlayer.transform.position + new Vector3(0f, 1.4f, 0f);
                 rotateKeyWithCamera();
                 onPlayer = true;
                 myPlayer.GetComponent<Player>().pickingUpKey();
@@ -78,6 +79,7 @@ public class Key : MonoBehaviour
     private void dropKey()
     {
         transform.parent = null;
+        transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
         transform.position = myPlayer.transform.position + new Vector3(0f, 0.18f, 0f);
         transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         inRange = false;

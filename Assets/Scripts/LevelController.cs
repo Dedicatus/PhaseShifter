@@ -7,33 +7,43 @@ public class LevelController : MonoBehaviour
 {
     [SerializeField] private GameObject player;
 
+    [SerializeField] private GameObject mainCamera;
+
+    [SerializeField] private float respawnCameraY = 25.0f;
+
     [SerializeField] private Transform[] spawnPoints;
 
-    [SerializeField] private int spawnPointIndex;
+    [SerializeField] private int curSpawnPointIndex;
+
+    [SerializeField] private int initSpawnIndex;
 
     // Start is called before the first frame update
     void Start()
     {
+        mainCamera = GameObject.FindWithTag("MainCamera");
         spawnPlayer();
-        spawnPointIndex = 0;
+        curSpawnPointIndex = initSpawnIndex - 1;
     }
 
     public void nextSpawnPoint()
     {
-        ++spawnPointIndex;
+        ++curSpawnPointIndex;
     }
 
     public void spawnPlayer()
     {
-        Instantiate(player, spawnPoints[0].position, spawnPoints[0].rotation);
+        Instantiate(player, spawnPoints[initSpawnIndex].position, spawnPoints[initSpawnIndex].rotation);
+        mainCamera.GetComponent<ThirdPersonCameraFollow>().setRotation(spawnPoints[initSpawnIndex].rotation.eulerAngles.y, respawnCameraY);
+        
     }
 
     public void respawnPlayer()
     {
-        if (spawnPoints[spawnPointIndex] == null)
+        if (spawnPoints[curSpawnPointIndex] == null)
         {
             throw new Exception("SpawnPoint Overflow");
         }
-        Instantiate(player, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+        Instantiate(player, spawnPoints[curSpawnPointIndex].position, spawnPoints[curSpawnPointIndex].rotation);
+        mainCamera.GetComponent<ThirdPersonCameraFollow>().setRotation(spawnPoints[curSpawnPointIndex].rotation.eulerAngles.y, respawnCameraY);
     }
 }

@@ -16,8 +16,8 @@ public class ThirdPersonCameraFollow : MonoBehaviour
     [SerializeField] private float offsetY = 2.5f;
     [SerializeField] private float xRotationSpeed = 2.5f;
     [SerializeField] private float yRotationSpeed = 2.5f;
-    private float currentX = 0.0f; // Holds value of X mouse movement
-    private float currentY = 0.0f; // Holds value of Y mouse movement
+    [SerializeField] private float currentX = 0.0f; // Holds value of X mouse movement
+    [SerializeField] private float currentY = 0.0f; // Holds value of Y mouse movement
 
     public bool isFrozen;
 
@@ -68,10 +68,15 @@ public class ThirdPersonCameraFollow : MonoBehaviour
             if (Physics.SphereCast(gameObject.transform.position, 0.5f, gameObject.transform.forward, out hitInfo, -distance, LayerMask.GetMask("Wall")))
             {
                 gameObject.transform.position = new Vector3(hitInfo.point.x + hitInfo.normal.x * currentPushDistance, hitInfo.point.y + hitInfo.normal.y * currentPushDistance, hitInfo.point.z + hitInfo.normal.z * currentPushDistance);
-                Debug.Log("YES!");
             }
             
         }
+    }
+
+    public void setRotation(float x, float y)
+    {
+        currentX = x;
+        currentY = y;
     }
     
 }

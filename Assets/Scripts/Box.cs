@@ -19,6 +19,7 @@ public class Box : MonoBehaviour
     {
         transform.position = spawnPoint.position;
         transform.rotation = spawnPoint.rotation;
+        transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 
     private void OnCollisionEnter(Collision collision)

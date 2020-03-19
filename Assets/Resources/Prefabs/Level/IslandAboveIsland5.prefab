@@ -27,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37572377084995766}
-  m_LocalRotation: {x: 0.13140307, y: -0.855947, z: 0.21451122, w: 0.45174435}
-  m_LocalPosition: {x: 9.779996, y: 1.3600006, z: 2.309998}
-  m_LocalScale: {x: 16.87, y: 13.049999, z: 1.5000001}
+  m_LocalRotation: {x: 0.13140307, y: -0.855947, z: 0.21451123, w: 0.45174432}
+  m_LocalPosition: {x: 9.8, y: -2.35, z: 2.33}
+  m_LocalScale: {x: 16.87, y: 13.05, z: 1.5}
   m_Children: []
   m_Father: {fileID: 7745820087618977328}
   m_RootOrder: 2
@@ -110,6 +110,7 @@ MonoBehaviour:
   respawnTime: 2
   box: []
   door: []
+  movingBlock: []
 --- !u!1 &3098703684088245636
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,9 +137,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3098703684088245636}
-  m_LocalRotation: {x: -0, y: -0.8910428, z: -0, w: 0.45391917}
-  m_LocalPosition: {x: 8.910005, y: -23.01, z: 1.8599988}
-  m_LocalScale: {x: 1, y: 1.8, z: 1.5000002}
+  m_LocalRotation: {x: -0, y: -0.8910429, z: -0, w: 0.45391917}
+  m_LocalPosition: {x: 8.9299965, y: -26.72, z: 1.8800056}
+  m_LocalScale: {x: 1, y: 1.8, z: 1.5}
   m_Children: []
   m_Father: {fileID: 7745820087618977328}
   m_RootOrder: 0
@@ -236,9 +237,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5439067584613531423}
-  m_LocalRotation: {x: -0, y: -0.8910428, z: -0, w: 0.45391917}
-  m_LocalPosition: {x: 11.039999, y: -27.93, z: 3.3999991}
-  m_LocalScale: {x: 16.870005, y: 54.15, z: 1.5000002}
+  m_LocalRotation: {x: -0, y: -0.8910429, z: -0, w: 0.45391917}
+  m_LocalPosition: {x: 11.059997, y: -31.64, z: 3.4200058}
+  m_LocalScale: {x: 16.87, y: 54.15, z: 1.5}
   m_Children: []
   m_Father: {fileID: 7745820087618977328}
   m_RootOrder: 1
@@ -319,6 +320,7 @@ MonoBehaviour:
   respawnTime: 2
   box: []
   door: []
+  movingBlock: []
 --- !u!1 &7745820087144713319
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +527,7 @@ MonoBehaviour:
   respawnTime: 2
   box: []
   door: []
+  movingBlock: []
 --- !u!1 &7745820087174859164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,6 +1490,7 @@ MonoBehaviour:
   respawnTime: 2
   box: []
   door: []
+  movingBlock: []
 --- !u!1 &7745820088532955459
 GameObject:
   m_ObjectHideFlags: 0
