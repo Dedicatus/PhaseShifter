@@ -80,13 +80,13 @@ public class MovingBlock : MonoBehaviour
             switch (thisBlockPhase)
             {
                 case BlockPhase.A:
-                    myTrigger.enabled = true;
+                    if (thisMovingMode == MovingMode.PhaseOnly) myTrigger.enabled = true;
                     EnabledObject.SetActive(true);
                     DisabledObject.SetActive(false);
                     if (thisMovingMode == MovingMode.PhaseOnly) movingAnimator.speed = 1;
                     break;
                 case BlockPhase.B:
-                    myTrigger.enabled = false;
+                    if (thisMovingMode == MovingMode.PhaseOnly) myTrigger.enabled = false;
                     EnabledObject.SetActive(false);
                     DisabledObject.SetActive(true);
                     if (thisMovingMode == MovingMode.PhaseOnly) movingAnimator.speed = 0;
@@ -100,13 +100,13 @@ public class MovingBlock : MonoBehaviour
             switch (thisBlockPhase)
             {
                 case BlockPhase.A:
-                    myTrigger.enabled = false;
+                    if (thisMovingMode == MovingMode.PhaseOnly) myTrigger.enabled = false;
                     EnabledObject.SetActive(false);
                     DisabledObject.SetActive(true);
                     if (thisMovingMode == MovingMode.PhaseOnly) movingAnimator.speed = 0;
                     break;
                 case BlockPhase.B:
-                    myTrigger.enabled = true;
+                    if (thisMovingMode == MovingMode.PhaseOnly) myTrigger.enabled = true;
                     EnabledObject.SetActive(true);
                     DisabledObject.SetActive(false);
                     if (thisMovingMode == MovingMode.PhaseOnly) movingAnimator.speed = 1;
