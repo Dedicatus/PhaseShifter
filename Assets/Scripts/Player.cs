@@ -40,14 +40,15 @@ public class Player : MonoBehaviour
 
     [SerializeField] private bool m_wasGrounded;
 
-    private float m_inAirTimer;
+    [SerializeField] private float m_inAirTimer;
     [SerializeField] private float fallingAnimationMargin = 0.25f;
     [SerializeField] private float maxFallingSpeed = -30.0f;
-
+    [SerializeField] private float jumpMargin = 0.25f;
+    [SerializeField] private float lateJumpCompensationScale = 1.2f;
     private Vector3 m_currentDirection = Vector3.zero;
 
     private float m_jumpTimeStamp = 0;
-    private float m_minJumpInterval = 0.25f;
+    private float m_minJumpInterval = 0.3f;
 
     private CapsuleCollider col;
     [SerializeField] private bool m_isGrounded;
@@ -65,6 +66,7 @@ public class Player : MonoBehaviour
     public bool isKeyboard;
     private List<Collider> m_collisions = new List<Collider>();
 
+    
     void Awake()
     {
         col = gameObject.GetComponent<CapsuleCollider>();
@@ -123,7 +125,10 @@ public class Player : MonoBehaviour
                 {
                     m_collisions.Remove(collision.collider);
                 }
-                if (m_collisions.Count == 0) { m_isGrounded = false; }
+                if (m_collisions.Count == 0) 
+                { 
+                    m_isGrounded = false; 
+                }
             }
         }
     }
@@ -301,13 +306,27 @@ public class Player : MonoBehaviour
     {
         bool jumpCooldownOver = (Time.time - m_jumpTimeStamp) >= m_minJumpInterval;
 
-        if ((jumpCooldownOver && m_isGrounded && Input.GetKey(KeyCode.Joystick1Button0) && !isKeyboard) || (jumpCooldownOver && m_isGrounded && Input.GetKey(KeyCode.Space) && isKeyboard))
+        if ((Input.GetKey(KeyCode.Joystick1Button0) && !isKeyboard) || (Input.GetKey(KeyCode.Space) && isKeyboard))
         {
-            m_jumpTimeStamp = Time.time;
-            m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
-            m_animator.SetTrigger("Jump");
-            m_isGrounded = false;
-            isCollisionEntered = false;
+            if (jumpCooldownOver)
+            {
+                if (m_inAirTimer <= jumpMargin)
+                {
+                    m_jumpTimeStamp = Time.time;
+                    if (m_inAirTimer == 0f)
+                    {
+                        m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
+                    }
+                    else 
+                    {
+                        m_rigidBody.AddForce(Vector3.up * m_jumpForce * lateJumpCompensationScale, ForceMode.Impulse);
+                    }
+                    m_animator.SetTrigger("Jump");
+                    m_isGrounded = false;
+                    isCollisionEntered = false;
+                }
+                
+            }
         }
 
         if (!m_wasGrounded && m_isGrounded)

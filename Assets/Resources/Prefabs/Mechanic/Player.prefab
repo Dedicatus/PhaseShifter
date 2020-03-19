@@ -1038,13 +1038,17 @@ MonoBehaviour:
   m_rigidBody: {fileID: 5133262545351383099}
   m_controlMode: 1
   m_wasGrounded: 0
+  m_inAirTimer: 0
   fallingAnimationMargin: 1
   maxFallingSpeed: -60
+  jumpMargin: 0.25
+  lateJumpCompensationScale: 1.2
   m_isGrounded: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 1
   isCollisionEntered: 0
+  m_key: {fileID: 0}
   keyInRange: 0
   hasKey: 0
   isKeyboard: 0
