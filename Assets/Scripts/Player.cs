@@ -315,10 +315,12 @@ public class Player : MonoBehaviour
                     m_jumpTimeStamp = Time.time;
                     if (m_inAirTimer == 0f)
                     {
+                        Debug.Log("1");
                         m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
                     }
                     else 
                     {
+                        Debug.Log("2");
                         m_rigidBody.AddForce(Vector3.up * m_jumpForce * lateJumpCompensationScale, ForceMode.Impulse);
                     }
                     m_animator.SetTrigger("Jump");
@@ -332,6 +334,8 @@ public class Player : MonoBehaviour
         if (!m_wasGrounded && m_isGrounded)
         {
             m_animator.SetTrigger("Land");
+            Debug.Log("Ohyes!");
+            m_rigidBody.velocity = new Vector3(m_rigidBody.velocity.x, 0f, m_rigidBody.velocity.z);
         }
 
         
@@ -350,5 +354,10 @@ public class Player : MonoBehaviour
     public bool pickUpAnimation()
     {
         return m_animator.GetCurrentAnimatorStateInfo(0).IsName("Pickup");
+    }
+
+    public void setGrounded(bool b)
+    {
+        m_isGrounded = b;
     }
 }

@@ -15,10 +15,12 @@ public class MovingBlock : MonoBehaviour
 
     private BoxCollider myTrigger;
 
+    [SerializeField] private GameObject m_moveTrigger;
+
     private GameObject EnabledObject;
     private GameObject DisabledObject;
 
-    Animator movingAnimator; 
+    Animator movingAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -34,9 +36,24 @@ public class MovingBlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (thisMovingMode == MovingMode.PhaseOnly)
+        if (thisMovingMode == MovingMode.PhaseOnly || thisMovingMode == MovingMode.PlayerOn)
         {
             phaseHandler();
+        }
+
+        if (thisMovingMode == MovingMode.PlayerOn)
+        {
+            if (m_moveTrigger != null)
+            {
+                if (m_moveTrigger.GetComponent<MoveTrigger>().playerOn)
+                {
+                    movingAnimator.speed = 1;
+                }
+                else
+                {
+                    movingAnimator.speed = 0;
+                }
+            }
         }
     }
 
@@ -45,7 +62,6 @@ public class MovingBlock : MonoBehaviour
         if (other.tag == "Player")
         {
             other.transform.parent = transform;
-            if (thisMovingMode == MovingMode.PlayerOn) { movingAnimator.speed = 1; }
         }
     }
 
@@ -54,7 +70,6 @@ public class MovingBlock : MonoBehaviour
         if (other.tag == "Player")
         {
             other.transform.parent = null;
-            if (thisMovingMode == MovingMode.PlayerOn) { movingAnimator.speed = 0; }
         }
     }
 
@@ -68,13 +83,13 @@ public class MovingBlock : MonoBehaviour
                     myTrigger.enabled = true;
                     EnabledObject.SetActive(true);
                     DisabledObject.SetActive(false);
-                    movingAnimator.speed = 1;
+                    if (thisMovingMode == MovingMode.PhaseOnly) movingAnimator.speed = 1;
                     break;
                 case BlockPhase.B:
                     myTrigger.enabled = false;
                     EnabledObject.SetActive(false);
                     DisabledObject.SetActive(true);
-                    movingAnimator.speed = 0;
+                    if (thisMovingMode == MovingMode.PhaseOnly) movingAnimator.speed = 0;
                     break;
                 default:
                     break;
@@ -88,13 +103,13 @@ public class MovingBlock : MonoBehaviour
                     myTrigger.enabled = false;
                     EnabledObject.SetActive(false);
                     DisabledObject.SetActive(true);
-                    movingAnimator.speed = 0;
+                    if (thisMovingMode == MovingMode.PhaseOnly) movingAnimator.speed = 0;
                     break;
                 case BlockPhase.B:
                     myTrigger.enabled = true;
                     EnabledObject.SetActive(true);
                     DisabledObject.SetActive(false);
-                    movingAnimator.speed = 1;
+                    if (thisMovingMode == MovingMode.PhaseOnly) movingAnimator.speed = 1;
                     break;
                 default:
                     break;
