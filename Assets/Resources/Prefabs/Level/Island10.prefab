@@ -5464,6 +5464,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerOn: 0
+  freezeCamera: 0
+  freezeTime: 3
 --- !u!1 &8202600592903605766
 GameObject:
   m_ObjectHideFlags: 0
