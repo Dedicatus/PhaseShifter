@@ -10,7 +10,7 @@ public class MovingBlock : MonoBehaviour
 
     [SerializeField] private BlockPhase thisBlockPhase = BlockPhase.A;
 
-    private enum MovingMode { Always, PhaseOnly, PlayerOn };
+    private enum MovingMode { Always, PhaseOnly, PhaseBoth, PlayerOn };
     [SerializeField] private MovingMode thisMovingMode = MovingMode.Always;
 
     private BoxCollider myTrigger;
@@ -37,7 +37,7 @@ public class MovingBlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (thisMovingMode == MovingMode.PhaseOnly || thisMovingMode == MovingMode.PlayerOn)
+        if (thisMovingMode == MovingMode.PhaseOnly || thisMovingMode == MovingMode.PlayerOn|| thisMovingMode == MovingMode.PhaseBoth)
         {
             phaseHandler();
         }
@@ -60,17 +60,28 @@ public class MovingBlock : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player"|| other.tag == "Box")
         {
-            other.transform.parent = transform;
+
+            if (other.tag == "Box")
+            {
+                other.transform.parent.parent.parent = transform;
+            }
+            else
+                other.transform.parent = transform;
+            
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.tag == "Box")
         {
-            other.transform.parent = null;
+            
+            if (other.tag == "Box")
+                other.transform.parent.parent.parent = null;
+            else
+                other.transform.parent = null;
         }
     }
 
