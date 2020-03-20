@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="Event" id="{9a9bdc5a-161e-43fa-abab-8f1229844d0c}">
 		<property name="name">
-			<value>Danger</value>
+			<value>Melody</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -98,7 +98,10 @@
 	<object class="MixerBusPanner" id="{9ef9d60e-bdb0-478e-9845-c6debf47aad6}" />
 	<object class="SingleSound" id="{0c09cf42-cc22-4bbc-8607-9dde322fc63b}">
 		<property name="length">
-			<value>410.34303854875282</value>
+			<value>409.01603854875253</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>1.327</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{f5f972ae-7d22-48d7-81c2-ae123fa247e6}</destination>
@@ -123,7 +126,7 @@
 	</object>
 	<object class="LoopRegion" id="{19fbd6ba-e105-49ae-8349-1e414abf3b2d}">
 		<property name="position">
-			<value>13.681513763145643</value>
+			<value>12.354513763145647</value>
 		</property>
 		<property name="length">
 			<value>4.5546808635445064</value>
@@ -137,7 +140,7 @@
 	</object>
 	<object class="NamedMarker" id="{35c59ad1-bcdc-4b7b-b500-622e30ed049a}">
 		<property name="position">
-			<value>21.640000000000001</value>
+			<value>20.313000000000006</value>
 		</property>
 		<property name="name">
 			<value>Part3</value>
@@ -151,7 +154,7 @@
 	</object>
 	<object class="NamedMarker" id="{a01b6255-b723-4971-aa11-c346b280e33c}">
 		<property name="position">
-			<value>1.327</value>
+			<value>0</value>
 		</property>
 		<property name="name">
 			<value>Part1</value>
@@ -165,7 +168,7 @@
 	</object>
 	<object class="LoopRegion" id="{c279f2f1-44b7-4556-a8a8-426bf2a79cc1}">
 		<property name="position">
-			<value>1.327</value>
+			<value>0</value>
 		</property>
 		<property name="length">
 			<value>12.354513763145652</value>
@@ -179,7 +182,7 @@
 	</object>
 	<object class="NamedMarker" id="{495f7665-e8a1-4aed-969d-0b4e4899a7bd}">
 		<property name="position">
-			<value>13.681513763145643</value>
+			<value>12.354513763145647</value>
 		</property>
 		<property name="name">
 			<value>Part2</value>
@@ -193,10 +196,10 @@
 	</object>
 	<object class="TransitionRegion" id="{52e1a766-3f4e-4f9b-b95d-996bb676faa3}">
 		<property name="position">
-			<value>4.6000000000000005</value>
+			<value>4</value>
 		</property>
 		<property name="length">
-			<value>2.5999999999999996</value>
+			<value>1.8729999999999993</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{c66a438b-dbdb-41f5-ad46-bb707ed8ebcb}</destination>
@@ -213,10 +216,10 @@
 	</object>
 	<object class="TransitionRegion" id="{6d947b44-c058-43c2-90fb-e57ba3971a7b}">
 		<property name="position">
-			<value>11.100000000000001</value>
+			<value>10.5</value>
 		</property>
 		<property name="length">
-			<value>2.581513763145642</value>
+			<value>1.8545137631456488</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{c66a438b-dbdb-41f5-ad46-bb707ed8ebcb}</destination>
@@ -233,7 +236,7 @@
 	</object>
 	<object class="TransitionMarker" id="{a94e7afc-8dc6-43b3-98a3-b9dd9c14a1a2}">
 		<property name="position">
-			<value>17.100000000000001</value>
+			<value>15.773000000000007</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{c66a438b-dbdb-41f5-ad46-bb707ed8ebcb}</destination>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{468fc290-7562-46d3-8c84-93f6f9004645}">
+		<property name="assetPath">
+			<value>footstep_single_wood_01_v03.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.27970833333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2fb2eb10-22ff-4eea-ba70-c8e13aa48f88}</destination>
+		</relationship>
+	</object>
+</objects>

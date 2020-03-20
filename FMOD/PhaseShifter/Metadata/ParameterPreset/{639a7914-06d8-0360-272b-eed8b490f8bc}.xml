@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="ParameterPreset" id="{639a7914-06d8-0360-272b-eed8b490f8bc}">
 		<property name="name">
-			<value>Battle</value>
+			<value>Part</value>
 		</property>
 		<relationship name="folder">
 			<destination>{51ab94da-62fd-46b1-a892-f24c0c31e176}</destination>
@@ -14,6 +14,9 @@
 	<object class="GameParameter" id="{239ebfb4-8e52-4067-9088-2d62461b3b1d}">
 		<property name="maximum">
 			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
 		</property>
 		<property name="isExposedRecursively">
 			<value>false</value>
