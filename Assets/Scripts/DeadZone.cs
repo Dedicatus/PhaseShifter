@@ -22,7 +22,8 @@ public class DeadZone : MonoBehaviour
     [SerializeField] private GameObject[] movingBlock;
 
     Collider myCollider;
-
+    private AudioController ac;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,7 @@ public class DeadZone : MonoBehaviour
         levelController = GameObject.Find("LevelController").transform.GetComponent<LevelController>();
         cameraController = GameObject.FindWithTag("MainCamera").GetComponent<ThirdPersonCameraFollow>();
         myCollider = gameObject.GetComponent<Collider>();
+        ac = GameObject.FindWithTag("AudioController").GetComponent<AudioController>();
     }
 
     // Update is called once per frame
@@ -103,6 +105,7 @@ public class DeadZone : MonoBehaviour
                 }
                 else
                 {
+                    ac.playWaterSplash();
                     Destroy(player);
                 }
             }     

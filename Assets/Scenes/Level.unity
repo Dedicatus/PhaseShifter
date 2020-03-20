@@ -420,7 +420,7 @@ Transform:
   - {fileID: 742272122}
   - {fileID: 1418337612}
   m_Father: {fileID: 627988297}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &352409897 stripped
 Transform:
@@ -695,7 +695,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 627988297}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &627988296
 GameObject:
@@ -726,6 +726,7 @@ Transform:
   m_Children:
   - {fileID: 1669749190}
   - {fileID: 1897495671}
+  - {fileID: 1568394942}
   - {fileID: 310690402}
   - {fileID: 553901690}
   m_Father: {fileID: 0}
@@ -1880,6 +1881,56 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 48600431375306298}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1568394941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1568394942}
+  - component: {fileID: 1568394943}
+  m_Layer: 0
+  m_Name: AudioController
+  m_TagString: AudioController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1568394942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568394941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 627988297}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1568394943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568394941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f215a8d1ae96c4e48aa3d2cdc109909a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JumpEvent: event:/Jump
+  DropKeyEvent: event:/DropKey
+  LandEvent: event:/Land
+  OpenDoorEvent: event:/OpenDoor
+  PickupKeyEvent: event:/PickupKey
+  ShiftPhaseEvent: event:/ShiftPhase
+  WaterSplashEvent: event:/WaterSplash
 --- !u!4 &1646907763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1646907763, guid: 824e5ade18720d947b6857ea157f9cf8,
@@ -2148,7 +2199,7 @@ PrefabInstance:
     - target: {fileID: 3844585194867702195, guid: 6bb618dc6fe682e43b7bdfd221817b5a,
         type: 3}
       propertyPath: initSpawnIndex
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3844585194867702195, guid: 6bb618dc6fe682e43b7bdfd221817b5a,
         type: 3}

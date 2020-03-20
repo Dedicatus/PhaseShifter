@@ -8,11 +8,13 @@ public class Door : MonoBehaviour
     [SerializeField] private Transform[] spawnPoints;
     private GameObject[] myKeys;
     private Player playerScript;
-
+    private AudioController ac;
+    
     private void Start()
     {
         myKeys = new GameObject[keyPrefabs.Length];
         spawnKey();
+        ac = GameObject.FindWithTag("AudioController").GetComponent<AudioController>();
     }
 
     public void spawnKey()
@@ -51,7 +53,7 @@ public class Door : MonoBehaviour
                     Debug.LogError("Missing key prefab");
                     return;
                 }
-
+                ac.playOpenDoor();
                 Destroy(other.transform.GetComponent<Player>().m_key);
 
                 playerScript.keyInRange = false;

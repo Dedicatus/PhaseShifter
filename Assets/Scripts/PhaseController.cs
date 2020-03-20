@@ -10,7 +10,8 @@ public class PhaseController : MonoBehaviour
     public GamePhase curGamePhase;
     private bool phaseSwitched;
     GameObject player;
-
+    private AudioController ac;
+    
     [SerializeField] Material grassMaterial;
     [SerializeField] Material grassMaterialA;
     [SerializeField] Material grassMaterialB;
@@ -24,6 +25,7 @@ public class PhaseController : MonoBehaviour
         phaseSwitched = false;
         player = GameObject.FindGameObjectWithTag("Player");
         timeOfDayController = GameObject.FindWithTag("System").transform.Find("SkySystemController").GetComponent<Funly.SkyStudio.TimeOfDayController>();
+        ac = GameObject.FindWithTag("AudioController").GetComponent<AudioController>();
         timeOfDayController.switchSkyColor(true);
     }
 
@@ -41,6 +43,7 @@ public class PhaseController : MonoBehaviour
         {
             if (Input.GetAxis("LRT") < -0.19f && !phaseSwitched)
             {
+                ac.playShiftPhase();
                 switchPhase();
             }
 
@@ -53,6 +56,7 @@ public class PhaseController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Q) && !phaseSwitched)
             {
+                ac.playShiftPhase();
                 switchPhase();
             }
 

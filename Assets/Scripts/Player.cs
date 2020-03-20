@@ -57,7 +57,6 @@ public class Player : MonoBehaviour
     [SerializeField] private bool isCollisionEntered;
 
     public GameObject m_key;
-
     private bool m_isPickingUp;
 
     public bool keyInRange;
@@ -67,6 +66,7 @@ public class Player : MonoBehaviour
     public bool isRespawning;
     private List<Collider> m_collisions = new List<Collider>();
 
+    private AudioController ac;
     
     void Awake()
     {
@@ -79,6 +79,7 @@ public class Player : MonoBehaviour
         hasKey = false;
         m_inAirTimer = 0f;
         isRespawning = false;
+        ac = GameObject.FindWithTag("AudioController").GetComponent<AudioController>();
     }
 
     
@@ -129,7 +130,7 @@ public class Player : MonoBehaviour
                 }
                 if (m_collisions.Count == 0) 
                 { 
-                    m_isGrounded = false; 
+                    m_isGrounded = false;
                 }
             }
         }
@@ -143,7 +144,7 @@ public class Player : MonoBehaviour
         }
         if (m_collisions.Count == 0)
         {
-            m_isGrounded = false;    
+            m_isGrounded = false;
         }
     }
     
@@ -168,6 +169,8 @@ public class Player : MonoBehaviour
         }
         else
         {
+            if (m_inAirTimer > 0.5f)
+                ac.playLand();
             m_inAirTimer = 0f;
         }
 
@@ -329,6 +332,7 @@ public class Player : MonoBehaviour
                     {
                         m_rigidBody.AddForce(Vector3.up * m_jumpForce * lateJumpCompensationScale, ForceMode.Impulse);
                     }
+                    ac.playJump();
                     m_animator.SetTrigger("Jump");
                     m_isGrounded = false;
                     isCollisionEntered = false;
@@ -353,6 +357,7 @@ public class Player : MonoBehaviour
 
     public void pickingUpKey()
     {
+        ac.playPickupKey();
         m_animator.SetTrigger("Pickup");
     }
 

@@ -23,10 +23,10 @@
 [Aa]ssets/Plugins/Editor/JetBrains*
 
 #Fmod cache & log
-[Aa]ssets/FMODStudioCache.asset
-[Aa]ssets/FMODStudioCache.asset.meta
-fmod.log
-fmod_editor.log
+/[Aa]ssets/FMODStudioCache.asset
+/[Aa]ssets/FMODStudioCache.asset.meta
+/fmod.log
+/fmod_editor.log
 
 # Visual Studio cache directory
 .vs/
