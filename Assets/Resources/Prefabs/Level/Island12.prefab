@@ -219,20 +219,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &914534053673434512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5479479113167991451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00709bfb35763244398192fc288a1963, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myObject: {fileID: 7133313084909441539}
-  yOffset: -2
 --- !u!1 &914534053707817466
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +735,20 @@ Transform:
   m_Father: {fileID: 4691237876685410641}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &914534053673434512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5479479113167991451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00709bfb35763244398192fc288a1963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myObject: {fileID: 7133313084909441539}
+  yOffset: -2
 --- !u!1 &5479479113198312430
 GameObject:
   m_ObjectHideFlags: 0
@@ -5655,7 +5655,7 @@ PrefabInstance:
         type: 3}
       propertyPath: keyPrefabs.Array.data[0]
       value: 
-      objectReference: {fileID: 497028776284211323, guid: 21157f9b1fcf7f94abc568dff1c2fc1d,
+      objectReference: {fileID: 497028776284211323, guid: 6dab2d53312627a4e9a8f8d6ed35dd5b,
         type: 3}
     - target: {fileID: 457682240918096633, guid: 799d9831401397f40a9e184071412a59,
         type: 3}

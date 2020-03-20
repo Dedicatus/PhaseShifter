@@ -9411,7 +9411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyPrefabs:
-  - {fileID: 4751501875914426941, guid: 6dab2d53312627a4e9a8f8d6ed35dd5b, type: 3}
+  - {fileID: 4751501875914426941, guid: 21157f9b1fcf7f94abc568dff1c2fc1d, type: 3}
   spawnPoints:
   - {fileID: 4182589259915646836}
 --- !u!1 &4346406123249787396
@@ -9544,7 +9544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyPrefabs:
-  - {fileID: 4751501875914426941, guid: 6dab2d53312627a4e9a8f8d6ed35dd5b, type: 3}
+  - {fileID: 4751501875914426941, guid: 21157f9b1fcf7f94abc568dff1c2fc1d, type: 3}
   spawnPoints:
   - {fileID: 4182589259928026364}
 --- !u!1 &4524720754062112300
