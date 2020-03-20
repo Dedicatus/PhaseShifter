@@ -210,6 +210,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &4770427020221718550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3375704497360354962}
+  m_Layer: 0
+  m_Name: MovingIslandSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3375704497360354962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4770427020221718550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7745820087182838572}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5439067584613531423
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,6 +684,7 @@ Transform:
   - {fileID: 7745820088862222503}
   - {fileID: 3037580265105961650}
   - {fileID: 6801283089497996978}
+  - {fileID: 3375704497360354962}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2247,17 +2278,17 @@ PrefabInstance:
     - target: {fileID: 6801283088683701477, guid: 0bf0c38b41e20074d9d5fdeb2ffe038f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -202.8
+      value: -198.82
       objectReference: {fileID: 0}
     - target: {fileID: 6801283088683701477, guid: 0bf0c38b41e20074d9d5fdeb2ffe038f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 98.3
+      value: 25.34
       objectReference: {fileID: 0}
     - target: {fileID: 6801283088683701477, guid: 0bf0c38b41e20074d9d5fdeb2ffe038f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 152.9
+      value: 148.75
       objectReference: {fileID: 0}
     - target: {fileID: 6801283088683701477, guid: 0bf0c38b41e20074d9d5fdeb2ffe038f,
         type: 3}
@@ -2304,6 +2335,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingIsland
       objectReference: {fileID: 0}
+    - target: {fileID: 6801283088683701503, guid: 0bf0c38b41e20074d9d5fdeb2ffe038f,
+        type: 3}
+      propertyPath: thisMovingMode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6801283088683701503, guid: 0bf0c38b41e20074d9d5fdeb2ffe038f,
+        type: 3}
+      propertyPath: spwanPoint
+      value: 
+      objectReference: {fileID: 3375704497360354962}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bf0c38b41e20074d9d5fdeb2ffe038f, type: 3}
 --- !u!4 &6801283089497996978 stripped
