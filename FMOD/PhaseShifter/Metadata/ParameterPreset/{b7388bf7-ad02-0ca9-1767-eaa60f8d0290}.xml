@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{b7388bf7-ad02-0ca9-1767-eaa60f8d0290}">
+		<property name="name">
+			<value>Melody Intesity</value>
+		</property>
+		<relationship name="folder">
+			<destination>{51ab94da-62fd-46b1-a892-f24c0c31e176}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f73c4d57-2588-4fae-a0c4-291cfd06c131}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f73c4d57-2588-4fae-a0c4-291cfd06c131}">
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
