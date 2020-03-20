@@ -15078,6 +15078,11 @@ PrefabInstance:
       propertyPath: door.Array.data[1]
       value: 
       objectReference: {fileID: 4346406123249787396}
+    - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
+        type: 3}
+      propertyPath: thisZonePhase
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6323151079261558578, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
       propertyPath: m_Enabled
