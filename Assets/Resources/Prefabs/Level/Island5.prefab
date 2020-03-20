@@ -507,7 +507,8 @@ MonoBehaviour:
   thisZonePhase: 2
   respawnTime: 2
   box: []
-  door: []
+  door:
+  - {fileID: 5239978714249060106}
   movingBlock: []
 --- !u!1 &1988621882506241693
 GameObject:
@@ -8739,9 +8740,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
+      propertyPath: door.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
+        type: 3}
       propertyPath: thisZonePhase
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
+        type: 3}
+      propertyPath: door.Array.data[0]
+      value: 
+      objectReference: {fileID: 5239978714249060106}
     - target: {fileID: 6323151079261558578, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
       propertyPath: m_Enabled
@@ -8995,6 +9006,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6f6a08b5c4a5ef24ca4d29b958bde46b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 799d9831401397f40a9e184071412a59, type: 3}
+--- !u!1 &5239978714249060106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 457682240918096626, guid: 799d9831401397f40a9e184071412a59,
+    type: 3}
+  m_PrefabInstance: {fileID: 5684149052296517112}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5239978714249060110 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 457682240918096630, guid: 799d9831401397f40a9e184071412a59,

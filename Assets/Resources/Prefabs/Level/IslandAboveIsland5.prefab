@@ -673,13 +673,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7745820087162278248}
-  m_LocalRotation: {x: 0.13140307, y: -0.855947, z: 0.21451123, w: 0.45174432}
-  m_LocalPosition: {x: 9.8, y: -2.35, z: 2.33}
+  m_LocalRotation: {x: 0.06683109, y: -0.87755555, z: 0.09250262, w: 0.46569654}
+  m_LocalPosition: {x: 10.36, y: -2.19, z: 2.71}
   m_LocalScale: {x: 16.87, y: 13.05, z: 1.5}
   m_Children: []
   m_Father: {fileID: 7745820088547623754}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 29.074001, y: -124.882, z: -2.042}
+  m_LocalEulerAnglesHint: {x: 12.979001, y: -124.301, z: -1.8310001}
 --- !u!33 &7745820087162278253
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -738,8 +738,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.6047045, z: 1}
-  m_Center: {x: -0.0000000069868897, y: 0.19764678, z: 0.000004843504}
+  m_Size: {x: 1, y: 0.9685443, z: 0.9999998}
+  m_Center: {x: -0.000000002186577, y: 0.25053534, z: 0.000005441931}
 --- !u!114 &7745820087162278254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,7 +755,8 @@ MonoBehaviour:
   thisZonePhase: 2
   respawnTime: 2
   box: []
-  door: []
+  door:
+  - {fileID: 0}
   movingBlock: []
 --- !u!1 &7745820087174859164
 GameObject:
@@ -1721,7 +1722,8 @@ MonoBehaviour:
   thisZonePhase: 2
   respawnTime: 2
   box: []
-  door: []
+  door:
+  - {fileID: 0}
   movingBlock: []
 --- !u!1 &7745820088532955459
 GameObject:
