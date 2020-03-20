@@ -19,6 +19,7 @@ public class Box : MonoBehaviour
     {
         transform.position = spawnPoint.position;
         transform.rotation = spawnPoint.rotation;
+        transform.parent.parent.parent = null;
         transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 
