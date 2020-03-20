@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7942061797347279698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/PhaseShifter/Build/Desktop/Master Bank.bank
+  SubDir: 
+  lastModified: 637202541985260651
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-7551442802342989714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,11 +32,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD/PhaseShifter/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637202535864213029
+  lastModified: 637202430084133295
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 728
+  Exists: 1
+--- !u!114 &-6779770323820178925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/PhaseShifter/Build/Desktop/Master Bank.strings.bank
+  SubDir: 
+  lastModified: 637202541985520518
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 692
   Exists: 1
 --- !u!114 &-1772748743765429970
 MonoBehaviour:
@@ -35,7 +73,7 @@ MonoBehaviour:
   Path: event:/BGM
   guid: a847683f088a8448aba26e6b1f41b01f
   Banks:
-  - {fileID: 2447384440606803197}
+  - {fileID: 5517416916245961955}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -56,35 +94,16 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -7551442802342989714}
-  - {fileID: 2447384440606803197}
-  EditorEvents:
-  - {fileID: -1772748743765429970}
+  - {fileID: -6779770323820178925}
+  - {fileID: -7942061797347279698}
+  EditorEvents: []
   EditorParameters: []
   MasterBanks:
-  - {fileID: 2447384440606803197}
+  - {fileID: -7942061797347279698}
   StringsBanks:
-  - {fileID: -7551442802342989714}
-  stringsBankWriteTime: 637202535864213029
+  - {fileID: -6779770323820178925}
+  stringsBankWriteTime: 637202541985520518
   cacheVersion: 3
---- !u!114 &2447384440606803197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD/PhaseShifter/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637202535864203062
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
 --- !u!114 &5517416916245961955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,4 +121,4 @@ MonoBehaviour:
   lastModified: 637202430084053343
   LoadResult: 0
   FileSizes: []
-  Exists: 0
+  Exists: 1
