@@ -5333,6 +5333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4717f218e6a8c434ca2bf4991246fc31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WaterfallEvent: event:/Wind
   thisBlockPhase: 0
   thisMovingMode: 1
   m_moveTrigger: {fileID: 0}
@@ -8762,6 +8763,11 @@ PrefabInstance:
         type: 3}
       propertyPath: thisBlockPhase
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551614784904556011, guid: 3d3a2a1e748d06d4cbddb332af3e52c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6718016361184531598, guid: 3d3a2a1e748d06d4cbddb332af3e52c6,
         type: 3}
