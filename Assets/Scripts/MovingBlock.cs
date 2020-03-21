@@ -21,6 +21,7 @@ public class MovingBlock : MonoBehaviour
 
     private GameObject EnabledObject;
     private GameObject DisabledObject;
+    private GameObject player;
     private bool isPlayerAboard;
     Animator movingAnimator;
     
@@ -40,6 +41,9 @@ public class MovingBlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        player = GameObject.FindWithTag("Player");
+        if (player == null) Wind.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
         if (thisMovingMode == MovingMode.PhaseOnly || thisMovingMode == MovingMode.PlayerOn|| thisMovingMode == MovingMode.PhaseBoth)
         {
             phaseHandler();
