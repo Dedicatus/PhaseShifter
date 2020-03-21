@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001ABC1DE35D8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000025E391E51C8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,13 +15,213 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000025E46C45B38 : node = 0000025E39D621F0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000025DB33CF1E8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025E46C45B38
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     setdata soundi = 0000025E46C44398 : node = 0000025E39D61E30
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000025DB33CF1E8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025E39D62300
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 0000025E46C44548 : node = 0000025E39D625B0
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000025DB33CF1E8.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='river_05_60_loop', format=2, channels=2, frequency=48000, lengthbytes=792928, lengthpcm=2955762, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.634951.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025E46C45B38
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025E46C44398
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025E39D61F40
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='river_05_60_loop', format=2, channels=2, frequency=48000, lengthbytes=792928, lengthpcm=2955762, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.634951.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025E46C44398
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025E46C44548
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025E39D626C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='river_05_60_loop', format=2, channels=2, frequency=48000, lengthbytes=792928, lengthpcm=2955762, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.634951.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025E46C44548
+[LOG] SoundI::getSubSound                      : sound 0000025E46C45B38.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000025E46C44398.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000025E46C44548.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000025E46E402F8 : node = 0000025E46ECA850
+[LOG] SystemI::createSound                     : add node to async list : head = 0000025DB33CF1E8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025E46E402F8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSound                     :     setdata soundi = 0000025E46E3F8D8 : node = 0000025E46ECAC10
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000025DB33CF1E8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025E46ECA960
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 0000025E46E40B68 : node = 0000025E46EC9BD0
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000025DB33CF1E8.  list count = 1
+[LOG] SystemI::createSound                     :     filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 0000025E46E3FC38 : node = 0000025E46ECA5D0
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000025DB33CF1E8.  list count = 2
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='river_05_60_loop', format=2, channels=2, frequency=48000, lengthbytes=792928, lengthpcm=2955762, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.634951.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025E46E402F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025E46E3F8D8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025E46ECAD20
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='river_05_60_loop', format=2, channels=2, frequency=48000, lengthbytes=792928, lengthpcm=2955762, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.634951.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025E46E3F8D8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025E46E40B68
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025E46EC9CE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='river_05_60_loop', format=2, channels=2, frequency=48000, lengthbytes=792928, lengthpcm=2955762, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.634951.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025E46E40B68
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025E46E3FC38
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025E46ECA6E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='river_05_60_loop', format=2, channels=2, frequency=48000, lengthbytes=792928, lengthpcm=2955762, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.634951.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025E46E3FC38
+[LOG] SoundI::getSubSound                      : sound 0000025E46E402F8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000025E46E3F8D8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000025E46E40B68.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000025E46E3FC38.  Subsound index 0 / 1
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SoundI::release                          :  (0000025DB6353EA8)
+[LOG] SoundI::release                          :     Ambience - Rattle Effect 3 (0000025DB33CDD18)
+[LOG] SoundI::release                          :  (0000025DB392B608)
+[LOG] SoundI::release                          :     Ambience - Congas Effect 2 (0000025DB33CC7F8)
+[LOG] SoundI::release                          :  (0000025DB392B8E8)
+[LOG] SoundI::release                          :     Ambience - Reverse Effect 1 (0000025DB33CE878)
+[LOG] SoundI::release                          :  (0000025DB6354018)
+[LOG] SoundI::release                          :     Birds 1 (0000025DB33D00D8)
+[LOG] SoundI::release                          :  (0000025DB3F430B8)
+[LOG] SoundI::release                          :     Birds 2 (0000025DB33CE058)
+[LOG] SoundI::release                          :  (0000025E46D9D4D8)
+[LOG] SoundI::release                          :     Crickets (0000025DB4F103A8)
+[LOG] SoundI::release                          :  (0000025DB392B498)
+[LOG] SoundI::release                          :     Ambience - Piano 1 (0000025DB33D0278)
+[LOG] SoundI::release                          :  (0000025DB6353D38)
+[LOG] SoundI::release                          :     Ambience - Piano 2 (0000025DB33D1AD8)
+[LOG] SoundI::release                          :  (0000025E46D9D368)
+[LOG] SoundI::release                          :     Ambience - Piano 3 (0000025DB33D1938)
+[LOG] SoundI::release                          : river_05_60_loop (0000025E46E3F8D8)
+[LOG] SoundI::release                          :     river_05_60_loop (0000025DB33CD698)
+[LOG] SoundI::release                          :     river_05_60_loop (0000025E46E40808)
+[LOG] SoundI::release                          : river_05_60_loop (0000025E46E402F8)
+[LOG] SoundI::release                          :     river_05_60_loop (0000025DB33CBAF8)
+[LOG] SoundI::release                          :     river_05_60_loop (0000025E46E409B8)
+[LOG] SoundI::release                          : river_05_60_loop (0000025E46C44398)
+[LOG] SoundI::release                          :     river_05_60_loop (0000025DB33CB958)
+[LOG] SoundI::release                          :     river_05_60_loop (0000025E46C446F8)
+[LOG] SoundI::release                          : river_05_60_loop (0000025E46C44548)
+[LOG] SoundI::release                          :     river_05_60_loop (0000025DB33CE398)
+[LOG] SoundI::release                          :     river_05_60_loop (0000025E46C45988)
+[LOG] SoundI::release                          : river_05_60_loop (0000025E46E40B68)
+[LOG] SoundI::release                          :     river_05_60_loop (0000025DB33D1458)
+[LOG] SoundI::release                          :     river_05_60_loop (0000025E46E3FF98)
+[LOG] SoundI::release                          : river_05_60_loop (0000025E46E3FC38)
+[LOG] SoundI::release                          :     river_05_60_loop (0000025DB33D08F8)
+[LOG] SoundI::release                          :     river_05_60_loop (0000025E46E404A8)
+[LOG] SoundI::release                          : river_05_60_loop (0000025E46C45B38)
+[LOG] SoundI::release                          :     river_05_60_loop (0000025DB33CB7B8)
+[LOG] SoundI::release                          :     river_05_60_loop (0000025E46C45628)
+[LOG] SoundI::release                          : 339326__inspectorj__bird-whistling-a (0000025DB5DB3BF8)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (0000025DB33CC4B8)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (0000025DB5DB2E78)
+[LOG] SoundI::release                          :  (0000025E46D9D7B8)
+[LOG] SoundI::release                          :     Ambience - Piano 4 (0000025DB33CD9D8)
+[LOG] SoundI::release                          :  (0000025E46D9D648)
+[LOG] SoundI::release                          :     Ambience - Piano 5 (0000025E39FC2BA8)
+[LOG] SoundI::release                          :  (0000025DB6353778)
+[LOG] SoundI::release                          :     Land_oneshot (0000025DB33CFA58)
+[LOG] SoundI::release                          :  (0000025DB392B048)
+[LOG] SoundI::release                          :     WaterSplash_oneshot (0000025DB33D0F78)
+[LOG] SoundI::release                          :  (0000025DB392B778)
+[LOG] SoundI::release                          :     PickupKey_oneshot (0000025DB33CCCD8)
+[LOG] SoundI::release                          :  (0000025DB392B1B8)
+[LOG] SoundI::release                          :     DropKey_oneshot (0000025DB33D12B8)
+[LOG] SoundI::release                          :  (0000025DB6353498)
+[LOG] SoundI::release                          :     footstep_single_wood_02_v01 (0000025DB33CD1B8)
+[LOG] SoundI::release                          :  (0000025DB392AD68)
+[LOG] SoundI::release                          :     footstep_single_wood_02_v02 (0000025DB33CDB78)
+[LOG] SoundI::release                          :  (0000025DB6353BC8)
+[LOG] SoundI::release                          :     footstep_single_wood_02_v03 (0000025DB33CC318)
+[LOG] SoundI::release                          :  (0000025E46D9D928)
+[LOG] SoundI::release                          :     footstep_single_wood_02_v04 (0000025DB33D1798)
+[LOG] SoundI::release                          :  (0000025DB6353608)
+[LOG] SoundI::release                          :     footstep_single_dirt_01_v01 (0000025DB33D0C38)
+[LOG] SoundI::release                          :  (0000025DB392ABF8)
+[LOG] SoundI::release                          :     footstep_single_dirt_01_v02 (0000025DB33D1C78)
+[LOG] SoundI::release                          :  (0000025DB392B328)
+[LOG] SoundI::release                          :     footstep_single_dirt_01_v03 (0000025DB33CC178)
+[LOG] SoundI::release                          :  (0000025DB6353328)
+[LOG] SoundI::release                          :     footstep_single_dirt_01_v04 (0000025DB33CCE78)
+[LOG] SoundI::release                          :  (0000025DB63538E8)
+[LOG] SoundI::release                          :     Jump_oneshot (0000025DB33D0A98)
+[LOG] SoundI::release                          :  (0000025DB392AED8)
+[LOG] SoundI::release                          :     OpenDoor_oneshot (0000025DB33CC658)
+[LOG] SoundI::release                          :  (0000025DB6353A58)
+[LOG] SoundI::release                          :     ShiftPhase_oneshot (0000025DB33CEA18)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
