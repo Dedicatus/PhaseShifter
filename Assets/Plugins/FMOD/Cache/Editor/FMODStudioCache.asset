@@ -32,7 +32,7 @@ MonoBehaviour:
   Path: event:/Jump
   guid: af3a781aea76ef4f9e3ef1a9be73cea2
   Banks:
-  - {fileID: 123066578859542645}
+  - {fileID: 9191727694855703001}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -57,6 +57,40 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-8568782920777914245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/GroundTexture
+  m_EditorClassIdentifier: 
+  Name: GroundTexture
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-8557678489531682098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/GroundTexture
+  m_EditorClassIdentifier: 
+  Name: GroundTexture
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-7942061797347279698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,11 +143,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD/PhaseShifter/Build/Desktop/Master Bank.strings.bank
   SubDir: 
-  lastModified: 637203301798633474
+  lastModified: 637203327474659257
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1348
+    Value: 1308
   Exists: 1
 --- !u!114 &-6714723477668227190
 MonoBehaviour:
@@ -132,6 +166,57 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 1
+--- !u!114 &-6692737334481671160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Phase
+  m_EditorClassIdentifier: 
+  Name: Phase
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-6620419734890554066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Wood
+  m_EditorClassIdentifier: 
+  Name: Wood
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-6584456205861724471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: Intensity
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &-6578478566048718707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +233,24 @@ MonoBehaviour:
   Min: 0
   Max: 3
   Default: 0
-  Exists: 1
+  Exists: 0
+--- !u!114 &-6373362305697927575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Part
+  m_EditorClassIdentifier: 
+  Name: Part
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &-6103600086744981005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,8 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Wind
   guid: b47e4c034542b246b1d067b63809e7b2
-  Banks:
-  - {fileID: 123066578859542645}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -222,6 +323,92 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  Exists: 0
+--- !u!114 &-4817825834634761142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: Melody Intesity
+  m_EditorClassIdentifier: 
+  Name: Melody Intesity
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 1
+--- !u!114 &-4656331079759262039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: Intensity
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &-4592036795771306679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Part
+  m_EditorClassIdentifier: 
+  Name: Part
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &-4495761837461364856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Part
+  m_EditorClassIdentifier: 
+  Name: Part
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &-4379516985873749439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/PhaseShifter/Build/Desktop/Master Bank.bank
+  SubDir: 
+  lastModified: 637203323767930355
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &-4292501556017693235
 MonoBehaviour:
@@ -290,13 +477,13 @@ MonoBehaviour:
   Path: event:/BGM
   guid: 399752cd55d32d43a90b8c40f54866da
   Banks:
-  - {fileID: 123066578859542645}
+  - {fileID: 9191727694855703001}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 6262577224870862489}
-  - {fileID: 2663565925644846982}
+  - {fileID: 4002201735178404750}
+  - {fileID: 5130902933718738943}
   MinDistance: 0
   MaxDistance: 0
   Length: 85500
@@ -373,15 +560,33 @@ MonoBehaviour:
   Path: event:/Footsteps
   guid: 645d34b6d1621a40bfca42e87edd6432
   Banks:
-  - {fileID: 123066578859542645}
+  - {fileID: 9191727694855703001}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 2205656800795050448}
+  - {fileID: 2379109284874910121}
   MinDistance: 0
   MaxDistance: 0
   Length: 1650
+--- !u!114 &-1767652963418451481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/PhaseShifter/Build/Desktop/Master Bank.bank
+  SubDir: 
+  lastModified: 637203319528807254
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-1727782170138698645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,6 +605,40 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-1634687646922552924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Part
+  m_EditorClassIdentifier: 
+  Name: Part
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &-1599303143529504746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: Melody Intesity
+  m_EditorClassIdentifier: 
+  Name: Melody Intesity
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &-1562654427094711099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,7 +722,7 @@ MonoBehaviour:
   Path: event:/ShiftPhase
   guid: 81074eb00827504692aff65ca63e683f
   Banks:
-  - {fileID: 123066578859542645}
+  - {fileID: 9191727694855703001}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -505,7 +744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -6779770323820178925}
-  - {fileID: 123066578859542645}
+  - {fileID: 9191727694855703001}
   EditorEvents:
   - {fileID: -2291706190795357691}
   - {fileID: 4589119221406514387}
@@ -517,14 +756,13 @@ MonoBehaviour:
   - {fileID: 45224792917141435}
   - {fileID: -8756445947646751966}
   - {fileID: 962415241121542844}
-  - {fileID: -5980606847013817365}
   EditorParameters:
-  - {fileID: -6578478566048718707}
+  - {fileID: -4817825834634761142}
   MasterBanks:
-  - {fileID: 123066578859542645}
+  - {fileID: 9191727694855703001}
   StringsBanks:
   - {fileID: -6779770323820178925}
-  stringsBankWriteTime: 637203301798633474
+  stringsBankWriteTime: 637203327474659257
   cacheVersion: 3
 --- !u!114 &45224792917141435
 MonoBehaviour:
@@ -541,7 +779,7 @@ MonoBehaviour:
   Path: event:/OpenDoor
   guid: ab1d4a291fe8a949962bfa2c6adb6109
   Banks:
-  - {fileID: 123066578859542645}
+  - {fileID: 9191727694855703001}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -566,7 +804,7 @@ MonoBehaviour:
   lastModified: 637203301798563399
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &162208181651754061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,6 +818,23 @@ MonoBehaviour:
   m_Name: parameter:/Footsteps/GroundTexture
   m_EditorClassIdentifier: 
   Name: GroundTexture
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &504450007306704779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Wood
+  m_EditorClassIdentifier: 
+  Name: Wood
   Min: 0
   Max: 1
   Default: 0
@@ -599,7 +854,7 @@ MonoBehaviour:
   Path: event:/WaterFall
   guid: 95e6c3e48262fe4daed3a9a1571a47d8
   Banks:
-  - {fileID: 123066578859542645}
+  - {fileID: 9191727694855703001}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -639,7 +894,7 @@ MonoBehaviour:
   Path: event:/PickupKey
   guid: ddaea98dceb88447af2757ef6eb15cf6
   Banks:
-  - {fileID: 123066578859542645}
+  - {fileID: 9191727694855703001}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -647,6 +902,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1040
+--- !u!114 &1009726779598259230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Phase
+  m_EditorClassIdentifier: 
+  Name: Phase
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &1382614647786771672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,6 +971,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &1929283287595024247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Phase
+  m_EditorClassIdentifier: 
+  Name: Phase
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &2205656800795050448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,7 +1004,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &2297098403089247866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,6 +1022,40 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &2379109284874910121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/GroundTexture
+  m_EditorClassIdentifier: 
+  Name: GroundTexture
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2422654088107685758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Phase
+  m_EditorClassIdentifier: 
+  Name: Phase
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &2663565925644846982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -749,7 +1072,24 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
+--- !u!114 &3040357096157957913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Phase
+  m_EditorClassIdentifier: 
+  Name: Phase
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &3430324648984900101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,6 +1125,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &3767920357303810734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/PhaseShifter/Build/Desktop/Master Bank.bank
+  SubDir: 
+  lastModified: 637203302512710667
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &3925970609394729718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,6 +1160,40 @@ MonoBehaviour:
   Max: 3
   Default: 0
   Exists: 0
+--- !u!114 &3981854510531667881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Wood
+  m_EditorClassIdentifier: 
+  Name: Wood
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &4002201735178404750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Part
+  m_EditorClassIdentifier: 
+  Name: Part
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &4589119221406514387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -817,7 +1209,7 @@ MonoBehaviour:
   Path: event:/WaterSplash
   guid: 4054e9361c25af43a4eec26c4987fb8a
   Banks:
-  - {fileID: 123066578859542645}
+  - {fileID: 9191727694855703001}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -825,6 +1217,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1670
+--- !u!114 &4782196106457039145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/PhaseShifter/Build/Desktop/Master Bank.bank
+  SubDir: 
+  lastModified: 637203306730099757
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &4941562110268779526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -840,6 +1250,23 @@ MonoBehaviour:
   Name: Melody Intesity
   Min: 0
   Max: 3
+  Default: 0
+  Exists: 1
+--- !u!114 &5130902933718738943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Phase
+  m_EditorClassIdentifier: 
+  Name: Phase
+  Min: 0
+  Max: 1
   Default: 0
   Exists: 1
 --- !u!114 &5517416916245961955
@@ -877,6 +1304,24 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &5774552640395146116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/PhaseShifter/Build/Desktop/Master Bank.bank
+  SubDir: 
+  lastModified: 637203327078435018
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &6039757879354451948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -912,6 +1357,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &6212916108772906398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: Intensity
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &6262577224870862489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -928,7 +1390,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &6400426440302598690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,7 +1406,7 @@ MonoBehaviour:
   Path: event:/Land
   guid: 9d05a0051cbad84aa3d75e9e52cdd8cb
   Banks:
-  - {fileID: 123066578859542645}
+  - {fileID: 9191727694855703001}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1018,7 +1480,7 @@ MonoBehaviour:
   Path: event:/DropKey
   guid: 54d006896e8be64496c68d849f7ba1c3
   Banks:
-  - {fileID: 123066578859542645}
+  - {fileID: 9191727694855703001}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1078,3 +1540,38 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &9021913046431732629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Part
+  m_EditorClassIdentifier: 
+  Name: Part
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &9191727694855703001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/PhaseShifter/Build/Desktop/Master Bank.bank
+  SubDir: 
+  lastModified: 637203327474588892
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1

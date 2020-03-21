@@ -70,6 +70,25 @@ public class AudioController : MonoBehaviour
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Intensity", mi);
     }
 
+    public void playFootsteps(bool b)
+    {
+        if (b)
+        {
+            Footsteps.start();
+            //Debug.Log("yes");
+        }
+        else
+        {
+            Footsteps.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            //Debug.Log("no");
+        }
+    }
+
+    public void setFootstepsTextrue(float wood)
+    {
+        Footsteps.setParameterByName("GroundTexture", wood);
+    }
+
     public void playJump()
     {
         Jump.start();

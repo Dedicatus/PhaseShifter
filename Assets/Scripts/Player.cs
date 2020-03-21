@@ -64,6 +64,9 @@ public class Player : MonoBehaviour
     public bool hasKey;
     public bool isKeyboard;
     public bool isRespawning;
+    [SerializeField] public bool onWood;
+    [SerializeField] public bool isPlayingFootsteps;
+    [SerializeField] public bool jumped;
     private List<Collider> m_collisions = new List<Collider>();
 
     private AudioController ac;
@@ -75,6 +78,7 @@ public class Player : MonoBehaviour
         if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
         isCollisionEntered = false;
         //isKeyboard = true;
+        jumped = false;
         keyInRange = false;
         hasKey = false;
         m_inAirTimer = 0f;
@@ -85,6 +89,17 @@ public class Player : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.layer == 10)
+        {
+            onWood = true;
+            ac.setFootstepsTextrue(1.0f);
+        }
+        else
+        {
+            onWood = false;
+            ac.setFootstepsTextrue(0f);
+        }
+
         ContactPoint[] contactPoints = collision.contacts;
         for (int i = 0; i < contactPoints.Length; i++)
         {
@@ -95,6 +110,7 @@ public class Player : MonoBehaviour
                     m_collisions.Add(collision.collider);
                 }
                 m_isGrounded = true;
+                jumped = false;
                 isCollisionEntered = true;
             }
         }
@@ -116,7 +132,8 @@ public class Player : MonoBehaviour
 
             if (validSurfaceNormal)
             {
-            m_isGrounded = true;
+                m_isGrounded = true;
+                jumped = false;
                 if (!m_collisions.Contains(collision.collider))
                 {
                     m_collisions.Add(collision.collider);
@@ -293,8 +310,12 @@ public class Player : MonoBehaviour
                 transform.rotation = Quaternion.LookRotation(m_currentDirection);
                 transform.position += m_currentDirection * m_moveSpeed * Time.deltaTime;
 
+                
+
                 m_animator.SetFloat("MoveSpeed", direction.magnitude);
+
             }
+            
         }
 
         JumpingAndLanding();
@@ -306,10 +327,26 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             isKeyboard = true;
+            if (m_inAirTimer <= jumpMargin && !isPlayingFootsteps && !jumped)
+            {
+                ac.playFootsteps(true);
+                isPlayingFootsteps = true;
+            }
         }
-        else if (Mathf.Abs(Input.GetAxis("Horizontal_L")) > 0.19f || Mathf.Abs(Input.GetAxis("Vertical_L")) > 0.19f)
+        else if (Mathf.Abs(Input.GetAxis("Horizontal_L")) > 0.19f || Mathf.Abs(Input.GetAxis("Vertical_L")) > 0.19f && !jumped)
         {
-            isKeyboard = false;
+            isKeyboard = false; 
+
+            if (m_inAirTimer <= jumpMargin && !isPlayingFootsteps && !jumped)
+            {
+                ac.playFootsteps(true);
+                isPlayingFootsteps = true;
+            }
+        }
+        else 
+        {
+            ac.playFootsteps(false);
+            isPlayingFootsteps = false;
         }
     }
 
@@ -328,13 +365,16 @@ public class Player : MonoBehaviour
                     {
                         m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
                     }
-                    else 
+                    else
                     {
                         m_rigidBody.AddForce(Vector3.up * m_jumpForce * lateJumpCompensationScale, ForceMode.Impulse);
                     }
                     ac.playJump();
+                    jumped = true;
                     m_animator.SetTrigger("Jump");
                     m_isGrounded = false;
+                    ac.playFootsteps(false);
+                    isPlayingFootsteps = false;
                     isCollisionEntered = false;
                 }
                 
