@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000002ACBD33B4C8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000002ACBD33A938 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,12 +16,1209 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AEF38 : node = 000002AC60B34640
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AEF38
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC60B34750
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AEF38
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AEF38.  Subsound index 0 / 1
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AEF38)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCDF9BE68)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AFCB8)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AEF38 : node = 000002AC60B34C80
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AEF38
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC60B34D90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AEF38
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AEF38.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AEF38)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCDF9AFC8)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AF0E8)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AE878 : node = 000002AC60B34B40
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC60B34C50
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AE878.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AE878)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCDF9AFC8)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AF448)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AF448 : node = 000002AC60B34B40
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AF448
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC60B34C50
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AF448
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AF448.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AEF38 : node = 000002AC60B34640
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AEF38
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC60B34750
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='339326__inspectorj__bird-whistling-a', format=2, channels=2, frequency=48000, lengthbytes=314336, lengthpcm=1154727, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.118774.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AEF38
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AEF38.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AF448)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCDF9BE68)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AE878)
+[LOG] SoundI::release                          : 339326__inspectorj__bird-whistling-a (000002AC5A3F1418)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002AC28563E48)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002AC396969F8)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AFCB8 : node = 000002AC60B34000
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AFCB8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC60B34110
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AFCB8
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AFCB8.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AFCB8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCDF9BE68)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AF448)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AF448 : node = 000002AC60B348C0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AF448
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC60B349D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AF448
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AF448.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AF448)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCDF9BE68)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AE878)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AE878 : node = 000002AC60B34C80
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC60B34D90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AE878.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AE878)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCDF9BE68)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AF448)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AFCB8 : node = 000002AC60B34500
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AFCB8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC60B34610
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AFCB8
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AFCB8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AFCB8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCDF9BE68)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AE878)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AE878 : node = 000002AC60B34280
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC60B34390
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AE878.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AE878)
+[LOG] SoundI::release                          :     Wind_loop (000002AC28563E48)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AF448)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AE878 : node = 000002AC60B34780
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC60B34890
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AE878.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AFCB8 : node = 000002AC60B34000
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AFCB8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC60B34110
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='339326__inspectorj__bird-whistling-a', format=2, channels=2, frequency=48000, lengthbytes=314336, lengthpcm=1154727, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.118774.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AFCB8
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AFCB8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AE878)
+[LOG] SoundI::release                          :     Wind_loop (000002AC28563E48)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AF448)
+[LOG] SoundI::release                          : 339326__inspectorj__bird-whistling-a (000002ACCB2AEF38)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002ABCDF9AFC8)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002ACCB2AF0E8)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23DDA8 : node = 000002AC60B34280
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23DDA8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC60B34390
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23DDA8
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23DDA8.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23DDA8)
+[LOG] SoundI::release                          :     Wind_loop (000002AC28563E48)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23E618)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23E618 : node = 000002ABCDFFEBD0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23E618
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002ABCDFFECE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23E618
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23E618.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23E618)
+[LOG] SoundI::release                          :     Wind_loop (000002AC28563E48)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23E2B8)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23E618 : node = 000002ABCDFFEBD0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23E618
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002ABCDFFECE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23E618
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23E618.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23E618)
+[LOG] SoundI::release                          :     Wind_loop (000002AC28563E48)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23DA48)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23E618 : node = 000002AC5A70F660
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23E618
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F770
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23E618
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23E618.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23E618)
+[LOG] SoundI::release                          :     Wind_loop (000002AC28563E48)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23DDA8)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23E618 : node = 000002AC5A70FCA0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23E618
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FDB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23E618
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23E618.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23E618)
+[LOG] SoundI::release                          :     Wind_loop (000002AC28563E48)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23DDA8)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23DA48 : node = 000002AC5A70F660
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23DA48
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F770
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23DA48
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23DA48.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23E618 : node = 000002AC5A70F7A0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23E618
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F8B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='339326__inspectorj__bird-whistling-a', format=2, channels=2, frequency=48000, lengthbytes=314336, lengthpcm=1154727, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.118774.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23E618
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23E618.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 339326__inspectorj__bird-whistling-a (000002ACCB2AFCB8)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002AC28564188)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002ABCC23DF58)
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23DA48)
+[LOG] SoundI::release                          :     Wind_loop (000002AC28563E48)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23E2B8)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23DA48 : node = 000002AC5A70FB60
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23DA48
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FC70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23DA48
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23DA48.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23DA48)
+[LOG] SoundI::release                          :     Wind_loop (000002AC348385C8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23DF58)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23DF58 : node = 000002AC5A70FB60
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23DF58
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FC70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23DF58
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23DF58.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23DF58)
+[LOG] SoundI::release                          :     Wind_loop (000002AC348385C8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23E2B8)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23DF58 : node = 000002AC5A70FA20
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23DF58
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FB30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23DF58
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23DF58.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23DF58)
+[LOG] SoundI::release                          :     Wind_loop (000002AC348385C8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23E2B8)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23E2B8 : node = 000002AC5A70F660
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23E2B8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F770
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23E2B8
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23E2B8.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23E2B8)
+[LOG] SoundI::release                          :     Wind_loop (000002AC348385C8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23DA48)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23DA48 : node = 000002AC5A70FA20
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23DA48
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FB30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23DA48
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23DA48.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23DA48)
+[LOG] SoundI::release                          :     Wind_loop (000002AC348385C8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23DF58)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23E2B8 : node = 000002AC5A70FA20
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23E2B8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FB30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23E2B8
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23E2B8.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23DF58 : node = 000002AC5A70FB60
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23DF58
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FC70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='339326__inspectorj__bird-whistling-a', format=2, channels=2, frequency=48000, lengthbytes=314336, lengthpcm=1154727, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.118774.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23DF58
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23DF58.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 339326__inspectorj__bird-whistling-a (000002ABCC23E618)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002AC3483BEA8)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002ABCC23DDA8)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23E2B8)
+[LOG] SoundI::release                          :     Wind_loop (000002AC348385C8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23DA48)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AF448 : node = 000002AC5A70F660
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AF448
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F770
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AF448
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AF448.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AF448)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AF0E8)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AE878 : node = 000002AC5A70FA20
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FB30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AE878.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AE878)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AF0E8)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AE878 : node = 000002AC5A70F8E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F9F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AE878.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AE878)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AF0E8)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AFCB8 : node = 000002AC5A70FCA0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AFCB8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FDB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AFCB8
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AFCB8.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AFCB8)
+[LOG] SoundI::release                          :     Wind_loop (000002AC348385C8)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AE878)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AE878 : node = 000002AC5A70FA20
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FB30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AE878.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AE878)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AFCB8)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AF0E8 : node = 000002AC5A70F7A0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AF0E8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F8B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AF0E8
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AF0E8.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AFCB8 : node = 000002AC5A70F8E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AFCB8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F9F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='339326__inspectorj__bird-whistling-a', format=2, channels=2, frequency=48000, lengthbytes=314336, lengthpcm=1154727, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.118774.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AFCB8
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AFCB8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 339326__inspectorj__bird-whistling-a (000002ABCC23DF58)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002AC34838AA8)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002ACCB2AEF38)
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AF0E8)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AE878)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AE878 : node = 000002AC5A70FA20
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FB30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AE878.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AE878)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AEF38)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AE878 : node = 000002AC5A70F660
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F770
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AE878.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AE878)
+[LOG] SoundI::release                          :     Wind_loop (000002AC34838AA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AEF38)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AE878 : node = 000002AC5A70FA20
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FB30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AE878.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AE878)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AEF38)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AE878 : node = 000002AC5A70FCA0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FDB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AE878.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AE878)
+[LOG] SoundI::release                          :     Wind_loop (000002AC34838AA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AEF38)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AE878 : node = 000002AC5A70FCA0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FDB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AE878
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AE878.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AE878)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AEF38)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AEF38 : node = 000002AC5A70F7A0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AEF38
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F8B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AEF38
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AEF38.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AF0E8 : node = 000002AC5A70FA20
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AF0E8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FB30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='339326__inspectorj__bird-whistling-a', format=2, channels=2, frequency=48000, lengthbytes=314336, lengthpcm=1154727, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.118774.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AF0E8
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AF0E8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 339326__inspectorj__bird-whistling-a (000002ACCB2AFCB8)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002AC348385C8)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002ACCB2AF448)
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AEF38)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AE878)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23E618 : node = 000002AC5A70F660
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23E618
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F770
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23E618
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23E618.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23E618)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23DF58)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23E618 : node = 000002AC5A70FCA0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23E618
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FDB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23E618
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23E618.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23E618)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23DA48)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23DF58 : node = 000002AC5A70F8E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23DF58
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F9F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23DF58
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23DF58.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23DF58)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23DA48)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23E2B8 : node = 000002AC5A70F8E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23E2B8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F9F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23E2B8
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23E2B8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23E2B8)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23DF58)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23E618 : node = 000002AC5A70F660
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23E618
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F770
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23E618
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23E618.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23E618)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23DA48)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23DA48 : node = 000002AC5A70FCA0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23DA48
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FDB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23DA48
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23DA48.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23E2B8 : node = 000002AC5A70F7A0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23E2B8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F8B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='339326__inspectorj__bird-whistling-a', format=2, channels=2, frequency=48000, lengthbytes=314336, lengthpcm=1154727, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.118774.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23E2B8
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23E2B8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 339326__inspectorj__bird-whistling-a (000002ACCB2AF0E8)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002AC34838AA8)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002ABCC23DDA8)
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23DA48)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23E618)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23DA48 : node = 000002AC5A70F8E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23DA48
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F9F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23DA48
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23DA48.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23DA48)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23E618)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23DA48 : node = 000002AC5A70FA20
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23DA48
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FB30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23DA48
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23DA48.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23DA48)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23DDA8)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23E618 : node = 000002AC5A70F8E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23E618
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F9F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23E618
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23E618.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23E618)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23DA48)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23E618 : node = 000002AC5A70F8E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23E618
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F9F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23E618
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23E618.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23E618)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23DA48)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23DDA8 : node = 000002AC5A70F660
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23DDA8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70F770
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23DDA8
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23DDA8.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23DDA8)
+[LOG] SoundI::release                          :     Wind_loop (000002AC3483BEA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23DA48)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23DDA8 : node = 000002AC5A70FCA0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23DDA8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FDB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23DDA8
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23DDA8.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ABCC23DA48 : node = 000002AC5A70FA20
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ABCC23DA48
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FB30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='339326__inspectorj__bird-whistling-a', format=2, channels=2, frequency=48000, lengthbytes=314336, lengthpcm=1154727, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.118774.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ABCC23DA48
+[LOG] SoundI::getSubSound                      : sound 000002ABCC23DA48.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 339326__inspectorj__bird-whistling-a (000002ABCC23E2B8)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002AC348385C8)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002ABCC23DF58)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          : Wind_loop (000002ABCC23DDA8)
+[LOG] SoundI::release                          :     Wind_loop (000002AC34838AA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ABCC23E618)
+[LOG] SystemI::createSound                     : filename = FMOD\PhaseShifter\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002ACCB2AFCB8 : node = 000002AC5A70FB60
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AC28566838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002ACCB2AFCB8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\PhaseShifter\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6583968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 28512
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AC5A70FC70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind_loop', format=2, channels=2, frequency=48000, lengthbytes=251296, lengthpcm=966066, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.979154.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002ACCB2AFCB8
+[LOG] SoundI::getSubSound                      : sound 000002ACCB2AFCB8.  Subsound index 0 / 1
+[LOG] SoundI::release                          :  (000002ACCBC141F8)
+[LOG] SoundI::release                          :     Ambience - Rattle Effect 3 (000002AC328E2478)
+[LOG] SoundI::release                          :  (000002ACCBC16758)
+[LOG] SoundI::release                          :     Ambience - Congas Effect 2 (000002AC28563488)
+[LOG] SoundI::release                          :  (000002AC27FE6ED8)
+[LOG] SoundI::release                          :     Ambience - Reverse Effect 1 (000002AC285637C8)
+[LOG] SoundI::release                          :  (000002ACCBC15058)
+[LOG] SoundI::release                          :     Birds 1 (000002AC328E0F58)
+[LOG] SoundI::release                          :  (000002AC27FE54F8)
+[LOG] SoundI::release                          :     Birds 2 (000002AC28566548)
+[LOG] SoundI::release                          :  (000002ACCBC14D78)
+[LOG] SoundI::release                          :     Crickets (000002AC328E15D8)
+[LOG] SoundI::release                          :  (000002ACCBC165E8)
+[LOG] SoundI::release                          :     Ambience - Piano 1 (000002AC285663A8)
+[LOG] SoundI::release                          :  (000002ACCBC17E58)
+[LOG] SoundI::release                          :     Ambience - Piano 2 (000002AC328E22D8)
+[LOG] SoundI::release                          :  (000002ACCBC175B8)
+[LOG] SoundI::release                          :     Ambience - Piano 3 (000002AC328E4B78)
+[LOG] SoundI::release                          : Wind_loop (000002ACCB2AFCB8)
+[LOG] SoundI::release                          :     Wind_loop (000002AC34838AA8)
+[LOG] SoundI::release                          :     Wind_loop (000002ACCB2AE878)
+[LOG] SoundI::release                          : 339326__inspectorj__bird-whistling-a (000002ABCC23DA48)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002AC3483BEA8)
+[LOG] SoundI::release                          :     339326__inspectorj__bird-whistling-a (000002ACCB2AEF38)
+[LOG] SoundI::release                          :  (000002ACCBC16BA8)
+[LOG] SoundI::release                          :     Ambience - Piano 5 (000002AC328E4358)
+[LOG] SoundI::release                          :  (000002ACCBC14648)
+[LOG] SoundI::release                          :     Ambience - Piano 4 (000002AC328E1AB8)
+[LOG] SoundI::release                          :  (000002ACCBC151C8)
+[LOG] SoundI::release                          :     Land_oneshot (000002AC328E2FD8)
+[LOG] SoundI::release                          :  (000002ACCBC15D48)
+[LOG] SoundI::release                          :     WaterSplash_oneshot (000002AC328E3658)
+[LOG] SoundI::release                          :  (000002ACCBC16A38)
+[LOG] SoundI::release                          :     PickupKey_oneshot (000002AC28563628)
+[LOG] SoundI::release                          :  (000002ACCBC16478)
+[LOG] SoundI::release                          :     DropKey_oneshot (000002AC328E3E78)
+[LOG] SoundI::release                          :  (000002ACCBC14EE8)
+[LOG] SoundI::release                          :     footstep_single_wood_02_v01 (000002AC328E4838)
+[LOG] SoundI::release                          :  (000002ACCBC168C8)
+[LOG] SoundI::release                          :     footstep_single_wood_02_v02 (000002AC28565EC8)
+[LOG] SoundI::release                          :  (000002ACCBC14088)
+[LOG] SoundI::release                          :     footstep_single_wood_02_v03 (000002AC328E1778)
+[LOG] SoundI::release                          :  (000002ACCBC15BD8)
+[LOG] SoundI::release                          :     footstep_single_wood_02_v04 (000002AC328E1C58)
+[LOG] SoundI::release                          :  (000002ACCBC154A8)
+[LOG] SoundI::release                          :     footstep_single_dirt_01_v01 (000002AC328E10F8)
+[LOG] SoundI::release                          :  (000002AC27FE6BF8)
+[LOG] SoundI::release                          :     footstep_single_dirt_01_v02 (000002AC28566208)
+[LOG] SoundI::release                          :  (000002ACCBC16308)
+[LOG] SoundI::release                          :     footstep_single_dirt_01_v03 (000002AC328E37F8)
+[LOG] SoundI::release                          :  (000002ACCBC147B8)
+[LOG] SoundI::release                          :     footstep_single_dirt_01_v04 (000002AC328E1DF8)
+[LOG] SoundI::release                          :  (000002ACCBC16198)
+[LOG] SoundI::release                          :     Jump_oneshot (000002AC328E2138)
+[LOG] SoundI::release                          :  (000002AC27FE5218)
+[LOG] SoundI::release                          :     OpenDoor_oneshot (000002AC28566068)
+[LOG] SoundI::release                          :  (000002ACCBC15338)
+[LOG] SoundI::release                          :     ShiftPhase_oneshot (000002AC328E44F8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
