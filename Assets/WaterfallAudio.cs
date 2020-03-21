@@ -12,6 +12,11 @@ public class WaterfallAudio : MonoBehaviour
         Waterfall = FMODUnity.RuntimeManager.CreateInstance(WaterfallEvent);
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(Waterfall, GetComponent<Transform>(), GetComponent<Rigidbody>());
     }
+
+    private void Awake()
+    {
+        Waterfall.start();
+    }
     private void OnEnable()
     {
         Waterfall.start();

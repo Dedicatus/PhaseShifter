@@ -7,7 +7,8 @@ public class MovingBlock : MonoBehaviour
     private PhaseController phaseController;
 
     private enum BlockPhase { A, B };
-
+    [FMODUnity.EventRef] public string WaterfallEvent = "event:/Wind";
+    FMOD.Studio.EventInstance Wind;
     [SerializeField] private BlockPhase thisBlockPhase = BlockPhase.A;
 
     private enum MovingMode { Always, PhaseOnly, PhaseBoth, PlayerOn };
@@ -20,9 +21,9 @@ public class MovingBlock : MonoBehaviour
 
     private GameObject EnabledObject;
     private GameObject DisabledObject;
-
+    private bool isPlayerAboard;
     Animator movingAnimator;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,9 @@ public class MovingBlock : MonoBehaviour
         EnabledObject = transform.Find("EnabledObject").gameObject;
         DisabledObject = transform.Find("DisabledObject").gameObject;
         if (thisMovingMode == MovingMode.PlayerOn) { movingAnimator.speed = 0; }
+        Wind = FMODUnity.RuntimeManager.CreateInstance(WaterfallEvent);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(Wind, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        isPlayerAboard = false;
     }
 
     // Update is called once per frame
@@ -68,20 +72,27 @@ public class MovingBlock : MonoBehaviour
                 other.transform.parent.parent.parent = transform;
             }
             else
+            {
                 other.transform.parent = transform;
+                isPlayerAboard = true;
+            }
             
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        isPlayerAboard = false;
         if (other.tag == "Player" || other.tag == "Box")
         {
-            
+
             if (other.tag == "Box")
                 other.transform.parent.parent.parent = null;
             else
+            {
                 other.transform.parent = null;
+                Wind.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            }
         }
     }
 
@@ -150,5 +161,17 @@ public class MovingBlock : MonoBehaviour
                     break;
             }
         }
+    }
+
+    void playwind()
+    {
+        if(isPlayerAboard)
+            Wind.start();
+    }
+
+    void stopwind()
+    {
+        if (isPlayerAboard)
+            Wind.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }

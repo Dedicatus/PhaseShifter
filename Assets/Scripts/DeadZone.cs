@@ -105,7 +105,10 @@ public class DeadZone : MonoBehaviour
                 }
                 else
                 {
-                    ac.playWaterSplash();
+                    float i = GameObject.FindWithTag("Player").GetComponent<Player>().m_inAirTimer / 3.0f;
+                    if (i > 1f)
+                        i = 1f;
+                    ac.playWaterSplash(i);
                     Destroy(player);
                 }
             }     

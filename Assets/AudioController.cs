@@ -38,7 +38,6 @@ public class AudioController : MonoBehaviour
         PickupKey = FMODUnity.RuntimeManager.CreateInstance(PickupKeyEvent);
         ShiftPhase = FMODUnity.RuntimeManager.CreateInstance(ShiftPhaseEvent);
         WaterSplash = FMODUnity.RuntimeManager.CreateInstance(WaterSplashEvent);
-
         BGM.start();
     }
 
@@ -97,9 +96,10 @@ public class AudioController : MonoBehaviour
     {
         DropKey.start();
     }
-    public void playLand()
+    public void playLand(float i)
     {
         Land.start();
+        Land.setParameterByName("Land", i);
     }
     public void playOpenDoor()
     {
@@ -113,8 +113,10 @@ public class AudioController : MonoBehaviour
     {
         ShiftPhase.start();
     }
-    public void playWaterSplash()
+    public void playWaterSplash(float i)
     {
         WaterSplash.start();
+        WaterSplash.setParameterByName("WaterSplash", i);
     }
+
 }

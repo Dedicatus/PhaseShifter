@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private bool m_wasGrounded;
 
-    [SerializeField] private float m_inAirTimer;
+    public float m_inAirTimer;
     [SerializeField] private float fallingAnimationMargin = 0.25f;
     [SerializeField] private float maxFallingSpeed = -30.0f;
     [SerializeField] private float jumpMargin = 0.25f;
@@ -187,7 +187,13 @@ public class Player : MonoBehaviour
         else
         {
             if (m_inAirTimer > 0.5f)
-                ac.playLand();
+            {
+                float i = (m_inAirTimer-0.5f) / 3f;
+                if (i > 1f)
+                    i = 1f;
+                ac.playLand(i);
+            }
+                
             m_inAirTimer = 0f;
         }
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{f67f23e3-9f20-4da8-a5fa-640645a56671}">
+		<property name="name">
+			<value>WaterSplash</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7cce145f-5e20-0b76-3b77-67c3c979c241}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{6d4b65c5-c4f5-47a7-8cbf-56f05ac2a35c}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{6d4b65c5-c4f5-47a7-8cbf-56f05ac2a35c}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
