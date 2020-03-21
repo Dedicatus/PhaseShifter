@@ -1124,12 +1124,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 806925316}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &886409707 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4202374051927890582, guid: 289a89b3281266446a031d691934e166,
-    type: 3}
-  m_PrefabInstance: {fileID: 4202374051729937277}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &968664583
 GameObject:
   m_ObjectHideFlags: 0
@@ -2488,7 +2482,7 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnPoints.Array.data[19]
       value: 
-      objectReference: {fileID: 886409707}
+      objectReference: {fileID: 4202374051729937278}
     - target: {fileID: 3844585194867702195, guid: 6bb618dc6fe682e43b7bdfd221817b5a,
         type: 3}
       propertyPath: spawnPoints.Array.data[20]
@@ -8377,8 +8371,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Island12
       objectReference: {fileID: 0}
+    - target: {fileID: 7491725027134291874, guid: 289a89b3281266446a031d691934e166,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 289a89b3281266446a031d691934e166, type: 3}
+--- !u!4 &4202374051729937278 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5192725183745691402, guid: 289a89b3281266446a031d691934e166,
+    type: 3}
+  m_PrefabInstance: {fileID: 4202374051729937277}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4376123401029916474
 PrefabInstance:
   m_ObjectHideFlags: 0
