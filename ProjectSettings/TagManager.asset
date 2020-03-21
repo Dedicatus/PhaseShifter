@@ -9,6 +9,7 @@ TagManager:
   - Key
   - Box
   - AudioController
+  - UIController
   layers:
   - Default
   - TransparentFX

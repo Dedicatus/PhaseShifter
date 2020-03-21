@@ -9,6 +9,7 @@ public class MoveTrigger : MonoBehaviour
     [SerializeField] private float freezeTime = 3f;
     bool isStartFreeze = false;
 
+
     private void Awake()
     {
         playerOn = false;
@@ -24,7 +25,7 @@ public class MoveTrigger : MonoBehaviour
             if (freezeCamera)
             {
                 isStartFreeze = true;
-                
+                GameObject.FindWithTag("UIController").GetComponent<UIController>().endGame();
             }
         }
     }
@@ -34,9 +35,14 @@ public class MoveTrigger : MonoBehaviour
         if (isStartFreeze)
         {
             if (freezeTime > 0)
+            {
                 freezeTime -= Time.deltaTime;
+            }
             else
+            {
                 GameObject.FindWithTag("MainCamera").GetComponent<ThirdPersonCameraFollow>().isFrozen = true;
+            }
+                
         }
     }
 
