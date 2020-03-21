@@ -168,7 +168,6 @@ public class MovingBlock : MonoBehaviour
         if (isPlayerAboard)
         { 
             Wind.start();
-            Debug.Log("Playing now!");
         }
            
     }
@@ -178,7 +177,6 @@ public class MovingBlock : MonoBehaviour
         if (isPlayerAboard)
         {
             Wind.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            Debug.Log("Stoping now!");
         }
     }
 }
