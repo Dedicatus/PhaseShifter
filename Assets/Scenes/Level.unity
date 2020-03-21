@@ -2262,7 +2262,7 @@ PrefabInstance:
     - target: {fileID: 3844585194867702195, guid: 6bb618dc6fe682e43b7bdfd221817b5a,
         type: 3}
       propertyPath: initSpawnIndex
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3844585194867702195, guid: 6bb618dc6fe682e43b7bdfd221817b5a,
         type: 3}
