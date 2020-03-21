@@ -6,6 +6,8 @@ public class AudioController : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    [FMODUnity.EventRef] public string BGMEvent = "event:/BGM";
+    [FMODUnity.EventRef] public string FootStepsEvent = "event:/Footsteps";
     [FMODUnity.EventRef] public string JumpEvent = "event:/Jump";
     [FMODUnity.EventRef] public string DropKeyEvent = "event:/DropKey";
     [FMODUnity.EventRef] public string LandEvent = "event:/Land";
@@ -14,6 +16,8 @@ public class AudioController : MonoBehaviour
     [FMODUnity.EventRef] public string ShiftPhaseEvent = "event:/ShiftPhase";
     [FMODUnity.EventRef] public string WaterSplashEvent = "event:/WaterSplash";
 
+    FMOD.Studio.EventInstance BGM;
+    FMOD.Studio.EventInstance Footsteps;
     FMOD.Studio.EventInstance Jump;
     FMOD.Studio.EventInstance DropKey;
     FMOD.Studio.EventInstance Land;
@@ -25,6 +29,8 @@ public class AudioController : MonoBehaviour
 
     void Start()
     {
+        BGM = FMODUnity.RuntimeManager.CreateInstance(BGMEvent);
+        Footsteps = FMODUnity.RuntimeManager.CreateInstance(FootStepsEvent);
         Jump = FMODUnity.RuntimeManager.CreateInstance(JumpEvent);
         DropKey = FMODUnity.RuntimeManager.CreateInstance(DropKeyEvent);
         Land = FMODUnity.RuntimeManager.CreateInstance(LandEvent);
@@ -32,12 +38,36 @@ public class AudioController : MonoBehaviour
         PickupKey = FMODUnity.RuntimeManager.CreateInstance(PickupKeyEvent);
         ShiftPhase = FMODUnity.RuntimeManager.CreateInstance(ShiftPhaseEvent);
         WaterSplash = FMODUnity.RuntimeManager.CreateInstance(WaterSplashEvent);
+
+        BGM.start();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void isPhaseA(bool isA)
+    {
+        if (isA)
+        {
+            BGM.setParameterByName("Phase", 0);
+        }
+        else
+        {
+            BGM.setParameterByName("Phase", 1);
+        }
+    }
+
+    public void setBGMPart(float p)
+    {
+        BGM.setParameterByName("Part", p);
+    }
+
+    public void setBGMMelodyIntensity(float mi)
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Intensity", mi);
     }
 
     public void playJump()

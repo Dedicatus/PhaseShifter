@@ -1123,7 +1123,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          value: 0.749
+          value: 0.387
         m_Name: Rain Sound Volume
         m_Id: 5e306dfd-9fe9-4487-9059-74bc287ca8b5
         minValue: 0
@@ -1243,7 +1243,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          value: 0.251
+          value: 0.093
         m_Name: Thunder Sound Volume
         m_Id: 272e6088-c216-4daa-9400-fb71b0ce1033
         minValue: 0
@@ -1353,7 +1353,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          value: 0.2
+          value: 0.3
         m_Name: Lightning Probability
         m_Id: e29efcc5-2980-4df8-9113-b9b01b9ffa7f
         minValue: 0
@@ -1363,7 +1363,7 @@ MonoBehaviour:
           m_Time: 0
           m_InterpolationCurve: 0
           m_InterpolationDirection: 0
-          value: 9.9
+          value: 10.5
         m_Name: Lightning Cool Down
         m_Id: faee665b-38c3-44ea-812f-cf3e61e39431
         minValue: 0

@@ -43,7 +43,6 @@ public class PhaseController : MonoBehaviour
         {
             if (Input.GetAxis("LRT") < -0.19f && !phaseSwitched)
             {
-                ac.playShiftPhase();
                 switchPhase();
             }
 
@@ -56,7 +55,6 @@ public class PhaseController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Q) && !phaseSwitched)
             {
-                ac.playShiftPhase();
                 switchPhase();
             }
 
@@ -69,10 +67,12 @@ public class PhaseController : MonoBehaviour
     }
 
     private void switchPhase()
-    { 
+    {
+        ac.playShiftPhase();
         switch (curGamePhase)
         {
             case GamePhase.A:
+                ac.isPhaseA(false);
                 curGamePhase = GamePhase.B;
                 timeOfDayController.switchSkyColor(false);
                 grassMaterial.SetColor("_Color", grassMaterialB.GetColor("_Color"));
@@ -82,6 +82,7 @@ public class PhaseController : MonoBehaviour
                 phaseSwitched = true;
                 break;
             case GamePhase.B:
+                ac.isPhaseA(true);
                 curGamePhase = GamePhase.A;
                 timeOfDayController.switchSkyColor(true);
                 grassMaterial.SetColor("_Color", grassMaterialA.GetColor("_Color"));
