@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: 2910577051721093357}
   - component: {fileID: 3594978692401583122}
   - component: {fileID: 6074523285251855074}
+  - component: {fileID: 1923404399}
   m_Layer: 0
   m_Name: Waterfall_Wide (1)
   m_TagString: Untagged
@@ -409,6 +410,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1923404399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3098703684088245636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5a79b1c2e79024d874801699f418bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaterfallEvent: event:/WaterFall
 --- !u!1 &4770427020221718550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,6 +1218,7 @@ GameObject:
   - component: {fileID: 7745820087669361361}
   - component: {fileID: 7745820087669361360}
   - component: {fileID: 7745820087669361363}
+  - component: {fileID: 428954851}
   m_Layer: 0
   m_Name: Waterfall_Wide
   m_TagString: Untagged
@@ -1291,6 +1306,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &428954851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7745820087669361357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5a79b1c2e79024d874801699f418bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaterfallEvent: event:/WaterFall
 --- !u!1 &7745820087678982279
 GameObject:
   m_ObjectHideFlags: 0

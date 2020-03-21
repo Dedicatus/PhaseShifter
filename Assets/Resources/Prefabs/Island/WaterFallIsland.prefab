@@ -112,6 +112,19 @@ Transform:
   m_Father: {fileID: 8145307989376148105}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3384388562661679675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7609457465459529481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5a79b1c2e79024d874801699f418bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaterfallEvent: event:/WaterFall
 --- !u!1001 &1960331256775817230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -643,6 +656,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aba885aef7e30e7408477d75b92aaa41, type: 3}
+--- !u!1 &7609457465459529481 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1997620202637898, guid: aba885aef7e30e7408477d75b92aaa41,
+    type: 3}
+  m_PrefabInstance: {fileID: 7610276245921324355}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7605759091625363693 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4561274582914478, guid: aba885aef7e30e7408477d75b92aaa41,
