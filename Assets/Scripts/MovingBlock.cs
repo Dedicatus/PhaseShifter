@@ -34,7 +34,6 @@ public class MovingBlock : MonoBehaviour
         DisabledObject = transform.Find("DisabledObject").gameObject;
         if (thisMovingMode == MovingMode.PlayerOn) { movingAnimator.speed = 0; }
         Wind = FMODUnity.RuntimeManager.CreateInstance(WaterfallEvent);
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(Wind, GetComponent<Transform>(), GetComponent<Rigidbody>());
         isPlayerAboard = false;
     }
 
@@ -82,7 +81,7 @@ public class MovingBlock : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        isPlayerAboard = false;
+        
         if (other.tag == "Player" || other.tag == "Box")
         {
 
@@ -90,6 +89,7 @@ public class MovingBlock : MonoBehaviour
                 other.transform.parent.parent.parent = null;
             else
             {
+                isPlayerAboard = false;
                 other.transform.parent = null;
                 Wind.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
@@ -165,13 +165,20 @@ public class MovingBlock : MonoBehaviour
 
     void playwind()
     {
-        if(isPlayerAboard)
+        if (isPlayerAboard)
+        { 
             Wind.start();
+            Debug.Log("Playing now!");
+        }
+           
     }
 
     void stopwind()
     {
         if (isPlayerAboard)
+        {
             Wind.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            Debug.Log("Stoping now!");
+        }
     }
 }
