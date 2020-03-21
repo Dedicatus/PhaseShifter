@@ -8112,6 +8112,48 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 627988297}
     m_Modifications:
+    - target: {fileID: 3464533370120451523, guid: 28cae6901e6c65247b452f8bcda8728b,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: be66b41d9fe7c5940bab9a1170600829,
+        type: 3}
+    - target: {fileID: 3464533370120451523, guid: 28cae6901e6c65247b452f8bcda8728b,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 66
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464533370120451533, guid: 28cae6901e6c65247b452f8bcda8728b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464533370562671878, guid: 28cae6901e6c65247b452f8bcda8728b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464533370846344288, guid: 28cae6901e6c65247b452f8bcda8728b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464533370846344289, guid: 28cae6901e6c65247b452f8bcda8728b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -41
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464533370846344294, guid: 28cae6901e6c65247b452f8bcda8728b,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: be66b41d9fe7c5940bab9a1170600829,
+        type: 3}
+    - target: {fileID: 3464533370846344294, guid: 28cae6901e6c65247b452f8bcda8728b,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 3464533371241621592, guid: 28cae6901e6c65247b452f8bcda8728b,
         type: 3}
       propertyPath: m_Name
@@ -8170,6 +8212,11 @@ PrefabInstance:
     - target: {fileID: 3464533371241621593, guid: 28cae6901e6c65247b452f8bcda8728b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464533372110067390, guid: 28cae6901e6c65247b452f8bcda8728b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
