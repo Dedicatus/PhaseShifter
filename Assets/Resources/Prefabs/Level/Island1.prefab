@@ -205,6 +205,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2166559288758613572, guid: 07daf1f4fa83b6445b697d49bef8c7a3,
+        type: 3}
+      propertyPath: tip
+      value: Press LT to Change Phase
+      objectReference: {fileID: 0}
     - target: {fileID: 2166559288758613573, guid: 07daf1f4fa83b6445b697d49bef8c7a3,
         type: 3}
       propertyPath: m_Name
