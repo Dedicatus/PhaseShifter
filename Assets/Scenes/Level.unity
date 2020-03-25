@@ -7378,6 +7378,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1715901942679270825, guid: 36370320190ee9245b2077a07c1badd2,
+        type: 3}
+      propertyPath: thisZonePhase
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3464231371063720148, guid: 36370320190ee9245b2077a07c1badd2,
         type: 3}
       propertyPath: m_Layer

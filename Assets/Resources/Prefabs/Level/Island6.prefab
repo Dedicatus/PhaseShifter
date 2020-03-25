@@ -8458,6 +8458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4717f218e6a8c434ca2bf4991246fc31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WaterfallEvent: event:/Wind
   thisBlockPhase: 1
   thisMovingMode: 1
   m_moveTrigger: {fileID: 0}
@@ -8565,7 +8566,7 @@ GameObject:
   - component: {fileID: 2097244790990005895}
   - component: {fileID: 3717024964699959549}
   - component: {fileID: 8008571187382789891}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10470,7 +10471,7 @@ PrefabInstance:
     - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
       propertyPath: thisZonePhase
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
