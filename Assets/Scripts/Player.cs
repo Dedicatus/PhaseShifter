@@ -49,6 +49,7 @@ public class Player : MonoBehaviour
 
     private float m_jumpTimeStamp = 0;
     private float m_minJumpInterval = 0.3f;
+    [SerializeField] private int m_Gem = 0;
 
     private CapsuleCollider col;
     [SerializeField] private bool m_isGrounded;
@@ -84,6 +85,7 @@ public class Player : MonoBehaviour
         m_inAirTimer = 0f;
         isRespawning = false;
         ac = GameObject.FindWithTag("AudioController").GetComponent<AudioController>();
+
     }
 
     
@@ -415,5 +417,15 @@ public class Player : MonoBehaviour
     public void setGrounded(bool b)
     {
         m_isGrounded = b;
+    }
+
+    public void addBouns()
+    {
+        m_Gem++;
+    }
+
+    public int getGemNum()
+    {
+        return m_Gem;
     }
 }
