@@ -42,7 +42,7 @@ public class GameEnd : MonoBehaviour
 
         foreach (GameObject text in texts) 
         {
-            text.GetComponent<Text>().color = new Color32(255, 255, 255, 0);
+            text.GetComponent<Text>().color = new Color32(255, 255, 255, 255);
             text.SetActive(true); 
         }
     }
