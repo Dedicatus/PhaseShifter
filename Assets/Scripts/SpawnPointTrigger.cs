@@ -6,7 +6,7 @@ public class SpawnPointTrigger : MonoBehaviour
 {
     private LevelController levelController;
 
-    private bool triggered;
+    [SerializeField] private bool triggered;
 
     private void Start()
     {
@@ -17,7 +17,7 @@ public class SpawnPointTrigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (!triggered)
+            if (!triggered && !other.GetComponent<Player>().isRespawning)
             {
                 levelController.nextSpawnPoint();
                 triggered = true;

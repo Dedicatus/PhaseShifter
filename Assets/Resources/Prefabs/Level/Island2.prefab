@@ -6099,7 +6099,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6178551362696787090}
+  - {fileID: 5719601338717541721}
   - {fileID: 6439728654320598984}
   - {fileID: 541925890441619974}
   - {fileID: 1225852050939612788}
@@ -6764,6 +6764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebfe16b9e18599440a34812190127d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggered: 0
 --- !u!1 &6952876086832147458
 GameObject:
   m_ObjectHideFlags: 0
@@ -6870,6 +6871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebfe16b9e18599440a34812190127d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggered: 0
 --- !u!1 &7074345726688397171
 GameObject:
   m_ObjectHideFlags: 0
@@ -7219,7 +7221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfa3ea8b85ff9ba4d948272864d629d2, type: 3}
---- !u!4 &6178551362696787090 stripped
+--- !u!4 &5719601338717541721 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1936130744809666103, guid: cfa3ea8b85ff9ba4d948272864d629d2,
     type: 3}

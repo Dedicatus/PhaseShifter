@@ -574,6 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebfe16b9e18599440a34812190127d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggered: 0
 --- !u!1 &180567047479338764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,14 +1172,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6494154083031534573}
-  - {fileID: 6620440178442982869}
+  - {fileID: 3868322496074067646}
   - {fileID: 4346406122614735270}
   - {fileID: 4187056336763468031}
   - {fileID: 6494154083838247295}
   - {fileID: 4346406123249787392}
   - {fileID: 4182589259915646836}
   - {fileID: 4182589259928026364}
-  - {fileID: 3989019646644390269}
+  - {fileID: 6418849581093614102}
   - {fileID: 1494886296459753140}
   - {fileID: 4182589260017598897}
   - {fileID: 4182589260620073549}
@@ -1197,7 +1198,7 @@ Transform:
   - {fileID: 4197716572135620}
   - {fileID: 1234072785}
   - {fileID: 8616822016150661452}
-  - {fileID: 1936130745419139805}
+  - {fileID: 612117270}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 143, z: 0}
@@ -14603,7 +14604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfa3ea8b85ff9ba4d948272864d629d2, type: 3}
---- !u!4 &1936130745419139805 stripped
+--- !u!4 &612117270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1936130744809666103, guid: cfa3ea8b85ff9ba4d948272864d629d2,
     type: 3}
@@ -15138,12 +15139,12 @@ PrefabInstance:
         type: 3}
       propertyPath: box.Array.data[1]
       value: 
-      objectReference: {fileID: 6620440178809456749}
+      objectReference: {fileID: 3868322496074055962}
     - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
       propertyPath: box.Array.data[0]
       value: 
-      objectReference: {fileID: 3989019647146136773}
+      objectReference: {fileID: 6418849581093608882}
     - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
       propertyPath: door.Array.data[0]
@@ -15251,13 +15252,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a65372e2a8fe7274985eaf22e239e8d6, type: 3}
---- !u!4 &6620440178442982869 stripped
+--- !u!4 &3868322496074067646 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7948727536743406582, guid: a65372e2a8fe7274985eaf22e239e8d6,
     type: 3}
   m_PrefabInstance: {fileID: 3868322496074059299}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6620440178809456749 stripped
+--- !u!1 &3868322496074055962 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7948727536367486542, guid: a65372e2a8fe7274985eaf22e239e8d6,
     type: 3}
@@ -15354,12 +15355,12 @@ PrefabInstance:
         type: 3}
       propertyPath: box.Array.data[0]
       value: 
-      objectReference: {fileID: 6620440178809456749}
+      objectReference: {fileID: 3868322496074055962}
     - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
       propertyPath: box.Array.data[1]
       value: 
-      objectReference: {fileID: 3989019647146136773}
+      objectReference: {fileID: 6418849581093608882}
     - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
       propertyPath: door.Array.data[0]
@@ -15502,13 +15503,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a65372e2a8fe7274985eaf22e239e8d6, type: 3}
---- !u!1 &3989019647146136773 stripped
+--- !u!1 &6418849581093608882 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7948727536367486542, guid: a65372e2a8fe7274985eaf22e239e8d6,
     type: 3}
   m_PrefabInstance: {fileID: 6418849581093606027}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &3989019646644390269 stripped
+--- !u!4 &6418849581093614102 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7948727536743406582, guid: a65372e2a8fe7274985eaf22e239e8d6,
     type: 3}

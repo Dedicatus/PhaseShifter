@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebfe16b9e18599440a34812190127d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggered: 0
 --- !u!1 &1437144320238345476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,8 +1306,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7183951800330249494}
-  - {fileID: 1007974593464163287}
-  - {fileID: 1007974592395429348}
+  - {fileID: 7183951801735454908}
+  - {fileID: 7183951800656838287}
   - {fileID: 7994249968581555892}
   - {fileID: 7183951800573237589}
   - {fileID: 7183951799970003583}
@@ -1316,7 +1317,7 @@ Transform:
   - {fileID: 4664065485185658634}
   - {fileID: 1759308842}
   - {fileID: 6923251431022083632}
-  - {fileID: 5521573453447408007}
+  - {fileID: 6232442482137892940}
   - {fileID: 6345724644894840674}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -5540,22 +5541,22 @@ PrefabInstance:
         type: 3}
       propertyPath: Box.Array.data[0]
       value: 
-      objectReference: {fileID: 1007974593907181167}
+      objectReference: {fileID: 7183951801735450392}
     - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
       propertyPath: Box.Array.data[1]
       value: 
-      objectReference: {fileID: 1007974592827971676}
+      objectReference: {fileID: 7183951800656826667}
     - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
       propertyPath: box.Array.data[0]
       value: 
-      objectReference: {fileID: 1007974593907181167}
+      objectReference: {fileID: 7183951801735450392}
     - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
       propertyPath: box.Array.data[1]
       value: 
-      objectReference: {fileID: 1007974592827971676}
+      objectReference: {fileID: 7183951800656826667}
     - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
       propertyPath: door.Array.data[0]
@@ -5674,7 +5675,17 @@ PrefabInstance:
     - target: {fileID: 2166559288758613572, guid: 07daf1f4fa83b6445b697d49bef8c7a3,
         type: 3}
       propertyPath: tip
-      value: Press RT to Pick up the Key
+      value: Press F to Pick up the Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166559288758613572, guid: 07daf1f4fa83b6445b697d49bef8c7a3,
+        type: 3}
+      propertyPath: controllerTip
+      value: Press RT to pick up the key.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166559288758613572, guid: 07daf1f4fa83b6445b697d49bef8c7a3,
+        type: 3}
+      propertyPath: keyboardTip
+      value: Press F to pick up the key.
       objectReference: {fileID: 0}
     - target: {fileID: 2166559288758613573, guid: 07daf1f4fa83b6445b697d49bef8c7a3,
         type: 3}
@@ -5758,7 +5769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfa3ea8b85ff9ba4d948272864d629d2, type: 3}
---- !u!4 &5521573453447408007 stripped
+--- !u!4 &6232442482137892940 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1936130744809666103, guid: cfa3ea8b85ff9ba4d948272864d629d2,
     type: 3}
@@ -6511,13 +6522,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a65372e2a8fe7274985eaf22e239e8d6, type: 3}
---- !u!1 &1007974592827971676 stripped
+--- !u!1 &7183951800656826667 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7948727536367486542, guid: a65372e2a8fe7274985eaf22e239e8d6,
     type: 3}
   m_PrefabInstance: {fileID: 7183951800656829970}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1007974592395429348 stripped
+--- !u!4 &7183951800656838287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7948727536743406582, guid: a65372e2a8fe7274985eaf22e239e8d6,
     type: 3}
@@ -6859,12 +6870,12 @@ PrefabInstance:
         type: 3}
       propertyPath: box.Array.data[0]
       value: 
-      objectReference: {fileID: 1007974593907181167}
+      objectReference: {fileID: 7183951801735450392}
     - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
       propertyPath: box.Array.data[1]
       value: 
-      objectReference: {fileID: 1007974592827971676}
+      objectReference: {fileID: 7183951800656826667}
     - target: {fileID: 6323151079261558577, guid: 21dfc21f4941f964490e6c8480199fcd,
         type: 3}
       propertyPath: door.Array.data[0]
@@ -7377,13 +7388,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a65372e2a8fe7274985eaf22e239e8d6, type: 3}
---- !u!1 &1007974593907181167 stripped
+--- !u!1 &7183951801735450392 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7948727536367486542, guid: a65372e2a8fe7274985eaf22e239e8d6,
     type: 3}
   m_PrefabInstance: {fileID: 7183951801735446561}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1007974593464163287 stripped
+--- !u!4 &7183951801735454908 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7948727536743406582, guid: a65372e2a8fe7274985eaf22e239e8d6,
     type: 3}
@@ -7494,7 +7505,7 @@ PrefabInstance:
     - target: {fileID: 457682240918096629, guid: 799d9831401397f40a9e184071412a59,
         type: 3}
       propertyPath: m_Size.x
-      value: 10.856968
+      value: 13.591125
       objectReference: {fileID: 0}
     - target: {fileID: 457682240918096629, guid: 799d9831401397f40a9e184071412a59,
         type: 3}
@@ -7504,12 +7515,12 @@ PrefabInstance:
     - target: {fileID: 457682240918096629, guid: 799d9831401397f40a9e184071412a59,
         type: 3}
       propertyPath: m_Center.x
-      value: 0.12163161
+      value: -1.5274777
       objectReference: {fileID: 0}
     - target: {fileID: 457682240918096629, guid: 799d9831401397f40a9e184071412a59,
         type: 3}
       propertyPath: m_Center.z
-      value: 3.957098
+      value: 3.9571002
       objectReference: {fileID: 0}
     - target: {fileID: 457682240918096630, guid: 799d9831401397f40a9e184071412a59,
         type: 3}
