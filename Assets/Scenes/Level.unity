@@ -1288,6 +1288,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81c09ca907581845adc9b8085ee5abe, type: 3}
+--- !u!1 &1130260365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5239978714249060106, guid: 824e5ade18720d947b6857ea157f9cf8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4376123401029916474}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1189653671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1189653671, guid: 6b0eb270b4ff05c4ba277416d174bb3b,
@@ -1307,6 +1313,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2246687056547547405, guid: 1847de89a557ccf419dc4d53b20463cf,
+        type: 3}
+      propertyPath: door.Array.data[0]
+      value: 
+      objectReference: {fileID: 1130260365}
+    - target: {fileID: 7009862214386168905, guid: 1847de89a557ccf419dc4d53b20463cf,
+        type: 3}
+      propertyPath: door.Array.data[0]
+      value: 
+      objectReference: {fileID: 1130260365}
+    - target: {fileID: 7745820087162278254, guid: 1847de89a557ccf419dc4d53b20463cf,
+        type: 3}
+      propertyPath: door.Array.data[0]
+      value: 
+      objectReference: {fileID: 1130260365}
     - target: {fileID: 7745820087182838572, guid: 1847de89a557ccf419dc4d53b20463cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1367,6 +1388,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IslandAboveIsland5
       objectReference: {fileID: 0}
+    - target: {fileID: 7745820088520115823, guid: 1847de89a557ccf419dc4d53b20463cf,
+        type: 3}
+      propertyPath: door.Array.data[0]
+      value: 
+      objectReference: {fileID: 1130260365}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1847de89a557ccf419dc4d53b20463cf, type: 3}
 --- !u!4 &1234072785 stripped
@@ -2259,7 +2285,7 @@ PrefabInstance:
     - target: {fileID: 3844585194867702195, guid: 6bb618dc6fe682e43b7bdfd221817b5a,
         type: 3}
       propertyPath: initSpawnIndex
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3844585194867702195, guid: 6bb618dc6fe682e43b7bdfd221817b5a,
         type: 3}

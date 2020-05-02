@@ -39,7 +39,6 @@ public class LevelController : MonoBehaviour
 
     public void respawnPlayer()
     {
-        Debug.Log("Ohyes!");
         if (spawnPoints[curSpawnPointIndex] == null)
         {
             throw new Exception("SpawnPoint Overflow");
