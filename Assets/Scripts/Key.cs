@@ -7,6 +7,7 @@ public class Key : MonoBehaviour
     [SerializeField] private GameObject player;
     private PhaseController phaseController;
     [SerializeField] private GameObject myCamera;
+    private Door myDoor;
 
     private enum Phase { A, B, Both };
     [SerializeField] private Phase thisPhase = Phase.A;
@@ -161,4 +162,15 @@ public class Key : MonoBehaviour
             }
         }
     }
+
+    public void setDoor(Door door)
+    {
+        myDoor = door;
+    }
+
+    public void respawn()
+    {
+        myDoor.spawnKey();
+    }
+
 }

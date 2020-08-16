@@ -36,6 +36,7 @@ public class Door : MonoBehaviour
                 continue;
             else 
             myKeys[i] = Instantiate(keyPrefabs[i], spawnPoints[i].transform.position, spawnPoints[i].transform.rotation);
+            myKeys[i].GetComponent<Key>().setDoor(this);
         }
     }
 

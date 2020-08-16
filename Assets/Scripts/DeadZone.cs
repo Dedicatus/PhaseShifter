@@ -84,6 +84,7 @@ public class DeadZone : MonoBehaviour
     public void respwanPlayer()
     {
         //player.GetComponent<Player>().isRespawning = false;
+        if (player.GetComponent<Player>().m_key != null) player.GetComponent<Player>().m_key.GetComponent<Key>().respawn();
         Destroy(player);
         levelController.respawnPlayer();
         cameraController.isFrozen = false;
@@ -109,6 +110,7 @@ public class DeadZone : MonoBehaviour
                     if (i > 1f)
                         i = 1f;
                     ac.playWaterSplash(i);
+                    if (player.GetComponent<Player>().m_key != null) player.GetComponent<Player>().m_key.GetComponent<Key>().respawn();
                     Destroy(player);
                 }
             }     
