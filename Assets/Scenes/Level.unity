@@ -341,11 +341,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2572892874487369615, guid: b1befb14a0d9f43428e4e2de7e719a41,
-        type: 3}
-      propertyPath: Y_ANGLE_MAX
-      value: 65
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1befb14a0d9f43428e4e2de7e719a41, type: 3}
 --- !u!4 &288835281 stripped
@@ -975,6 +970,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

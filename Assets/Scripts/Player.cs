@@ -85,6 +85,8 @@ public class Player : MonoBehaviour
         m_inAirTimer = 0f;
         isRespawning = false;
         ac = GameObject.FindWithTag("AudioController").GetComponent<AudioController>();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
 
     }
 

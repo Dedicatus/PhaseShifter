@@ -98,13 +98,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Y_ANGLE_MIN: 5
-  Y_ANGLE_MAX: 45
+  Y_ANGLE_MAX: 75
   character: {fileID: 0}
   distance: -7.39
   currentPushDistance: 0.5
   offsetY: 2.58
-  xRotationSpeed: 180
-  yRotationSpeed: 180
+  xRotationSpeed: 60
+  yRotationSpeed: 40
+  currentX: 0
+  currentY: 0
+  isFrozen: 0
 --- !u!135 &68826611
 SphereCollider:
   m_ObjectHideFlags: 0
