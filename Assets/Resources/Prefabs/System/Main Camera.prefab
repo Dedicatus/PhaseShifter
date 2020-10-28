@@ -97,14 +97,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db3ca2f548d028b45bc7f85898dbd2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Y_ANGLE_MIN: 5
-  Y_ANGLE_MAX: 75
+  Y_ANGLE_MIN: 0
+  Y_ANGLE_MAX: 65
   character: {fileID: 0}
   distance: -7.39
   currentPushDistance: 0.5
   offsetY: 2.58
-  xRotationSpeed: 60
-  yRotationSpeed: 40
+  xRotationSpeed: 85
+  yRotationSpeed: 30
   currentX: 0
   currentY: 0
   isFrozen: 0

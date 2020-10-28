@@ -58,6 +58,8 @@ public class DeadZone : MonoBehaviour
 
         if (respawnTimer <= 0f)
         {
+            if (thisZonePhase == ZonePhase.Air) destoryPlayer();
+
             respwanPlayer();
 
             foreach (GameObject myBox in box)
@@ -84,11 +86,15 @@ public class DeadZone : MonoBehaviour
     public void respwanPlayer()
     {
         //player.GetComponent<Player>().isRespawning = false;
-        if (player.GetComponent<Player>().m_key != null) player.GetComponent<Player>().m_key.GetComponent<Key>().respawn();
-        Destroy(player);
         levelController.respawnPlayer();
         cameraController.isFrozen = false;
         isRespawning = false;
+    }
+
+    public void destoryPlayer()
+    {
+        if (player.GetComponent<Player>().m_key != null) player.GetComponent<Player>().m_key.GetComponent<Key>().respawn();
+        Destroy(player);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -106,12 +112,11 @@ public class DeadZone : MonoBehaviour
                 }
                 else
                 {
-                    float i = GameObject.FindWithTag("Player").GetComponent<Player>().m_inAirTimer / 3.0f;
+                    float i = other.GetComponent<Player>().m_inAirTimer / 3.0f;
                     if (i > 1f)
                         i = 1f;
                     ac.playWaterSplash(i);
-                    if (player.GetComponent<Player>().m_key != null) player.GetComponent<Player>().m_key.GetComponent<Key>().respawn();
-                    Destroy(player);
+                    destoryPlayer();
                 }
             }     
         }
@@ -124,18 +129,10 @@ public class DeadZone : MonoBehaviour
             switch (thisZonePhase)
             {
                 case ZonePhase.A:
-                    //gameObject.GetComponent<MeshRenderer>().enabled = true;
-                    //cubeMaterial.SetColor("_Color", new Color(253f / 255f, 85f / 255f, 85f / 255f, 255f / 255f));
-                    //cubeMaterial.SetColor("_Color", blockAEnabledMaterial.GetColor("_Color"));
                     gameObject.GetComponent<Collider>().enabled = true;
-                    //gameObject.layer = 0;
                     break;
                 case ZonePhase.B:
-                    //gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    //cubeMaterial.SetColor("_Color", new Color(103f / 255f, 231f / 255f, 250f / 255f, 30f / 255f));
-                    //cubeMaterial.SetColor("_Color", blockBDisabledMaterial.GetColor("_Color"));
                     gameObject.GetComponent<Collider>().enabled = false;
-                    //gameObject.layer = 8;
                     break;
                 default:
                     break;
@@ -146,18 +143,10 @@ public class DeadZone : MonoBehaviour
             switch (thisZonePhase)
             {
                 case ZonePhase.A:
-                    //gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    //cubeMaterial.SetColor("_Color", new Color(253f / 255f, 85f / 255f, 85f / 255f, 30f / 255f));
-                    //cubeMaterial.SetColor("_Color", blockADisabledMaterial.GetColor("_Color"));
                     gameObject.GetComponent<Collider>().enabled = false;
-                    //gameObject.layer = 8;
                     break;
                 case ZonePhase.B:
-                    //gameObject.GetComponent<MeshRenderer>().enabled = true;
-                    //cubeMaterial.SetColor("_Color", new Color(103f / 255f, 231f / 255f, 250f / 255f, 255f / 255f));
-                    //cubeMaterial.SetColor("_Color", blockBEnabledMaterial.GetColor("_Color"));
                     gameObject.GetComponent<Collider>().enabled = true;
-                    //gameObject.layer = 0;
                     break;
                 default:
                     break;
